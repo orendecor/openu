@@ -1,0 +1,9 @@
+\babel@toc {hebrew}{}
+\beamer@sectionintoc {1}{ברוכים הבאים לקורס אלגוריתמים!}{1}{0}{1}
+\beamer@sectionintoc {2}{מה אתם עושים פה? \\ \relax \fontsize {12}{14}\selectfont {(או - מה אתם חושבים שנעשה פה)}}{4}{0}{2}
+\beamer@sectionintoc {3}{ברוכים הבאים לקורס טעימות של אלגוריתמים!}{5}{0}{3}
+\beamer@sectionintoc {4}{מהי התרומה של הקורס עבורכם?}{6}{0}{4}
+\beamer@sectionintoc {5}{אנשים אומרים שאלגוריתמים הוא אחד הקורס \textit {הקשים בתואר} }{7}{0}{5}
+\beamer@sectionintoc {6}{הם צודקים.}{8}{0}{6}
+\beamer@sectionintoc {7}{מה זה אלגוריתם?}{22}{1}{7}
+\beamer@sectionintoc {8}{הוכחת נכונות פורמאלית}{26}{1}{8}

@@ -1,0 +1,303 @@
+%! TEX program = lualatex
+% find: (\$((?!\$).)+\$)
+%replace: \E{\1}
+
+%%%%%%%%%%
+% BEAMER %
+%%%%%%%%%%
+
+\RequirePackage{luatex85}
+
+\PassOptionsToPackage{luatex}{hyperref}
+
+%\documentclass[luatex]{beamer}
+\documentclass[handout]{beamer}
+
+\usetheme{metropolis}
+
+	\newcommand{\bigq}{\mathbb{Q}}
+\newcommand{\bb}{\bfseries\large}
+\newcommand{\class}{\mathcal}
+\newcommand{\mbi}[1]{\textbf{\em{#1}}}
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
+\newcommand{\ita}[1]{\textit{#1}}
+\newcommand{\p}{\cdot}
+\newcommand{\req}{\emptyset}
+\newcommand{\init}{\mathcal{J}}
+\newcommand{\power}[1]{\class{P}(#1)}
+\newcommand{\bigpower}[2]{\class{P}^{#1}(#2)}
+\newcommand{\symetric}{\bigtriangleup}
+\newcommand{\gx}[3]{\Gamma_{(#1,#2)}(#3)}
+\newcommand{\bd}[3]{\Delta_{(#1,#2)}(#3)}
+\newcommand{\bp}[3]{\Phi_{(#1,#2)}(#3)}
+\newcommand{\eab}{\eta_{\alpha \beta}}
+\newcommand{\sab}{\sigma_{\alpha\beta}}
+\newcommand{\dab}{\class{D}_{\alpha\beta}}
+\newcommand{\cab}{\class{C}_{\alpha\beta}}
+\newcommand{\C}[1]{\class{#1}}
+\newcommand{\ol}{\overline}
+\newcommand{\into}{\longrightarrow}
+\newcommand{\ifff}{\Longleftrightarrow}
+\newcommand{\imply}{\Rightarrow}
+\newcommand{\since}{\Longleftarrow}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\andd}{\wedge}
+\newcommand{\orr}{\vee}
+\newcommand{\ft}{(\C F \C T)_Q}
+\newcommand{\pathopen}[3]{#1_{(\ol{#2},#3)}}
+\newcommand{\fpi}[3]{#1_*(\Pi(#2,#3))}
+\newcommand{\xpath}[2]{(\ol {#1},#2)}
+\newcommand{\qn}[2]{\Lambda(#1,#2)}
+\newcommand{\jh}{\class J \class H}
+\newcommand{\bos}{\boldsymbol}
+\newcommand{\f}{\mathbb}
+\newcommand{\rss}{\la\psi_i:i\in \lambda\ra}
+\newcommand{\ito}[1]{\overset{#1}{\longrightarrow}}
+\newcommand{\pcomplex}[2]{\class #1(\class #2)}
+\newcommand{\then}{\Rightarrow}
+\newcommand{\ud}{{ {up-down-automaton}} }
+
+\newcommand{\map}[1]{\underset{#1}{\mapsto}}
+\newcommand{\mapi}[1]{\underset{#1}{\overset{i}{\mapsto}}}
+\newcommand{\mapstar}[1]{\underset{#1}{\overset{*}{\mapsto}}}
+\newcommand{\mapk}[2]{\underset{#1}{\overset{#2}{\mapsto}}}
+
+\newcommand{\eql}{\equiv_L}
+\newcommand{\der}[1]{\underset{#1}{\imply}}
+\newcommand{\deri}[1]{\underset{#1}{\overset{i}{\imply}}}
+\newcommand{\derstar}[1]{\underset{#1}{\overset{*}{\imply}}}
+\newcommand{\derk}[2]{\underset{#1}{\overset{#2}{\imply}}}
+\newcommand{\blank}{\bar{b}}
+\newcommand{\R}[1]{#1}
+\newcommand{\say}[1]{\color{blue}{#1}\color{black}}
+
+
+
+% Fix the title separator
+\makeatletter
+\setbeamertemplate{title separator}{
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[fg] (0,0) rectangle (\textwidth, \metropolis@titleseparator@linewidth);
+	\end{tikzpicture}%
+	\egroup
+	\par%
+}
+\makeatother
+
+% Fix the progress bar and make it progress from right to left
+\makeatletter
+\setbeamertemplate{progress bar in section page}{
+	\setlength{\metropolis@progressonsectionpage}{%
+		\textwidth * \ratio{\insertframenumber pt}{\inserttotalframenumber pt}%
+	}%
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[bg] (0,0) rectangle (\textwidth, \metropolis@progressonsectionpage@linewidth);
+	\fill[fg] (\textwidth,0) rectangle (\textwidth-\metropolis@progressonsectionpage, \metropolis@progressonsectionpage@linewidth);
+	\end{tikzpicture}%
+	\egroup
+}
+\makeatother
+
+% A more logical title page, juxtaposing `institute` to `author`. This modification is not necessary for Hebrew support.
+\makeatletter
+\setbeamertemplate{title page}{
+	\begin{minipage}[b][\paperheight]{\textwidth}
+		\ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+		\vfill%
+		\ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+		\ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+		\usebeamertemplate*{title separator}
+		\ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+		\ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+		\ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+		\vfill
+		\vspace*{1mm}
+	\end{minipage}
+}
+\setbeamertemplate{author}{\vspace*{2em}\insertauthor\par\vspace*{0.25em}}
+\setbeamertemplate{institute}{\insertinstitute\par}
+\setbeamertemplate{date}{\vspace*{3mm}\insertdate\par}
+\makeatother
+
+
+
+
+%%%%%%%%%
+% Babel %
+%%%%%%%%%
+
+\usepackage[nil,bidi=basic-r]{babel}
+\babelprovide[import=he,main]{hebrew}
+\babelprovide[import=en-GB]{english}
+
+% For some reason Babel’s `\babelfont` doesn’t work
+\setsansfont[Script=Hebrew]{Open Sans Hebrew}
+\setmonofont{Fira Mono}
+\renewcommand{\H}[1]{\foreignlanguage{hebrew}{\fontspec[Script=Hebrew]{Open Sans Hebrew}#1}}
+\newcommand{\E}[1]{\foreignlanguage{english}{\fontspec{Open Sans}#1}}
+\newcommand{\LR}[1]{{‏\textdir TLT #1}}
+
+
+
+
+%%%%%%%%
+% MISC %
+%%%%%%%%
+
+\usepackage{metalogo, fancyvrb}
+\usepackage{cancel}
+\newcommand{\smallurl}[1]{{\footnotesize\url{#1}}}
+
+
+
+%%%%%%%%%%%%
+% DOCUMENT %
+%%%%%%%%%%%%
+
+\begin{document}
+	\title{בעיית העץ הפורש המינימאלי (MST)}
+	\subtitle{תרגול 3}
+	%\author{}
+	%\institute{}
+	\date{}
+	
+	
+	\frame{\titlepage}
+\begin{frame}
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{imgs/island}
+\end{figure}
+
+
+\end{frame}
+\begin{frame}
+\begin{figure}
+	\centering
+	\includegraphics[width=.6\linewidth]{imgs/mst}
+\end{figure}
+
+\end{frame}
+\part{הגדרות ומשפטים}
+\frame{\partpage}
+\begin{frame}{הגדרות מתורת הגרפים}
+\begin{itemize}[<+->]
+	\item \textbf{גרף פשוט} 
+	גרף \E{$G$} הוא פשוט אם אין בו צלעות עצמיות (צלע מקודקוד לעצמו) או צלעות כפולות (יותר מצלע אחת בין זוג קודקודים).
+	\item \textbf{מסלול}   מסלול בגרף  
+	\E{$G=(V,E)$}
+	הוא סידרת קודקודים 
+	\E{$<v_0,v_1,\ldots,v_k>$}
+	, כאשר לכל 
+	\E{$0\le i < k$}
+	מתקיים 
+	\E{$(v_i,v_{i+1})\in E$}.
+	\item \textbf{מסלול פשוט}  מסלול  \E{$<v_0,v_1,\ldots,v_k>$}, הוא פשוט אם כל קדקודיו שונים זמ"ז, כלומר לכל   
+	\E{$0\le i < j \le k$}
+	מתקיים 
+	\E{$v_i\ne v_j$}
+	.
+	\item \textbf{מעגל}   מסלול 
+	\E{$<v_0,v_1,\ldots,v_k>$}
+	, כך ש- 
+	\E{$v_0= v_k$}
+	.
+\end{itemize}
+\end{frame}
+\begin{frame}{עץ פורש - הגדרה}
+ \textbf{עץ פורש }  עץ פורש של גרף קשיר 
+\E{$G=(V,E)$}
+הוא תת-גרף   
+\E{$T=(V,E_T)$}
+של \E{$G$} \pause שמכיל את כל קדקודי \E{$G$} וחלק מצלעותיו (כלומר \E{$E_T\subseteq E$}), והוא מקיים:
+\pause 
+\begin{enumerate}[<+->]
+	\item \E{$T$} חסר מעגלים.
+	\item \E{$T$} קשיר (כלומר לכל שני קודקודים קיים מסלול המקשר ביניהם).
+\end{enumerate}
+\end{frame}
+\begin{frame}{משפט 1 (הוכח בכיתה)}
+יהי \E{$H$} גרף (פשוט ולא מכוון). התנאים הבאים שקולים זה לזה:
+\pause 
+ \begin{enumerate}[<+->]
+ 	\item 	\E{$H$} קשיר וחסר מעגלים,
+
+ 	\item \E{$H$} חסר מעגלים ו- \E{$|E| = |V|-1$},
+
+ 	\item \E{$H$} קשיר ו-\E{$|E| = |V|-1$}
+ 	\item יש ב-\E{$H$} מסלול פשוט יחיד בין כל זוג צמתים.
+
+ \end{enumerate}
+\pause 
+כדי להוכיח שתת הגרף   \E{$T=(V,E_T)$} של הגרף  \E{$G=(V,E)$} הוא עץ פורש של  \E{$G$}, מספיק להראות שאחד מהתנאים הנ"ל מתקיים.
+\end{frame}
+\begin{frame}{משפט 2 (ללא הוכחה)}
+יהי 
+\begin{itemize}[<+->]
+	\item \E{$G$} גרף, 
+	\item \E{$T=(V,E_T)$}
+	עץ פורש של 
+	\E{$G$}
+	\item ו- 
+	\E{$ e\in E\setminus E_T$}
+	.
+\end{itemize}
+\pause 
+    הגרף 
+    \E{$H=(V,E_T\cup \{e\})$}
+    מכיל מעגל \pause  ולכל צלע  
+    \E{$e'\in E_T$}
+     במעגל, \\ \pause 
+     הגרף 
+         \E{$T'=(V,(E_T\cup \{e\})\setminus \{e'\})$}
+       הוא עץ פורש של \E{$G$}.
+\end{frame}
+\begin{frame}{הגדרות משקול של עץ פורש}
+\begin{itemize}[<+->]
+	\item \textbf{עלות של עץ פורש } 	 בהינתן גרף  \E{$G=(V,E)$} ופונקצית משקל  \E{$w:E\rightarrow \mathbb{R}$}, נגדיר \textbf{עלות} של עץ פורש \E{$T$} להיות סך המשקלות של כל צלעותיו, כלומר 
+	 \E{$w(T) = \sum_{e\in T} w(e)$}
+	  .
+
+	\item \textbf{עץ פורש מינימאלי (MST)} של גרף  \E{$G$} הוא עץ פורש שעלותו מינימאלית מבין כל עלויות העצים הפורשים את  \E{$G$}, כלומר נבקש למצוא עץ פורש \E{$T$} כך ש : 
+	$$w(T) = min_{\tilde T\text{ is a spanning tree}}\{w(\tilde T)\}$$
+	 .
+	\item \textbf{הערה-} עץ פורש מינימאלי אינו בהכרח יחיד. יתכנו כמה כאלו, אבל לכולם, כמובן, אותו משקל.
+
+\end{itemize}
+\end{frame}
+\part{שאלות}
+\frame{\partpage}
+\begin{frame}{שאלות}
+לכל השאלות בתרגול נתון לנו גרף לא מכוון וקשיר \E{$G=(V,E)$} ופונקצית משקל על קשתות הגרף  \E{$w:E\rightarrow \mathbb{R}$}.
+\pause \\
+\textbf{שאלה 1:
+}
+
+יהי  \E{$T=(V,E_T)$}
+עץ פורש של 
+\E{$G$} עץ פורש מינימאלי של  
+\E{$G$}
+תחת פונקצית המשקל  
+\E{$w$}
+. \\
+\pause 
+נגדיר את 
+\E{$w'$}
+  להיות פונקצית משקל באופן הבא:
+\\
+  \pause 
+  
+  \E{$w'(e)=w(e)+c$}
+, כאשר 
+\E{$c\in \mathbb{R}$}
+ קבוע כלשהו. \\
+ \pause 
+ האם  \E{$T$} הוא עץ פורש מינימאלי של  \E{$G$} תחת פונקצית המשקל \E{$w'$}?
+
+\end{frame}
+\end{document}
