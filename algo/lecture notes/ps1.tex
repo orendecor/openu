@@ -202,6 +202,7 @@
   \end{figure}
   \end{frame}
 \begin{frame}{דברים שנגיד פעם אחת}
+\pause
 \begin{itemize}[<+->]
 	\item \url{oren.roth@openu.ac.il}
 	\item שעת הנחייה: שלישי 14:00-15:00, 0542244598
@@ -214,20 +215,31 @@
 \end{itemize}
 \end{frame}
 \begin{frame}{איך נגרום לזה לעבוד?}
+\pause
 \begin{itemize}[<+->]
 \item לפני כל שיעור תקראו את החומר (לפי לוח הזמנים שמופיע בחוברת הקורס)
+	\begin{itemize}[<+->]
+	\item  אנחנו נדבר בקצרה על חומרים מתוך פרקים  1-2
+	\item ב2-3 שבועות הראשונים נתחיל בפרק 3
+\end{itemize}
 \item תשלחו שאלות ונושאים שדורשים הבהרות למייל שלי לפני השיעור
+\item "מי שמבין חומר בצורה עמוקה יכול להסביר אותו בצורה פשוטה"
+	\note{
+		 אם משהו לא מובן (בפרט ייתכן שאני אומר מושג שעבורי זה טרוואילי)
+		 הפנו את תשומת ליבי ואני אגיד אותו בעברית פשוטה.
+}
 \item מה עוזר לכם ללמוד חומר מורכב?
 \end{itemize}
 \end{frame}
 \begin{frame}{התוכנית שלנו להיום}
-\begin{itemize}
+\pause
+\begin{itemize}[<+->]
 	\item מבוא והגדרות בסיסיות 
 	\item חזרה מהירה על ניתוח זמני ריצה
 	\item מושגים בסיסיים מעולם הגרפים
 \end{itemize}
 \end{frame}
-
+\section{\#התחלנו}
 \part{מבוא והגדרות בסיסיות}
 \frame{\partpage}
 \begin{frame}{בעיה, מופע ופתרון}
@@ -242,7 +254,7 @@
 
 
 
-
+\pause
 \begin{itemize}[<+->]
 	\item סדרה של פעולות
 	\item בסיומה מוחזר פלט
@@ -274,6 +286,8 @@
 \item \E{$O(n)$}   - זמן לינארי.
 \item \E{$O(n^c)$}   - עבור \E{$c\in \mathbb N$} - זמן פולינומי.
 \item \E{$O(2^{cn})$}   - עבור \E{$c\in \mathbb N$} - זמן אקספוננציאלי.   \pause זמן זה נחשב ללא יעיל במיוחד, כאשר הזמן הדרוש לפתרון של קלטים קטנים יחסית יכול להיות עצום.
+\pause
+\item *הביטו בטבלה 2.1 בספר (עמוד 39)
  \end{itemize}
 \end{frame}
 \begin{frame}{כתיבת אלגוריתם בשלושה חלקים}
@@ -289,98 +303,320 @@
 
 \part{מושגים בסיסיים מעולם הגרפים}
 \frame{\partpage}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=11,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{מושגים בסיסיים￼}
+\pause
+\begin{itemize}[<+->]
+	\item  גרף לא מכוון הוא זוג
+	\E{$G=(V,E)$}
+	\begin{itemize}[<+->]
+
+
+	\item $V$ היא קבוצה סופית של איברים הנקראים צמתים
+או קודקודים.
+
+	\item \E{$E$} היא קבוצה של זוגות לא סדורים מתוך \E{$V$} 
+	הנקראים קשתות.
+	\end{itemize}
+
+\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{imgs/graph}
+	\label{fig:graph}
+\end{figure}
+
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=12,width=\paperwidth]{pdfs/lec1}}
+
+\begin{frame}{מושגים בסיסיים￼}
+\pause
+\begin{itemize}[<+->]
+	\item \textbf{שכן - } צומת \E{$v$} הוא שכן של צומת \E{$u$}, אם קיימת קשת בגרף \E{$\{u,v\}$}, היחס כמובן סימטרי.
+	\item  \textbf{דרגה - } הדרגה של צומת \E{$u$} שווה למספר השכנים של \E{$u$} ומסומנת  \E{$deg(u)$}.
+	
+		\item  \textbf{מסלול - } מסלול בגרף הוא סדרה של צמתים 
+		\E{$(v_1,\ldots,v_k)$}
+		שבה כל זוג 
+		\E{$(v_i,v_{i+1})$}
+		היא קשת בגרף.
+	
+\end{itemize}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=13,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{מושגים בסיסיים￼}
+\pause
+\begin{itemize}[<+->]
+\item \textbf{אורך מסלול - } מספר הקשתות במסלול. אורך המסלול 
+\E{$(v_1,\ldots,v_k)$}
+הוא
+\E{$k-1$}
+\item  \textbf{מרחק בין צמתים - } אורך המסלול הקצר
+ביותר המחבר אותם. אם אין מסלול כזה,  המרחק מוגדר להיות אינסוף.
+
+\item  \textbf{מסלול פשוט- } 
+ מסלול בו שום צומת איננו
+מופיע יותר מפעם אחת. 
+
+\end{itemize}
+
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=14,width=\paperwidth]{pdfs/lec1}}
+
+\begin{frame}{מושגים בסיסיים￼}
+\pause
+\begin{itemize}[<+->]
+	\item \textbf{מעגל - } מסלול המכיל לפחות שלושה צמתים
+שונים ובו הצומת הראשון והאחרון זהים, כל  שאר הצמתים במסלול מופיעים בדיוק פעם אחת.
+	\item  \textbf{גרף קשיר - }
+	גרף נקרא קשיר אם בין כל זוג
+צמתים בגרף קיים מסלול המקשר אותם. 
+	\item  \textbf{תת-גרף- } 
+\E{$H=(V',E')$}
+	נקרא תת-גרף של הגרף
+	\E{$G=(V,E)$}
+, אם
+\E{$H$}
+הוא גרף וגם,
+\E{$E'\subseteq E,\quad V'\subseteq V$}
+
+	
+\end{itemize}
+
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=15,width=\paperwidth]{pdfs/lec1}}
+
+
+\begin{frame}{מושגים בסיסיים￼}
+\pause
+\begin{itemize}[<+->]
+	\item \textbf{עץ –} 
+	גרף קשיר ללא מעגלים.
+	\item \textbf{עץ מושרש –}
+	 עץ עם שורש מיוחד הנקרא
+ שורש. צומת
+ \E{$v$} 
+  הוא צאצא של צומת
+   \E{$u$}
+    אם
+       \E{$u$}
+     מופיע על המסלול הפשוט (היחיד) המחבר את
+      \E{$v$} 
+       לשורש.
+	
+\end{itemize}
+
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=16,width=\paperwidth]{pdfs/lec1}}
+
+\begin{frame}{מושגים בסיסיים￼ - גרפים מכוונים}
+\pause
+\begin{itemize}[<+->]
+	\item  \textbf{גרף מכוון} הוא זוג
+	\E{$G=(V,E)$}
+	\begin{itemize}[<+->]
+		
+		
+		\item $V$ היא קבוצה סופית של איברים הנקראים צמתים
+		או קודקודים.
+		
+		\item \E{$E$} היא קבוצה של זוגות \textbf{סדורים} מתוך \E{$V$} 
+		הנקראים קשתות.
+	\end{itemize}
+	
+\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{imgs/directed-graph}
+	\label{fig:directed-graph}
+\end{figure}
+
+
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=17,width=\paperwidth]{pdfs/lec1}}
+
+\begin{frame}{מושגים בסיסיים￼ - גרפים מכוונים}
+\pause
+\begin{itemize}[<+->]
+	\item  \textbf{דרגת כניסה של צומת 
+		\E{$v$}
+		 – } 
+	מספר הקשתות
+הנכנסות ל
+		\E{$v$}
+.
+\item  \textbf{דרגת יציאה של צומת 
+	\E{$v$}
+	– } 
+מספר הקשתות
+היוצאות מ
+\E{$v$}
+.
+	\item  \textbf{DAG}  גרף מכוון ללא
+מעגלים מכוונים בגרף.
+
+		\item  \textbf{קשירות היטב - }
+				\E{$u$}
+		ו-
+				\E{$v$}
+		קשירים היטב, אם קיים מסלול מכוון מ
+				\E{$u$}
+		ל
+				\E{$v$}
+		וכמו כן מ
+				\E{$v$}
+		ל
+				\E{$u$}
+		. 
+
+	
+\end{itemize}
+
+
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=18,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{שאלה 1}
+\pause
+\begin{itemize}[<+->]
+	\item נקרא למסלול "מסלול פשוט קשתות" אמ"מ אין בו
+קשת החוזרת פעמיים
+
+	\item הוכח או הפרך ע"י מתן דוגמא נגדית
+\begin{itemize}[<+->]
+	\item האם כל מסלול פשוט הוא מסלול פשוט קשתות?
+	\begin{itemize}[<+->]
+		\item נכון. נניח בשלילה שלא.
+אזי במסלול קיימת קשת המופיעה פעמיים במסלול, ולכן הקודקדים  הסמוכים לה מופעים פעמים, והמסלול אינו פשוט, בסתירה להנחה.
+	\end{itemize}
+\item האם כל מסלול פשוט-קשתות הוא מסלול פשוט?
+\begin{itemize}[<+->]
+	\item לא נכון. להלן דוגמא נגדית
+\end{itemize}	
+\pause
+\begin{figure}
+	\centering
+	\includegraphics[width=0.2\linewidth]{imgs/counter-example}
+	\label{fig:counter-example}
+\end{figure}
+
+\end{itemize}
+\end{itemize}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=19,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{גרפים}
+\pause
+\begin{itemize}[<+->]
+	\item מבני נתונים לשמירת גרפים:
+\begin{itemize}[<+->]
+	\item מטריצת סמיכויות
+	\item רשימת סמיכויות
+\end{itemize}
+\end{itemize}	
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=20,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{מטריצת סמיכויות - דוגמא}
+\pause
+\begin{center}
+	\includegraphics[width=0.4\linewidth]{imgs/matrix1}
+\end{center}
+\begin{center}
+	\includegraphics[width=0.4\linewidth]{imgs/matrix2}
+\end{center}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=21,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{מטריצת סמיכויות:}
+\begin{itemize}[<+->]
+	\item מטריצה
+	\E{$A=(a_{ij})$}
+	שמימדיה
+	\E{$|V|\times |V|$}
+	וערכי איבריה:
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.5\linewidth]{imgs/case}
+		\label{fig:case}
+	\end{figure}
+	
+	\item הייצוג ע"י מטריצת סמיכויות עשוי להיות עדיף כאשר
+הגרף צפוף או כאשר נדרשת היכולת לגלות במהירות אם  קיימת קשת המחברת שני קודקודים נתונים.
+\end{itemize}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=22,width=\paperwidth]{pdfs/lec1}}
+
+\begin{frame}{רשימת סמיכויות - דוגמא}
+\begin{center}
+	\includegraphics[width=0.4\linewidth]{imgs/matrix1}
+\end{center}
+\begin{center}
+	\includegraphics[width=0.4\linewidth]{imgs/list}
+\end{center}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=23,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=24,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{רשימת סמיכויות}
+\pause
+\begin{itemize}[<+->]
+	\item הייצוג ע"י רשימות סמיכות של גרף
+	\E{$G = (V, E)$}
+	מורכב
+	ממערך
+	\E{Adj}
+	של
+	\E{$|V|$}
+	רשימות, אחת עבור כל קדקוד ב-
+	\E{$V$}.
+	\item  עבור כל
+	\E{$u$}
+	מ-
+	\E{$V$}
+	רשימת
+	\E{$Adj[u]$}
+	מכילה מצביעים לכל הקודקודים
+	\E{$v$}
+	שעבורם קיימת קשת
+\E{$(u,v)$}
+	.
+	\item   בד"כ קודקודים
+	בכל רשימת סמיכות מאוחסנים בסדר שרירותי.
+\end{itemize}
+
+  \end{frame}
+
+\begin{frame}{עלות מקום לייצוגים}
+\pause
+\begin{itemize}[<+->]
+	\item 
+	עלות המקום כאשר מייצגים גרף בעזרת
+ 
+מטריצת סמיכויות: 
+\E{$\Theta(|V|^2)$}
+	\item  ובייצוג על ידי רשימת סמיכויות:
+	\E{$\Theta(|V|+|E|)$}
+\end{itemize}
 \end{frame}
 \begin{frame}
 \vspace*{-1pt}
 \makebox[\linewidth]{\includegraphics[page=25,width=\paperwidth]{pdfs/lec1}}
 \end{frame}
+
 \begin{frame}
 \vspace*{-1pt}
 \makebox[\linewidth]{\includegraphics[page=26,width=\paperwidth]{pdfs/lec1}}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=27,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{טכניקות בסיסיות ושימושיות מאוד}
+\pause
+\begin{itemize}[<+->]
+	\item אינדוקציה
+	\item עקרון שובך היונים: אם מכניסים
+	\E{$n+1$}
+	ל
+	\E{$n$}
+שובכים אז קיים שובך אחד בו לפחות 2 יונים.\\\pause
+שימוש: כל מסלול בגרף בעלת
+\E{$n+1$}
+קודקודים מכילה מעגל.\pause
+	\item בגרף לא מכוון:
+$$\sum_{v\in V} deg(v) = 2|E|$$
+\end{itemize}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=28,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{שאלה 2}
+הראה שבכל גרף בלתי מכוון וקשיר 
+\E{$|E|\ge |V|-1$}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=29,width=\paperwidth]{pdfs/lec1}}
+%\begin{frame}
+%\vspace*{-1pt}
+%\makebox[\linewidth]{\includegraphics[page=29,width=\paperwidth]{pdfs/lec1}}
+%\end{frame}
+\begin{frame}{שאלה 3}
+הראו שבכל DAG (גרף מכוון חסר מעגלים) יש קודקוד מקור (קודקוד שדרגת הכניסה אליו היא 0)
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=30,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=31,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=32,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=33,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
+%BFS STARTS
 \begin{frame}
 \vspace*{-1pt}
 \makebox[\linewidth]{\includegraphics[page=34,width=\paperwidth]{pdfs/lec1}}
