@@ -1,0 +1,569 @@
+%! TEX program = lualatex
+% find: (\\E{$((?!\$}).)+\$)
+%replace: \E{\1}
+
+%%%%%%%%%%
+% BEAMER %
+%%%%%%%%%%
+
+\RequirePackage{luatex85}
+
+\PassOptionsToPackage{luatex}{hyperref}
+
+\documentclass[luatex]{beamer}
+%\documentclass[handout]{beamer}
+
+\usetheme{metropolis}
+
+	\newcommand{\bigq}{\mathbb{Q}}
+\newcommand{\bb}{\bfseries\large}
+\newcommand{\class}{\mathcal}
+\newcommand{\mbi}[1]{\textbf{\em{#1}}}
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
+\newcommand{\ita}[1]{\textit{#1}}
+\newcommand{\p}{\cdot}
+\newcommand{\req}{\emptyset}
+\newcommand{\init}{\mathcal{J}}
+\newcommand{\power}[1]{\class{P}(#1)}
+\newcommand{\bigpower}[2]{\class{P}^{#1}(#2)}
+\newcommand{\symetric}{\bigtriangleup}
+\newcommand{\gx}[3]{\Gamma_{(#1,#2)}(#3)}
+\newcommand{\bd}[3]{\Delta_{(#1,#2)}(#3)}
+\newcommand{\bp}[3]{\Phi_{(#1,#2)}(#3)}
+\newcommand{\eab}{\eta_{\alpha \beta}}
+\newcommand{\sab}{\sigma_{\alpha\beta}}
+\newcommand{\dab}{\class{D}_{\alpha\beta}}
+\newcommand{\cab}{\class{C}_{\alpha\beta}}
+\newcommand{\C}[1]{\class{#1}}
+\newcommand{\ol}{\overline}
+\newcommand{\into}{\longrightarrow}
+\newcommand{\ifff}{\Longleftrightarrow}
+\newcommand{\imply}{\Rightarrow}
+\newcommand{\since}{\Longleftarrow}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\andd}{\wedge}
+\newcommand{\orr}{\vee}
+\newcommand{\ft}{(\C F \C T)_Q}
+\newcommand{\pathopen}[3]{#1_{(\ol{#2},#3)}}
+\newcommand{\fpi}[3]{#1_*(\Pi(#2,#3))}
+\newcommand{\xpath}[2]{(\ol {#1},#2)}
+\newcommand{\qn}[2]{\Lambda(#1,#2)}
+\newcommand{\jh}{\class J \class H}
+\newcommand{\bos}{\boldsymbol}
+\newcommand{\f}{\mathbb}
+\newcommand{\rss}{\la\psi_i:i\in \lambda\ra}
+\newcommand{\ito}[1]{\overset{#1}{\longrightarrow}}
+\newcommand{\pcomplex}[2]{\class #1(\class #2)}
+\newcommand{\then}{\Rightarrow}
+\newcommand{\ud}{{ {up-down-automaton}} }
+
+\newcommand{\map}[1]{\underset{#1}{\mapsto}}
+\newcommand{\mapi}[1]{\underset{#1}{\overset{i}{\mapsto}}}
+\newcommand{\mapstar}[1]{\underset{#1}{\overset{*}{\mapsto}}}
+\newcommand{\mapk}[2]{\underset{#1}{\overset{#2}{\mapsto}}}
+
+\newcommand{\eql}{\equiv_L}
+\newcommand{\der}[1]{\underset{#1}{\imply}}
+\newcommand{\deri}[1]{\underset{#1}{\overset{i}{\imply}}}
+\newcommand{\derstar}[1]{\underset{#1}{\overset{*}{\imply}}}
+\newcommand{\derk}[2]{\underset{#1}{\overset{#2}{\imply}}}
+\newcommand{\blank}{\bar{b}}
+\newcommand{\R}[1]{#1}
+\newcommand{\say}[1]{\color{blue}{#1}\color{black}}
+
+
+
+% Fix the title separator
+\makeatletter
+\setbeamertemplate{title separator}{
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[fg] (0,0) rectangle (\textwidth, \metropolis@titleseparator@linewidth);
+	\end{tikzpicture}%
+	\egroup
+	\par%
+}
+\makeatother
+
+% Fix the progress bar and make it progress from right to left
+\makeatletter
+\setbeamertemplate{progress bar in section page}{
+	\setlength{\metropolis@progressonsectionpage}{%
+		\textwidth * \ratio{\insertframenumber pt}{\inserttotalframenumber pt}%
+	}%
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[bg] (0,0) rectangle (\textwidth, \metropolis@progressonsectionpage@linewidth);
+	\fill[fg] (\textwidth,0) rectangle (\textwidth-\metropolis@progressonsectionpage, \metropolis@progressonsectionpage@linewidth);
+	\end{tikzpicture}%
+	\egroup
+}
+\makeatother
+
+% A more logical title page, juxtaposing `institute` to `author`. This modification is not necessary for Hebrew support.
+\makeatletter
+\setbeamertemplate{title page}{
+	\begin{minipage}[b][\paperheight]{\textwidth}
+		\ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+		\vfill%
+		\ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+		\ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+		\usebeamertemplate*{title separator}
+		\ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+		\ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+		\ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+		\vfill
+		\vspace*{1mm}
+	\end{minipage}
+}
+\setbeamertemplate{author}{\vspace*{2em}\insertauthor\par\vspace*{0.25em}}
+\setbeamertemplate{institute}{\insertinstitute\par}
+\setbeamertemplate{date}{\vspace*{3mm}\insertdate\par}
+\makeatother
+
+
+
+
+%%%%%%%%%
+% Babel %
+%%%%%%%%%
+
+\usepackage[nil,bidi=basic-r]{babel}
+\babelprovide[import=he,main]{hebrew}
+\babelprovide[import=en-GB]{english}
+
+% For some reason Babel’s `\babelfont` doesn’t work
+\setsansfont[Script=Hebrew]{Open Sans Hebrew}
+\setmonofont{Fira Mono}
+\renewcommand{\H}[1]{\foreignlanguage{hebrew}{\fontspec[Script=Hebrew]{Open Sans Hebrew}#1}}
+\newcommand{\E}[1]{\foreignlanguage{english}{\fontspec{Open Sans}#1}}
+\newcommand{\LR}[1]{{‏\textdir TLT #1}}
+
+
+
+
+%%%%%%%%
+% MISC %
+%%%%%%%%
+
+\usepackage{metalogo, fancyvrb}
+\usepackage{cancel}
+\newcommand{\smallurl}[1]{{\footnotesize\url{#1}}}
+
+
+
+%%%%%%%%%%%%
+% DOCUMENT %
+%%%%%%%%%%%%
+
+\begin{document}
+	\title{מבוא והגדרות}
+	\subtitle{מפגש 1}
+	%\author{}
+	%\institute{}
+	\date{}
+\begin{frame}{שבוע שעבר ראינו}
+\pause
+\begin{itemize}[<+->]
+	\item מבוא והגדרות בסיסיות 
+	\item חזרה מהירה על ניתוח זמני ריצה
+	\item מושגים בסיסיים מעולם הגרפים
+\end{itemize}
+\end{frame}
+
+\begin{frame}{התוכנית להיום}
+\pause
+\begin{itemize}[<+->]
+	\item מעבר על BFS
+	\item מעבר ע
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=34,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=35,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=36,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=37,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=38,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=39,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=40,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=41,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=42,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=43,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=44,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=45,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=46,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=47,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=48,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=49,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=50,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=51,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=52,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=53,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=54,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=55,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=56,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=57,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=58,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=59,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=60,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=61,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=62,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=63,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=64,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=65,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=66,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=67,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=68,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=69,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=70,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=71,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=72,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=73,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=74,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=75,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=76,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=77,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=78,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=79,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=80,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=81,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=82,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=83,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=84,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=85,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=86,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=87,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=88,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=89,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=90,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=91,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=92,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=93,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=94,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=95,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=96,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=97,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=98,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=99,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=100,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=101,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=102,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=103,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=104,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=105,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+
+\begin{frame}
+\vspace*{-1pt}
+\makebox[\linewidth]{\includegraphics[page=106,width=\paperwidth]{pdfs/lec1}}
+\end{frame}
+%
+%\begin{frame}
+%\centering
+%\fontsize{16pt}{7.2}\selectfont
+%100011101 מתחלק ב7?
+%\end{frame}
+%\part{תכנון אלגוריתם באמצעות רדוקציה}
+%\frame{\partpage}
+%\begin{frame}{דוגמא 1}
+%\textbf{הגדרה}
+%יהי  \E{$G=(V,E)$} גרף לא מכוון ויהיו \E{$u,v\in V$} זוג קודקודים ב- \E{$G$}.  \pause נסמן ב-  \E{$d(u,v)$} את אורך המסלול המינימאלי בצלעות מקודקוד \E{$u$} לקודקוד \E{$v$}.  \pause בנוסף, נגדיר כי \E{$d(u,v)=\infty$}   אם לא קיים מסלול מ-u ל- v ב- G.   \pause 
+%
+%\textbf{הגדרת בעיית \E{SP (Single Source Shortest Paths)}:}\\ \pause
+%יהי  \E{$G=(V,E)$} גרף לא מכוון ו- \E{$s\in V$} קודקוד ב- \E{$G$}. \pause מצא \E{$d(s,v) $} לכל 
+%\E{$v\in V$}. 
+%
+% \pause
+%\textbf{הגדרת בעיית \E{SEP (Single Source Shortest Even Paths)}:}\\ \pause
+%יהי  \E{$G=(V,E)$} גרף לא מכוון ו- \E{$s\in V$} קודקוד ב- \E{$G$}.  \pause מצא את אורך המסלול (לפי צלעות) הזוגי המינאמלי מ-  \E{$s$} לכל 
+%\E{$v\in V$} או \E{$\infty$} אם לא קיים כזה. 
+%\end{frame}
+%\begin{frame}{}
+%\begin{itemize}[<+->]
+%	\item איך פותרים את SP?
+%	\item בהינתן של-SP יש אלגוריתם כיצד נבנה אלגוריתם עבור SEP?
+%\end{itemize}
+%\end{frame}
+%\section{אלגוריתם רדוקציה מ-SEP ל-SP (על הלוח)}
+%\begin{frame}{הגדרה פורמאלית ל- "רדוקציה":}
+%\pause
+%תהיינה A ו-B זוג בעיות נתונות. \\\pause
+%רדוקציה מ- A  לבעיה B היא  זוג פונקציות f,g, כך ש:
+%\\\pause 
+%\begin{itemize}[<+->]
+%	\item f היא פונקצית המרת הקלט, המעבירה מופע של בעיה A למופע של בעיה B. 
+%	\item g היא פונקצית המרת הפלט, המעבירה פתרון של בעיה B לפתרון של בעיה A.
+%
+%	\item \textbf{הגדרת נכונות}-\pause עבור מופע a לבעיה A, \\ \pause
+%	אם \E{B(f(a))}  הוא פתרון עבור המופע \E{f(a)} תחת בעיה B \\ \pause
+%	אזי \E{g(B(f(a)))}  הוא פתרון למופע a תחת בעיה A. 
+%
+%\end{itemize}
+%\end{frame}
+%\begin{frame}{הוכחת נכונות רדוקציה}
+%כדי להוכיח את נכונות הרדוקציה, יש להוכיח שהאלגוריתם הבא פותר את הבעיה A:
+% \pause
+%\begin{enumerate}[<+->]
+%	\item 	עבור מופע a לבעיה A, חשב את \E{f(a)}.
+%	\item עבור המופע \E{f(a) } לבעיה B, חשב את הפיתרון b.
+%	\item החזר את \E{g(b)} להיות הפתרון של A.
+%\end{enumerate}
+%
+%\end{frame}
+%\begin{frame}{הערות}
+%\begin{itemize}[<+->]
+%	\item 	הפונקציה  f  נקראת פונקצית המרת הקלט.
+%	
+%	
+%	\item 	הפונקציה  g  נקראת פונקצית המרת הפלט.
+%
+%	\item נתייחס לאלגוריתם שפותר את בעיה B כאל "\textbf{קופסה שחורה}", מבלי להניח דבר על אופן פעולתו מלבד העובדה שהוא אכן פותר נכון את B לכל מופע.
+%	\item לעיתים נשתמש בקופסה השחורה כמה פעמים.
+%\end{itemize}
+%\end{frame}
+%\begin{frame}{}
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=\linewidth]{imgs/screenshot002.jpg}	
+%\end{figure}
+%\end{frame}
+%\begin{frame}{שאלה}
+%בדוגמה הקודמת, מהי פונקצית הרדוקציה, מהי הקופסה השחורה, ומהי פונקצית תרגום הפלט?
+%\end{frame}
+%\begin{frame}{חישוב זמן ריצה לאלגוריתם רדוקציה}
+%כפי שראינו ישנם שלושה רכיבים הדורשים זמן חישוב בעת הרצת האלגוריתם: 
+%\pause
+%\begin{itemize}[<+->]
+%	\item חישוב תרגום הקלט, 
+%	\item הפעלת האלגוריתם לפתרון הבעיה B, 
+%	\item וחישוב תרגום הפלט. 
+%\end{itemize}
+%\pause
+%זמן חישוב האלגוריתם המבוסס על הרדוקציה הינו הזמן המקסימאלי הדרוש מבין השלושה. \\ \pause
+%נשים לב שזמן הריצה של הקופסא השחורה הוא על גודל הקלט החדש (הפלט של ממיר הקלט).
+%\end{frame}
+%\section{אלגוריתם רדוקציה מ-SP ל-SEP (על הלוח)}
+%\begin{frame}{תרגיל למחשבה}
+%\textbf{הגדרת בעיית \E{SOP (Single Source Shortest Odd Paths)}:}\\
+%יהי  \E{$G=(V,E)$} גרף לא מכוון ו- \E{$s\in V$} קודקוד ב- \E{$G$}. מצא את אורך המסלול (לפי צלעות) \textbf{האי-זוגי }המינאמלי מ-  \E{$s$} לכל 
+%\E{$v\in V$} או \E{$\infty$} אם לא קיים כזה. 
+%\end{frame}
+\end{document}
