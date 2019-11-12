@@ -1,9 +1,9 @@
 \babel@toc {hebrew}{}
 \beamer@sectionintoc {1}{ברוכים הבאים לקורס אלגוריתמים!}{1}{0}{1}
-\beamer@sectionintoc {2}{מה אתם עושים פה? \\ \relax \fontsize {12}{14}\selectfont {(או - מה אתם חושבים שנעשה פה)}}{4}{0}{2}
-\beamer@sectionintoc {3}{ברוכים הבאים לקורס טעימות של אלגוריתמים!}{5}{0}{3}
-\beamer@sectionintoc {4}{אנשים אומרים שאלגוריתמים הוא אחד הקורס \textit {הקשים בתואר} }{6}{0}{4}
-\beamer@sectionintoc {5}{הם צודקים.}{7}{0}{5}
-\beamer@sectionintoc {6}{\#התחלנו}{27}{0}{6}
-\beamer@sectionintoc {7}{מה זה אלגוריתם?}{30}{1}{7}
-\beamer@sectionintoc {8}{הוכחת נכונות פורמאלית}{35}{1}{8}
+\beamer@sectionintoc {2}{מה אתם עושים פה? \\ \relax \fontsize {12}{14}\selectfont {(או - מה אתם חושבים שנעשה פה)}}{2}{0}{2}
+\beamer@sectionintoc {3}{ברוכים הבאים לקורס טעימות של אלגוריתמים!}{3}{0}{3}
+\beamer@sectionintoc {4}{אנשים אומרים שאלגוריתמים הוא אחד הקורס \textit {הקשים בתואר} }{4}{0}{4}
+\beamer@sectionintoc {5}{הם צודקים.}{5}{0}{5}
+\beamer@sectionintoc {6}{\#התחלנו}{10}{0}{6}
+\beamer@sectionintoc {7}{מה זה אלגוריתם?}{13}{1}{7}
+\beamer@sectionintoc {8}{הוכחת נכונות פורמאלית}{15}{1}{8}

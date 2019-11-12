@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  5 NOV 2019 14:24
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  10 NOV 2019 08:13
  restricted system commands enabled.
 **ps1.tex
 (./ps1.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.126 seconds
+luaotfload | main : initialization completed in 0.109 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
@@ -1537,6 +1537,7 @@ LaTeX Font Info:    ... okay on input line 162.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
 LaTeX Font Info:    ... okay on input line 162.
 
+*geometry* driver: auto-detecting
 *geometry* detected driver: luatex
 *geometry* verbose mode - [ preamble ] result:
 * driver: luatex
@@ -1710,82 +1711,35 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 169.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<imgs/highline.jpg, id=62, 5203.44pt x 3468.96pt>
-File: imgs/highline.jpg Graphic file (type jpg)
-<use imgs/highline.jpg>
-Package luatex.def Info: imgs/highline.jpg  used on input line 180.
-(luatex.def)             Requested size: 307.28987pt x 204.84683pt.
- [2
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-<./imgs/highline.jpg>]
-<imgs/nael.jpg, id=69, 1137.24875pt x 854.19125pt>
-File: imgs/nael.jpg Graphic file (type jpg)
-<use imgs/nael.jpg>
-Package luatex.def Info: imgs/nael.jpg  used on input line 183.
-(luatex.def)             Requested size: 307.28987pt x 230.80415pt.
- [3
+] [3
 
-<./imgs/nael.jpg>] [4
+] [4
 
 ] [5
 
-] [6
-
-] [7
-
 ]
-<imgs/hard.png, id=107, 1103.12125pt x 561.09625pt>
+<imgs/hard.png, id=94, 1103.12125pt x 561.09625pt>
 File: imgs/hard.png Graphic file (type png)
 <use imgs/hard.png>
 Package luatex.def Info: imgs/hard.png  used on input line 200.
 (luatex.def)             Requested size: 307.28987pt x 156.30109pt.
- [8
 
-<./imgs/hard.png>] [9
+[6
+
+<./imgs/hard.png>] [7
+
+] [8
+
+] [9
 
 ] [10
 
-]
-[11
-
-] [12
-
-] [13
-
-] [14
-
-] [15
-
-] [16
-
-] [17
-
-] [18
-
-] [19
-
-] [20
-
-] [21
-
-] [22
-
-] [23
-
-] [24
-
-] [25
+] [11
 
 ]
-[26
-
-] [27
-
-] [28
-
-]
-<imgs/screenshot001.jpg, id=237, 548.0475pt x 522.95375pt>
+<imgs/screenshot001.jpg, id=136, 548.0475pt x 522.95375pt>
 File: imgs/screenshot001.jpg Graphic file (type jpg)
 <use imgs/screenshot001.jpg>
 Package luatex.def Info: imgs/screenshot001.jpg  used on input line 248.
@@ -1794,28 +1748,15 @@ Package luatex.def Info: imgs/screenshot001.jpg  used on input line 248.
 Overfull \vbox (10.15643pt too high) detected at line 248
  []
 
-[29
+[12
 
-<./imgs/screenshot001.jpg>] [30
+<./imgs/screenshot001.jpg>] [13
 
-] [31
+] [14
 
-] [32
+] [15
 
-] [33
-
-] [34
-
-] [35
-
-] [36
-
-] [37
-
-] [38
-
-]
-[39
+] [16
 
 ]
 (/usr/local/texlive/2018/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-en-
@@ -1860,278 +1801,70 @@ luaotfload | aux : no font with id 81
 . <->"OpenSans/BI:mode=node;script=latn;language=DFLT;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 .................................................
- [40
+ [17
 
-] [41
+] [18
 
-] [42
-
-] [43
-
-] [44
-
-] [45
-
-] [46
-
-] [47
+] [19
 
 ]
-[48
-
-] [49
-
-] [50
-
-] [51
-
-] [52
-
-] [53
-
-] [54
-
-] [55
-
-] [56
-
-]
-<imgs/graph.png, id=392, 2154.0475pt x 790.955pt>
+<imgs/graph.png, id=188, 2154.0475pt x 790.955pt>
 File: imgs/graph.png Graphic file (type png)
 <use imgs/graph.png>
 Package luatex.def Info: imgs/graph.png  used on input line 325.
 (luatex.def)             Requested size: 215.10196pt x 78.97943pt.
- [57
+ [20
 
 Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
 cript=hebr;language=DFLT;+tlig;!
-<./imgs/graph.png>]
-File: imgs/graph.png Graphic file (type png)
-<use imgs/graph.png>
-Package luatex.def Info: imgs/graph.png  used on input line 325.
-(luatex.def)             Requested size: 215.10196pt x 78.97943pt.
- [58
+<./imgs/graph.png>] [21
 
 Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
 cript=hebr;language=DFLT;+tlig;!
 ]
-File: imgs/graph.png Graphic file (type png)
-<use imgs/graph.png>
-Package luatex.def Info: imgs/graph.png  used on input line 325.
-(luatex.def)             Requested size: 215.10196pt x 78.97943pt.
+[22
 
-[59
+Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
+cript=hebr;language=DFLT;+tlig;!
+] [23
+
+Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
+cript=hebr;language=DFLT;+tlig;!
+] [24
 
 Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
 cript=hebr;language=DFLT;+tlig;!
 ]
-File: imgs/graph.png Graphic file (type png)
-<use imgs/graph.png>
-Package luatex.def Info: imgs/graph.png  used on input line 325.
-(luatex.def)             Requested size: 215.10196pt x 78.97943pt.
- [60
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [61
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [62
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [63
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [64
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [65
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [66
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [67
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [68
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [69
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [70
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [71
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [72
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [73
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-]
-[74
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [75
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-]
-<imgs/directed-graph.png, id=496, 2158.0625pt x 782.925pt>
+<imgs/directed-graph.png, id=220, 2158.0625pt x 782.925pt>
 File: imgs/directed-graph.png Graphic file (type png)
 <use imgs/directed-graph.png>
 Package luatex.def Info: imgs/directed-graph.png  used on input line 426.
 (luatex.def)             Requested size: 215.10196pt x 78.03426pt.
- [76
+ [25
 
 Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
 cript=hebr;language=DFLT;+tlig;!
-<./imgs/directed-graph.png>]
-File: imgs/directed-graph.png Graphic file (type png)
-<use imgs/directed-graph.png>
-Package luatex.def Info: imgs/directed-graph.png  used on input line 426.
-(luatex.def)             Requested size: 215.10196pt x 78.03426pt.
- [77
+<./imgs/directed-graph.png>] [26
 
 Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
 cript=hebr;language=DFLT;+tlig;!
 ]
-File: imgs/directed-graph.png Graphic file (type png)
-<use imgs/directed-graph.png>
-Package luatex.def Info: imgs/directed-graph.png  used on input line 426.
-(luatex.def)             Requested size: 215.10196pt x 78.03426pt.
- [78
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-]
-File: imgs/directed-graph.png Graphic file (type png)
-<use imgs/directed-graph.png>
-Package luatex.def Info: imgs/directed-graph.png  used on input line 426.
-(luatex.def)             Requested size: 215.10196pt x 78.03426pt.
- [79
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [80
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [81
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [82
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-]
-[83
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-] [84
-
-Missing character: There is no ￼ (U+FFFC) in font OpenSansHebrew/B:mode=node;s
-cript=hebr;language=DFLT;+tlig;!
-]
-<imgs/counter-example.png, id=546, 421.575pt x 363.3575pt>
+<imgs/counter-example.png, id=233, 421.575pt x 363.3575pt>
 File: imgs/counter-example.png Graphic file (type png)
 <use imgs/counter-example.png>
 Package luatex.def Info: imgs/counter-example.png  used on input line 493.
 (luatex.def)             Requested size: 52.69716pt x 45.41957pt.
- [85
+ [27
 
-<./imgs/counter-example.png>]
-File: imgs/counter-example.png Graphic file (type png)
-<use imgs/counter-example.png>
-Package luatex.def Info: imgs/counter-example.png  used on input line 493.
-(luatex.def)             Requested size: 52.69716pt x 45.41957pt.
- [86
+<./imgs/counter-example.png>] [28
 
 ]
-File: imgs/counter-example.png Graphic file (type png)
-<use imgs/counter-example.png>
-Package luatex.def Info: imgs/counter-example.png  used on input line 493.
-(luatex.def)             Requested size: 52.69716pt x 45.41957pt.
- [87
-
-]
-File: imgs/counter-example.png Graphic file (type png)
-<use imgs/counter-example.png>
-Package luatex.def Info: imgs/counter-example.png  used on input line 493.
-(luatex.def)             Requested size: 52.69716pt x 45.41957pt.
- [88
-
-]
-File: imgs/counter-example.png Graphic file (type png)
-<use imgs/counter-example.png>
-Package luatex.def Info: imgs/counter-example.png  used on input line 493.
-(luatex.def)             Requested size: 52.69716pt x 45.41957pt.
- [89
-
-]
-File: imgs/counter-example.png Graphic file (type png)
-<use imgs/counter-example.png>
-Package luatex.def Info: imgs/counter-example.png  used on input line 493.
-(luatex.def)             Requested size: 52.69716pt x 45.41957pt.
- [90
-
-]
-File: imgs/counter-example.png Graphic file (type png)
-<use imgs/counter-example.png>
-Package luatex.def Info: imgs/counter-example.png  used on input line 493.
-(luatex.def)             Requested size: 52.69716pt x 45.41957pt.
- [91
-
-]
-File: imgs/counter-example.png Graphic file (type png)
-<use imgs/counter-example.png>
-Package luatex.def Info: imgs/counter-example.png  used on input line 493.
-(luatex.def)             Requested size: 52.69716pt x 45.41957pt.
-
-[92
-
-]
-File: imgs/counter-example.png Graphic file (type png)
-<use imgs/counter-example.png>
-Package luatex.def Info: imgs/counter-example.png  used on input line 493.
-(luatex.def)             Requested size: 52.69716pt x 45.41957pt.
- [93
-
-] [94
-
-] [95
-
-] [96
-
-] [97
-
-]
-<imgs/matrix1.png, id=615, 479.7925pt x 287.0725pt>
+<imgs/matrix1.png, id=246, 479.7925pt x 287.0725pt>
 File: imgs/matrix1.png Graphic file (type png)
 <use imgs/matrix1.png>
 Package luatex.def Info: imgs/matrix1.png  used on input line 512.
 (luatex.def)             Requested size: 122.91406pt x 73.54199pt.
-<imgs/matrix2.png, id=616, 554.07pt x 529.98pt>
+<imgs/matrix2.png, id=247, 554.07pt x 529.98pt>
 File: imgs/matrix2.png Graphic file (type png)
 <use imgs/matrix2.png>
 Package luatex.def Info: imgs/matrix2.png  used on input line 512.
@@ -2140,64 +1873,31 @@ Package luatex.def Info: imgs/matrix2.png  used on input line 512.
 Overfull \vbox (8.48798pt too high) detected at line 512
  []
 
-[98
+[29
 
 <./imgs/matrix1.png><./imgs/matrix2.png>]
-File: imgs/matrix1.png Graphic file (type png)
-<use imgs/matrix1.png>
-Package luatex.def Info: imgs/matrix1.png  used on input line 512.
-(luatex.def)             Requested size: 122.91406pt x 73.54199pt.
-File: imgs/matrix2.png Graphic file (type png)
-<use imgs/matrix2.png>
-Package luatex.def Info: imgs/matrix2.png  used on input line 512.
-(luatex.def)             Requested size: 122.91406pt x 117.56638pt.
-
-Overfull \vbox (8.48798pt too high) detected at line 512
- []
-
-[99
-
-]
-<imgs/case.png, id=629, 616.3025pt x 240.9pt>
+<imgs/case.png, id=255, 616.3025pt x 240.9pt>
 File: imgs/case.png Graphic file (type png)
 <use imgs/case.png>
 Package luatex.def Info: imgs/case.png  used on input line 529.
 (luatex.def)             Requested size: 142.69493pt x 55.7734pt.
- [100
+ [30
 
 <./imgs/case.png>]
-File: imgs/case.png Graphic file (type png)
-<use imgs/case.png>
-Package luatex.def Info: imgs/case.png  used on input line 529.
-(luatex.def)             Requested size: 142.69493pt x 55.7734pt.
- [101
-
-]
 File: imgs/matrix1.png Graphic file (type png)
 <use imgs/matrix1.png>
 Package luatex.def Info: imgs/matrix1.png  used on input line 538.
 (luatex.def)             Requested size: 122.91406pt x 73.54199pt.
-<imgs/list.png, id=643, 1435.3625pt x 726.715pt>
+<imgs/list.png, id=263, 1435.3625pt x 726.715pt>
 File: imgs/list.png Graphic file (type png)
 <use imgs/list.png>
 Package luatex.def Info: imgs/list.png  used on input line 538.
 (luatex.def)             Requested size: 122.91406pt x 62.23013pt.
- [102
+ [31
 
-<./imgs/list.png>] [103
+<./imgs/list.png>] [32
 
-] [104
-
-] [105
-
-]
-[106
-
-] [107
-
-] [108
-
-] [109
+] [33
 
 ]
 luaotfload | aux : font no 40 (nil) does not define feature tnum for script hebr
@@ -2278,95 +1978,13 @@ luaotfload | aux : no font with id 41
 . <->"OpenSansHebrew/BI:mode=node;script=hebr;language=DFLT;+tlig;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 .................................................
-[110
+[34
 
-]
-luaotfload | aux : font no 40 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 40
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew' with script 'Hebrew' and language 'Default'.
-*************************************************
-[111
+] [35
 
-]
-luaotfload | aux : font no 40 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 40
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew' with script 'Hebrew' and language 'Default'.
-*************************************************
-[112
+] [36
 
-]
-luaotfload | aux : font no 40 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 40
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew' with script 'Hebrew' and language 'Default'.
-*************************************************
-[113
-
-]
-luaotfload | aux : font no 40 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 40
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew' with script 'Hebrew' and language 'Default'.
-*************************************************
-[114
-
-]
-luaotfload | aux : font no 40 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 40
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew' with script 'Hebrew' and language 'Default'.
-*************************************************
-[115
-
-]
-luaotfload | aux : font no 40 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 40
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew' with script 'Hebrew' and language 'Default'.
-*************************************************
-[116
-
-] [117
-
-] [118
-
-] [119
-
-] [120
-
-] [121
-
-] [122
-
-] [123
-
-] [124
+] [37
 
 ]
 \tf@nav=\write7
@@ -2385,24 +2003,28 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 621.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 621.
 Package rerunfilecheck Info: File `ps1.out' has not changed.
 (rerunfilecheck)             Checksum: 9DEEC39A1208D57102C126527BE5EFDB;862.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 )
 
 Here is how much of LuaTeX's memory you used:
- 34402 strings out of 494413
+ 33090 strings out of 494413
  100000,953878 words of node,token memory allocated
- 1952 words of node memory still in use:
+ 1922 words of node memory still in use:
    22 hlist, 8 vlist, 5 rule, 2 local_par, 6 dir, 38 glue, 1 kern, 11 penalty, 7
-4 glyph, 93 attribute, 71 glue_spec, 48 attribute_list, 3 write, 3 pdf_action, 1
+4 glyph, 83 attribute, 71 glue_spec, 43 attribute_list, 3 write, 3 pdf_action, 1
 2 pdf_colorstack nodes
-   avail lists: 1:5,2:1039,3:376,4:122,5:224,6:22,7:1450,8:75,9:133,10:15,11:6
- 35353 multiletter control sequences out of 65536+600000
- 112 fonts using 16094359 bytes
- 72i,13n,97p,1805b,732s stack positions out of 5000i,500n,10000p,200000b,100000s
+   avail lists: 1:5,2:793,3:300,4:122,5:127,6:20,7:1237,8:53,9:133,10:15,11:5
+ 35336 multiletter control sequences out of 65536+600000
+ 112 fonts using 15945223 bytes
+ 72i,13n,97p,1805b,723s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2018/texmf-dist/fonts/truetype/public/opensans/OpenSans-Regu
 lar.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Italic.ttf></usr/local/texlive/
 2018/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></Users/mac/Libr
-ary/Fonts/OpenSansHebrew-BoldItalic.ttf></Users/mac/Library/Fonts/OpenSansHebrew
--Regular.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Bold.ttf></usr/local/texli
+ary/Fonts/OpenSansHebrew-Regular.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Bo
+ldItalic.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Bold.ttf></usr/local/texli
 ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2
 018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/201
@@ -2410,10 +2032,10 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ps1.pdf (124 pages, 6397067 bytes).
+Output written on ps1.pdf (37 pages, 2022532 bytes).
 
-PDF statistics: 840 PDF objects out of 1000 (max. 8388607)
- 657 compressed objects within 7 object streams
- 264 named destinations out of 1000 (max. 131072)
+PDF statistics: 370 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 90 named destinations out of 1000 (max. 131072)
  96 words of extra memory for PDF output out of 10000 (max. 100000000)
 

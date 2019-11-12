@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  5 NOV 2019 13:15
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  10 NOV 2019 08:12
  restricted system commands enabled.
 **ps2.tex
 (./ps2.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.116 seconds
+luaotfload | main : initialization completed in 0.113 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
@@ -1698,9 +1698,14 @@ Dictionary: translator-numbers-dictionary, Language: English
 (/usr/local/texlive/2018/texmf-dist/tex/latex/translator/translator-theorem-dic
 tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./ps2.nav) [1
+) (./ps2.nav)
+Overfull \vbox (15.63992pt too high) detected at line 170
+ []
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+[1
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2
 
 ] [3
 
@@ -1712,881 +1717,769 @@ Dictionary: translator-theorem-dictionary, Language: English
 
 ] [7
 
+] [8
+
+] [9
+
+] [10
+
 ]
-<pdfs/lec1.pdf, id=51, page=34, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=88, page=34, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
 <use pdfs/lec1.pdf, page 34>
-Package luatex.def Info: pdfs/lec1.pdf , page34 used on input line 188.
+Package luatex.def Info: pdfs/lec1.pdf , page34 used on input line 193.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 188
- []
-
-[8
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=108, page=35, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 35>
-Package luatex.def Info: pdfs/lec1.pdf , page35 used on input line 192.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 192
- []
-
-[9
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=122, page=36, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 36>
-Package luatex.def Info: pdfs/lec1.pdf , page36 used on input line 196.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 196
- []
-
-[10
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=128, page=37, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 37>
-Package luatex.def Info: pdfs/lec1.pdf , page37 used on input line 200.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 200
+Overfull \vbox (32.35449pt too high) detected at line 193
  []
 
 [11
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=135, page=38, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=146, page=35, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 38>
-Package luatex.def Info: pdfs/lec1.pdf , page38 used on input line 204.
+<use pdfs/lec1.pdf, page 35>
+Package luatex.def Info: pdfs/lec1.pdf , page35 used on input line 197.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 204
+Overfull \vbox (32.35449pt too high) detected at line 197
  []
 
 [12
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=141, page=39, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=160, page=36, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 39>
-Package luatex.def Info: pdfs/lec1.pdf , page39 used on input line 208.
+<use pdfs/lec1.pdf, page 36>
+Package luatex.def Info: pdfs/lec1.pdf , page36 used on input line 201.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 208
+Overfull \vbox (32.35449pt too high) detected at line 201
  []
 
 [13
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=147, page=40, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=166, page=37, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 40>
-Package luatex.def Info: pdfs/lec1.pdf , page40 used on input line 212.
+<use pdfs/lec1.pdf, page 37>
+Package luatex.def Info: pdfs/lec1.pdf , page37 used on input line 205.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 212
+Overfull \vbox (32.35449pt too high) detected at line 205
  []
 
 [14
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=153, page=41, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=172, page=38, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 41>
-Package luatex.def Info: pdfs/lec1.pdf , page41 used on input line 216.
+<use pdfs/lec1.pdf, page 38>
+Package luatex.def Info: pdfs/lec1.pdf , page38 used on input line 209.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 216
+Overfull \vbox (32.35449pt too high) detected at line 209
  []
 
 [15
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=159, page=42, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=178, page=39, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 42>
-Package luatex.def Info: pdfs/lec1.pdf , page42 used on input line 220.
+<use pdfs/lec1.pdf, page 39>
+Package luatex.def Info: pdfs/lec1.pdf , page39 used on input line 213.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 220
+Overfull \vbox (32.35449pt too high) detected at line 213
  []
 
 [16
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=165, page=43, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=185, page=40, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 43>
-Package luatex.def Info: pdfs/lec1.pdf , page43 used on input line 224.
+<use pdfs/lec1.pdf, page 40>
+Package luatex.def Info: pdfs/lec1.pdf , page40 used on input line 217.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 224
+Overfull \vbox (32.35449pt too high) detected at line 217
  []
 
 [17
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=171, page=44, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=191, page=41, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 44>
-Package luatex.def Info: pdfs/lec1.pdf , page44 used on input line 228.
+<use pdfs/lec1.pdf, page 41>
+Package luatex.def Info: pdfs/lec1.pdf , page41 used on input line 221.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 228
+Overfull \vbox (32.35449pt too high) detected at line 221
  []
 
 [18
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=177, page=45, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=197, page=42, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 45>
-Package luatex.def Info: pdfs/lec1.pdf , page45 used on input line 232.
+<use pdfs/lec1.pdf, page 42>
+Package luatex.def Info: pdfs/lec1.pdf , page42 used on input line 225.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 232
+Overfull \vbox (32.35449pt too high) detected at line 225
  []
 
 [19
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=184, page=46, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=203, page=43, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 46>
-Package luatex.def Info: pdfs/lec1.pdf , page46 used on input line 236.
+<use pdfs/lec1.pdf, page 43>
+Package luatex.def Info: pdfs/lec1.pdf , page43 used on input line 229.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 236
+Overfull \vbox (32.35449pt too high) detected at line 229
  []
 
 [20
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=190, page=47, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=209, page=44, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 47>
-Package luatex.def Info: pdfs/lec1.pdf , page47 used on input line 240.
+<use pdfs/lec1.pdf, page 44>
+Package luatex.def Info: pdfs/lec1.pdf , page44 used on input line 233.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 240
+Overfull \vbox (32.35449pt too high) detected at line 233
  []
 
 [21
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=197, page=48, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=216, page=45, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 48>
-Package luatex.def Info: pdfs/lec1.pdf , page48 used on input line 244.
+<use pdfs/lec1.pdf, page 45>
+Package luatex.def Info: pdfs/lec1.pdf , page45 used on input line 237.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 244
+Overfull \vbox (32.35449pt too high) detected at line 237
  []
 
 [22
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=203, page=49, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=222, page=46, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 49>
-Package luatex.def Info: pdfs/lec1.pdf , page49 used on input line 248.
+<use pdfs/lec1.pdf, page 46>
+Package luatex.def Info: pdfs/lec1.pdf , page46 used on input line 241.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 248
+Overfull \vbox (32.35449pt too high) detected at line 241
  []
 
 [23
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=209, page=50, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=228, page=47, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 50>
-Package luatex.def Info: pdfs/lec1.pdf , page50 used on input line 252.
+<use pdfs/lec1.pdf, page 47>
+Package luatex.def Info: pdfs/lec1.pdf , page47 used on input line 245.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 252
+Overfull \vbox (32.35449pt too high) detected at line 245
  []
 
 [24
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=215, page=51, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=234, page=48, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 51>
-Package luatex.def Info: pdfs/lec1.pdf , page51 used on input line 256.
+<use pdfs/lec1.pdf, page 48>
+Package luatex.def Info: pdfs/lec1.pdf , page48 used on input line 249.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 256
+Overfull \vbox (32.35449pt too high) detected at line 249
  []
 
 [25
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=221, page=52, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=240, page=49, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 52>
-Package luatex.def Info: pdfs/lec1.pdf , page52 used on input line 260.
+<use pdfs/lec1.pdf, page 49>
+Package luatex.def Info: pdfs/lec1.pdf , page49 used on input line 253.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 260
+Overfull \vbox (32.35449pt too high) detected at line 253
  []
 
 [26
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=227, page=53, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=246, page=50, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 53>
-Package luatex.def Info: pdfs/lec1.pdf , page53 used on input line 264.
+<use pdfs/lec1.pdf, page 50>
+Package luatex.def Info: pdfs/lec1.pdf , page50 used on input line 257.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 264
+Overfull \vbox (32.35449pt too high) detected at line 257
  []
 
 [27
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=233, page=54, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=252, page=51, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 54>
-Package luatex.def Info: pdfs/lec1.pdf , page54 used on input line 268.
+<use pdfs/lec1.pdf, page 51>
+Package luatex.def Info: pdfs/lec1.pdf , page51 used on input line 261.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 268
+Overfull \vbox (32.35449pt too high) detected at line 261
  []
 
 [28
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=239, page=55, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=258, page=52, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 55>
-Package luatex.def Info: pdfs/lec1.pdf , page55 used on input line 272.
+<use pdfs/lec1.pdf, page 52>
+Package luatex.def Info: pdfs/lec1.pdf , page52 used on input line 265.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 272
+Overfull \vbox (32.35449pt too high) detected at line 265
  []
 
 [29
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=245, page=56, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=264, page=53, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 56>
-Package luatex.def Info: pdfs/lec1.pdf , page56 used on input line 276.
+<use pdfs/lec1.pdf, page 53>
+Package luatex.def Info: pdfs/lec1.pdf , page53 used on input line 269.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 276
+Overfull \vbox (32.35449pt too high) detected at line 269
  []
 
 [30
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=251, page=57, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=270, page=54, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 57>
-Package luatex.def Info: pdfs/lec1.pdf , page57 used on input line 280.
+<use pdfs/lec1.pdf, page 54>
+Package luatex.def Info: pdfs/lec1.pdf , page54 used on input line 273.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 280
+Overfull \vbox (32.35449pt too high) detected at line 273
  []
 
 [31
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=258, page=58, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=277, page=55, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 58>
-Package luatex.def Info: pdfs/lec1.pdf , page58 used on input line 284.
+<use pdfs/lec1.pdf, page 55>
+Package luatex.def Info: pdfs/lec1.pdf , page55 used on input line 277.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 284
+Overfull \vbox (32.35449pt too high) detected at line 277
  []
 
 [32
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=264, page=59, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=283, page=56, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 59>
-Package luatex.def Info: pdfs/lec1.pdf , page59 used on input line 288.
+<use pdfs/lec1.pdf, page 56>
+Package luatex.def Info: pdfs/lec1.pdf , page56 used on input line 281.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 288
+Overfull \vbox (32.35449pt too high) detected at line 281
  []
 
 [33
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=270, page=60, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=289, page=57, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 60>
-Package luatex.def Info: pdfs/lec1.pdf , page60 used on input line 292.
+<use pdfs/lec1.pdf, page 57>
+Package luatex.def Info: pdfs/lec1.pdf , page57 used on input line 285.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 292
+Overfull \vbox (32.35449pt too high) detected at line 285
  []
 
 [34
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=276, page=61, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=295, page=58, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 61>
-Package luatex.def Info: pdfs/lec1.pdf , page61 used on input line 296.
+<use pdfs/lec1.pdf, page 58>
+Package luatex.def Info: pdfs/lec1.pdf , page58 used on input line 289.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 296
+Overfull \vbox (32.35449pt too high) detected at line 289
  []
 
 [35
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=282, page=62, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=301, page=59, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 62>
-Package luatex.def Info: pdfs/lec1.pdf , page62 used on input line 300.
+<use pdfs/lec1.pdf, page 59>
+Package luatex.def Info: pdfs/lec1.pdf , page59 used on input line 293.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 300
+Overfull \vbox (32.35449pt too high) detected at line 293
  []
 
 [36
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=288, page=63, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=307, page=60, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 63>
-Package luatex.def Info: pdfs/lec1.pdf , page63 used on input line 304.
+<use pdfs/lec1.pdf, page 60>
+Package luatex.def Info: pdfs/lec1.pdf , page60 used on input line 297.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 304
+Overfull \vbox (32.35449pt too high) detected at line 297
  []
 
 [37
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=294, page=64, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=313, page=61, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 64>
-Package luatex.def Info: pdfs/lec1.pdf , page64 used on input line 308.
+<use pdfs/lec1.pdf, page 61>
+Package luatex.def Info: pdfs/lec1.pdf , page61 used on input line 301.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 308
+Overfull \vbox (32.35449pt too high) detected at line 301
  []
 
 [38
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=330, page=65, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=319, page=62, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 65>
-Package luatex.def Info: pdfs/lec1.pdf , page65 used on input line 312.
+<use pdfs/lec1.pdf, page 62>
+Package luatex.def Info: pdfs/lec1.pdf , page62 used on input line 305.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 312
+Overfull \vbox (32.35449pt too high) detected at line 305
  []
 
 [39
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=338, page=66, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=325, page=63, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 66>
-Package luatex.def Info: pdfs/lec1.pdf , page66 used on input line 316.
+<use pdfs/lec1.pdf, page 63>
+Package luatex.def Info: pdfs/lec1.pdf , page63 used on input line 309.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 316
+Overfull \vbox (32.35449pt too high) detected at line 309
  []
 
 [40
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=355, page=67, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 67>
-Package luatex.def Info: pdfs/lec1.pdf , page67 used on input line 320.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 320
+LaTeX Font Warning: Font shape `TU/OpenSansHebrew(0)/m/sc' undefined
+(Font)              using `TU/OpenSansHebrew(0)/m/n' instead on input line 338.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 338.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 338.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \vbox (22.85568pt too high) detected at line 338
  []
 
 [41
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=364, page=68, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 68>
-Package luatex.def Info: pdfs/lec1.pdf , page68 used on input line 324.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+Missing character: There is no ‏ (U+200F) in font OpenSansHebrew:mode=node;scr
+ipt=hebr;language=DFLT;+tlig;!
+]
+(/usr/local/texlive/2018/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-en-
+gb.tex ASCII Hyphenation patterns for British English
+(/usr/local/texlive/2018/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-en-
+gb.tex))(load luc: /Users/mac/Library/texlive/2018/texmf-var/luatex-cache/generi
+c/fonts/otl/opensans-regular.luc)
+\g__fontspec_family_OpenSans_int=\count344
+(load luc: /Users/mac/Library/texlive/2018/texmf-var/luatex-cache/generic/fonts/
+otl/opensans-bolditalic.luc)(load luc: /Users/mac/Library/texlive/2018/texmf-var
+/luatex-cache/generic/fonts/otl/opensans-bold.luc)(load luc: /Users/mac/Library/
+texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/opensans-italic.luc)
+luaotfload | aux : font no 108 (nil) does not define feature smcp for script lat
+n with language dflt
+luaotfload | aux : no font with id 108
+luaotfload | aux : font no 110 (nil) does not define feature smcp for script lat
+n with language dflt
+luaotfload | aux : no font with id 110
+luaotfload | aux : font no 111 (nil) does not define feature smcp for script lat
+n with language dflt
+luaotfload | aux : no font with id 111
+luaotfload | aux : font no 109 (nil) does not define feature smcp for script lat
+n with language dflt
+luaotfload | aux : no font with id 109
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'OpenSans(0)' created for font 'Open Sans' with options [].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.:
+. <->"OpenSans:mode=node;script=latn;language=DFLT;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. - 'bold' (bx/n) with NFSS spec.:
+. <->"OpenSans/B:mode=node;script=latn;language=DFLT;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+. - 'italic' (m/it) with NFSS spec.:
+. <->"OpenSans/I:mode=node;script=latn;language=DFLT;"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: 
+. - 'bold italic' (bx/it) with NFSS spec.:
+. <->"OpenSans/BI:mode=node;script=latn;language=DFLT;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+.................................................
+ [42
 
-Overfull \vbox (32.35449pt too high) detected at line 324
- []
+] [43
 
-[42
+] [44
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=370, page=69, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 69>
-Package luatex.def Info: pdfs/lec1.pdf , page69 used on input line 328.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [45
 
-Overfull \vbox (32.35449pt too high) detected at line 328
- []
+] [46
 
-[43
+Missing character: There is no ‏ (U+200F) in font OpenSansHebrew:mode=node;scr
+ipt=hebr;language=DFLT;+tlig;!
+] [47
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=376, page=70, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 70>
-Package luatex.def Info: pdfs/lec1.pdf , page70 used on input line 332.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [48
 
-Overfull \vbox (32.35449pt too high) detected at line 332
- []
+] [49
 
-[44
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=386, page=71, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 71>
-Package luatex.def Info: pdfs/lec1.pdf , page71 used on input line 336.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 336
- []
-
-[45
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=392, page=72, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 72>
-Package luatex.def Info: pdfs/lec1.pdf , page72 used on input line 340.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 340
- []
-
-[46
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=398, page=73, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 73>
-Package luatex.def Info: pdfs/lec1.pdf , page73 used on input line 344.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 344
- []
-
-[47
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=411, page=74, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 74>
-Package luatex.def Info: pdfs/lec1.pdf , page74 used on input line 348.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 348
- []
-
-[48
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=429, page=75, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 75>
-Package luatex.def Info: pdfs/lec1.pdf , page75 used on input line 352.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 352
- []
-
-[49
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=437, page=76, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 76>
-Package luatex.def Info: pdfs/lec1.pdf , page76 used on input line 356.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 356
- []
-
+]
 [50
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=443, page=77, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 77>
-Package luatex.def Info: pdfs/lec1.pdf , page77 used on input line 360.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [51
 
-Overfull \vbox (32.35449pt too high) detected at line 360
- []
+] [52
 
-[51
+] [53
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=456, page=78, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 78>
-Package luatex.def Info: pdfs/lec1.pdf , page78 used on input line 364.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [54
 
-Overfull \vbox (32.35449pt too high) detected at line 364
- []
+] [55
 
-[52
+] [56
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=464, page=79, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 79>
-Package luatex.def Info: pdfs/lec1.pdf , page79 used on input line 368.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [57
 
-Overfull \vbox (32.35449pt too high) detected at line 368
- []
+] [58
 
-[53
+] [59
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=470, page=80, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 80>
-Package luatex.def Info: pdfs/lec1.pdf , page80 used on input line 372.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [60
 
-Overfull \vbox (32.35449pt too high) detected at line 372
- []
+] [61
 
-[54
+] [62
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=483, page=81, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 81>
-Package luatex.def Info: pdfs/lec1.pdf , page81 used on input line 376.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [63
 
-Overfull \vbox (32.35449pt too high) detected at line 376
- []
+] [64
 
-[55
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=496, page=82, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 82>
-Package luatex.def Info: pdfs/lec1.pdf , page82 used on input line 380.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 380
- []
-
-[56
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=503, page=83, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 83>
-Package luatex.def Info: pdfs/lec1.pdf , page83 used on input line 384.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 384
- []
-
-[57
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=513, page=84, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 84>
-Package luatex.def Info: pdfs/lec1.pdf , page84 used on input line 388.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 388
- []
-
-[58
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=526, page=85, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 85>
-Package luatex.def Info: pdfs/lec1.pdf , page85 used on input line 392.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 392
- []
-
-[59
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=539, page=86, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 86>
-Package luatex.def Info: pdfs/lec1.pdf , page86 used on input line 396.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 396
- []
-
-[60
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=545, page=87, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 87>
-Package luatex.def Info: pdfs/lec1.pdf , page87 used on input line 400.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 400
- []
-
-[61
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=561, page=88, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 88>
-Package luatex.def Info: pdfs/lec1.pdf , page88 used on input line 404.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 404
- []
-
-[62
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=567, page=89, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 89>
-Package luatex.def Info: pdfs/lec1.pdf , page89 used on input line 408.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 408
- []
-
-[63
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=573, page=90, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 90>
-Package luatex.def Info: pdfs/lec1.pdf , page90 used on input line 412.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 412
- []
-
-[64
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=581, page=91, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 91>
-Package luatex.def Info: pdfs/lec1.pdf , page91 used on input line 416.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 416
- []
-
+]
 [65
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=589, page=92, 722.7pt x 542.025pt>
+] [66
+
+] [67
+
+] [68
+
+] [69
+
+] [70
+
+]
+<pdfs/lec1.pdf, id=501, page=78, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 92>
-Package luatex.def Info: pdfs/lec1.pdf , page92 used on input line 420.
+<use pdfs/lec1.pdf, page 78>
+Package luatex.def Info: pdfs/lec1.pdf , page78 used on input line 462.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 420
- []
-
-[66
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=595, page=93, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 93>
-Package luatex.def Info: pdfs/lec1.pdf , page93 used on input line 424.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 424
- []
-
-[67
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=603, page=94, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 94>
-Package luatex.def Info: pdfs/lec1.pdf , page94 used on input line 428.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 428
- []
-
-[68
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=609, page=95, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 95>
-Package luatex.def Info: pdfs/lec1.pdf , page95 used on input line 432.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 432
- []
-
-[69
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=615, page=96, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 96>
-Package luatex.def Info: pdfs/lec1.pdf , page96 used on input line 436.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 436
- []
-
-[70
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=621, page=97, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 97>
-Package luatex.def Info: pdfs/lec1.pdf , page97 used on input line 440.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 440
+Overfull \vbox (32.35449pt too high) detected at line 462
  []
 
 [71
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=628, page=98, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 98>
-Package luatex.def Info: pdfs/lec1.pdf , page98 used on input line 444.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 444
+Overfull \vbox (31.85883pt too high) detected at line 490
  []
 
 [72
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=634, page=99, 722.7pt x 542.025pt>
+Missing character: There is no ‏ (U+200F) in font OpenSansHebrew:mode=node;scr
+ipt=hebr;language=DFLT;+tlig;!
+] [73
+
+] [74
+
+] [75
+
+] [76
+
+] [77
+
+] [78
+
+]
+<pdfs/lec1.pdf, id=547, page=87, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 99>
-Package luatex.def Info: pdfs/lec1.pdf , page99 used on input line 448.
+<use pdfs/lec1.pdf, page 87>
+Package luatex.def Info: pdfs/lec1.pdf , page87 used on input line 525.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 448
- []
-
-[73
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=640, page=100, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 100>
-Package luatex.def Info: pdfs/lec1.pdf , page100 used on input line 452.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 452
- []
-
-[74
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=646, page=101, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 101>
-Package luatex.def Info: pdfs/lec1.pdf , page101 used on input line 456.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 456
- []
-
-[75
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=652, page=102, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 102>
-Package luatex.def Info: pdfs/lec1.pdf , page102 used on input line 460.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 460
- []
-
-[76
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=658, page=103, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 103>
-Package luatex.def Info: pdfs/lec1.pdf , page103 used on input line 464.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 464
- []
-
-[77
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=664, page=104, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 104>
-Package luatex.def Info: pdfs/lec1.pdf , page104 used on input line 468.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 468
- []
-
-[78
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=670, page=105, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 105>
-Package luatex.def Info: pdfs/lec1.pdf , page105 used on input line 472.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 472
+Overfull \vbox (32.35449pt too high) detected at line 525
  []
 
 [79
 
 <./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=676, page=106, 722.7pt x 542.025pt>
+<pdfs/lec1.pdf, id=586, page=88, 722.7pt x 542.025pt>
 File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 106>
-Package luatex.def Info: pdfs/lec1.pdf , page106 used on input line 477.
+<use pdfs/lec1.pdf, page 88>
+Package luatex.def Info: pdfs/lec1.pdf , page88 used on input line 529.
 (luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 477
+Overfull \vbox (32.35449pt too high) detected at line 529
  []
 
 [80
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=592, page=89, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 89>
+Package luatex.def Info: pdfs/lec1.pdf , page89 used on input line 533.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 533
+ []
+
+[81
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=599, page=90, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 90>
+Package luatex.def Info: pdfs/lec1.pdf , page90 used on input line 537.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 537
+ []
+
+[82
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=616, page=91, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 91>
+Package luatex.def Info: pdfs/lec1.pdf , page91 used on input line 541.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 541
+ []
+
+[83
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=632, page=92, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 92>
+Package luatex.def Info: pdfs/lec1.pdf , page92 used on input line 545.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 545
+ []
+
+[84
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=638, page=93, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 93>
+Package luatex.def Info: pdfs/lec1.pdf , page93 used on input line 549.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 549
+ []
+
+[85
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=646, page=94, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 94>
+Package luatex.def Info: pdfs/lec1.pdf , page94 used on input line 553.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 553
+ []
+
+[86
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=652, page=95, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 95>
+Package luatex.def Info: pdfs/lec1.pdf , page95 used on input line 557.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 557
+ []
+
+[87
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=658, page=96, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 96>
+Package luatex.def Info: pdfs/lec1.pdf , page96 used on input line 561.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 561
+ []
+
+[88
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=664, page=97, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 97>
+Package luatex.def Info: pdfs/lec1.pdf , page97 used on input line 565.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 565
+ []
+
+[89
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=670, page=98, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 98>
+Package luatex.def Info: pdfs/lec1.pdf , page98 used on input line 569.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 569
+ []
+
+[90
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=676, page=99, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 99>
+Package luatex.def Info: pdfs/lec1.pdf , page99 used on input line 573.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 573
+ []
+
+[91
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=683, page=100, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 100>
+Package luatex.def Info: pdfs/lec1.pdf , page100 used on input line 577.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 577
+ []
+
+[92
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=689, page=101, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 101>
+Package luatex.def Info: pdfs/lec1.pdf , page101 used on input line 581.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 581
+ []
+
+[93
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=695, page=102, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 102>
+Package luatex.def Info: pdfs/lec1.pdf , page102 used on input line 585.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 585
+ []
+
+[94
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=701, page=103, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 103>
+Package luatex.def Info: pdfs/lec1.pdf , page103 used on input line 589.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 589
+ []
+
+[95
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=707, page=104, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 104>
+Package luatex.def Info: pdfs/lec1.pdf , page104 used on input line 593.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 593
+ []
+
+[96
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=713, page=105, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 105>
+Package luatex.def Info: pdfs/lec1.pdf , page105 used on input line 597.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 597
+ []
+
+[97
+
+<./pdfs/lec1.pdf>]
+<pdfs/lec1.pdf, id=719, page=106, 722.7pt x 542.025pt>
+File: pdfs/lec1.pdf Graphic file (type pdf)
+<use pdfs/lec1.pdf, page 106>
+Package luatex.def Info: pdfs/lec1.pdf , page106 used on input line 602.
+(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+
+Overfull \vbox (32.35449pt too high) detected at line 602
+ []
+
+[98
 
 <./pdfs/lec1.pdf>]
 \tf@nav=\write7
@@ -2598,32 +2491,42 @@ Overfull \vbox (32.35449pt too high) detected at line 477
 \tf@snm=\write9
 
 \openout9 = ps2.snm
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 569.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 569.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 604.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 604.
  (./ps2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 569.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 569.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 604.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 604.
 Package rerunfilecheck Info: File `ps2.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: A31239204DCC6C49F3AA559E52B0517C;428.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 )
 
 Here is how much of LuaTeX's memory you used:
- 33012 strings out of 494413
+ 34132 strings out of 494413
  100000,953878 words of node,token memory allocated
- 1057 words of node memory still in use:
-   20 hlist, 6 vlist, 4 rule, 1 local_par, 19 glue, 2 kern, 9 penalty, 52 attrib
-ute, 71 glue_spec, 28 attribute_list, 3 write, 4 pdf_colorstack, 1 pdf_setmatrix
-, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:5,2:449,3:137,4:95,5:60,6:11,7:403,8:9,9:88,10:6
- 35286 multiletter control sequences out of 65536+600000
- 50 fonts using 11402727 bytes
- 72i,13n,96p,1805b,499s stack positions out of 5000i,500n,10000p,200000b,100000s
-</Users/mac/Library/Fonts/OpenSansHebrew-Regular.ttf></Users/mac/Library/Fonts/O
-penSansHebrew-Bold.ttf>
-Output written on ps2.pdf (80 pages, 605481 bytes).
+ 1083 words of node memory still in use:
+   20 hlist, 6 vlist, 4 rule, 1 local_par, 19 glue, 2 kern, 9 penalty, 57 attrib
+ute, 71 glue_spec, 30 attribute_list, 3 write, 2 pdf_action, 4 pdf_colorstack, 1
+ pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
+   avail lists: 1:5,2:850,3:257,4:170,5:235,6:31,7:1720,8:18,9:191,10:15,11:5
+ 35502 multiletter control sequences out of 65536+600000
+ 115 fonts using 15867615 bytes
+ 72i,13n,107p,1805b,719s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2018/texmf-dist/fonts/truetype/public/opensans/OpenSans-Bold
+.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Italic.ttf></Users/mac/Library/Fon
+ts/OpenSansHebrew-Regular.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Bold.ttf>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on ps2.pdf (98 pages, 467385 bytes).
 
-PDF statistics: 706 PDF objects out of 1000 (max. 8388607)
- 428 compressed objects within 5 object streams
- 161 named destinations out of 1000 (max. 131072)
- 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 778 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
+ 202 named destinations out of 1000 (max. 131072)
+ 56 words of extra memory for PDF output out of 10000 (max. 100000000)
 

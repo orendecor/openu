@@ -160,11 +160,14 @@
 %%%%%%%%%%%%
 
 \begin{document}
-	\title{מבוא והגדרות}
-	\subtitle{מפגש 1}
+	\title{ סריקות לעומק ורדוקציות}
+	\subtitle{מפגש 2}
 	%\author{}
 	%\institute{}
 	\date{}
+	
+	
+	\maketitle
 \begin{frame}{שבוע שעבר ראינו}
 \pause
 \begin{itemize}[<+->]
@@ -178,10 +181,12 @@
 \pause
 \begin{itemize}[<+->]
 	\item מעבר על BFS
-	\item מעבר ע
+	\item תכנון אלגוריתם מבוסס רדוקציה
+	\item  DFS  -כמה שהזמן יאפשר לנו 
 \end{itemize}
 \end{frame}
-
+\part{BFS - סריקה לרוחב}
+\frame{\partpage}
 \begin{frame}
 \vspace*{-1pt}
 \makebox[\linewidth]{\includegraphics[page=34,width=\paperwidth]{pdfs/lec1}}
@@ -302,97 +307,217 @@
 \vspace*{-1pt}
 \makebox[\linewidth]{\includegraphics[page=63,width=\paperwidth]{pdfs/lec1}}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=64,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{BFS- האלגוריתם}
+\LR{
+\fbox{
+	\parbox{10cm}{
+		
+		{\sc color[$u$]=white for all $u\in V$\\ } 
+		{\sc BFS($s$) }
+		\begin{itemize}
+			\item[] color[$s$] = gray
+			\item[] $d[s] = 0$
+			\item[] ENQUEUE($Q,s$)
+			\item[] WHILE $Q$ not empty:
+			\begin{itemize}
+				\item[] DEQUEUE($Q,u$)
+				\item[] FOR $(u,v)\in E$ DO
+				\begin{itemize}
+					\item[] IF color[$v$] = white THEN
+					\item[] ~~~~color[$v$] = gray
+					\item[] ~~~~$d[v] = d[u] + 1$
+					\item[] ~~~~parent[$v$] = u
+					\item[] ~~~~ENQUEUE($Q,v$)
+					\item[] color[$u$] = black
+				\end{itemize}
+			\end{itemize}	
+		\end{itemize}
+}}
+}
+\vspace*{\baselineskip}
+\end{frame}
+\begin{frame}{שימושים של BFS}
+\pause
+\begin{itemize}[<+->]
+	\item האם יש מסלול מ-
+	\E{$u$}
+	ל-
+	\E{$v$}?
+	\item מה ארכו של המסלול הקצר ביותר
+	\item מציאת רכיבי קשירות בגרף לא מכוון
+\end{itemize}	
+\end{frame}
+\begin{frame}{BFS לגרף לא קשיר}
+\LR{
+\fbox{
+	\parbox{8cm}{ 
+		FOR each vertex $u \in V $ DO
+		\begin{itemize}
+			\item[] IF color[$u$] = white THEN BFS($u$)
+		\end{itemize}
+		OD
+}}
+}
 \end{frame}
 \begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=65,width=\paperwidth]{pdfs/lec1}}
+\centering
+\fontsize{16pt}{7.2}\selectfont
+100011101 מתחלק ב7?
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=66,width=\paperwidth]{pdfs/lec1}}
+\part{תכנון אלגוריתם באמצעות רדוקציה}
+\frame{\partpage}
+\begin{frame}{דוגמא 1}
+\textbf{הגדרה}
+יהי  \E{$G=(V,E)$} גרף לא מכוון ויהיו \E{$u,v\in V$} זוג קודקודים ב- \E{$G$}.  \pause נסמן ב-  \E{$\delta(u,v)$} את אורך המסלול המינימאלי בצלעות מקודקוד \E{$u$} לקודקוד \E{$v$}.  \pause בנוסף, נגדיר כי \E{$\delta(u,v)=\infty$}   אם לא קיים מסלול מ-u ל- v ב- G.   \pause 
+
+\textbf{הגדרת בעיית \E{SP (Single Source Shortest Paths)}:}\\ \pause
+יהי  \E{$G=(V,E)$} גרף לא מכוון ו- \E{$s\in V$} קודקוד ב- \E{$G$}. \pause מצא \E{$\delta(s,v) $} לכל 
+\E{$v\in V$}. 
+
+ \pause
+\textbf{הגדרת בעיית \E{SEP (Single Source Shortest Even Paths)}:}\\ \pause
+יהי  \E{$G=(V,E)$} גרף לא מכוון ו- \E{$s\in V$} קודקוד ב- \E{$G$}.  \pause מצא את אורך המסלול (לפי צלעות) הזוגי המינאמלי מ-  \E{$s$} לכל 
+\E{$v\in V$} או \E{$\infty$} אם לא קיים כזה. 
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=67,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{}
+\begin{itemize}[<+->]
+	\item איך פותרים את SP?
+	\item בהינתן של-SP יש אלגוריתם כיצד נבנה אלגוריתם עבור SEP?
+\end{itemize}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=68,width=\paperwidth]{pdfs/lec1}}
+\section{שאלה 1 -  הראו אלגוריתם רדוקציה מ-SEP ל-SP }
+%\begin{frame}{הגדרה פורמאלית ל- "רדוקציה":}
+%\pause
+%תהיינה A ו-B זוג בעיות נתונות. \\\pause
+%רדוקציה מ- A  לבעיה B היא  זוג פונקציות f,g, כך ש:
+%\\\pause 
+%\begin{itemize}[<+->]
+%	\item f היא פונקצית המרת הקלט, המעבירה מופע של בעיה A למופע של בעיה B. 
+%	\item g היא פונקצית המרת הפלט, המעבירה פתרון של בעיה B לפתרון של בעיה A.
+%
+%	\item \textbf{הגדרת נכונות}-\pause עבור מופע a לבעיה A, \\ \pause
+%	אם \E{B(f(a))}  הוא פתרון עבור המופע \E{f(a)} תחת בעיה B \\ \pause
+%	אזי \E{g(B(f(a)))}  הוא פתרון למופע a תחת בעיה A. 
+%
+%\end{itemize}
+%\end{frame}
+%\begin{frame}{הוכחת נכונות רדוקציה}
+%כדי להוכיח את נכונות הרדוקציה, יש להוכיח שהאלגוריתם הבא פותר את הבעיה A:
+% \pause
+%\begin{enumerate}[<+->]
+%	\item 	עבור מופע a לבעיה A, חשב את \E{f(a)}.
+%	\item עבור המופע \E{f(a) } לבעיה B, חשב את הפיתרון b.
+%	\item החזר את \E{g(b)} להיות הפתרון של A.
+%\end{enumerate}
+%
+%\end{frame}
+%\begin{frame}{הערות}
+%\begin{itemize}[<+->]
+%	\item 	הפונקציה  f  נקראת פונקצית המרת הקלט.
+%	
+%	
+%	\item 	הפונקציה  g  נקראת פונקצית המרת הפלט.
+%
+%	\item נתייחס לאלגוריתם שפותר את בעיה B כאל "\textbf{קופסה שחורה}", מבלי להניח דבר על אופן פעולתו מלבד העובדה שהוא אכן פותר נכון את B לכל מופע.
+%	\item לעיתים נשתמש בקופסה השחורה כמה פעמים.
+%\end{itemize}
+%\end{frame}
+%\begin{frame}{}
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=\linewidth]{imgs/screenshot002.jpg}	
+%\end{figure}
+%\end{frame}
+%\begin{frame}{שאלה}
+%בדוגמה הקודמת, מהי פונקצית הרדוקציה, מהי הקופסה השחורה, ומהי פונקצית תרגום הפלט?
+%\end{frame}
+\begin{frame}{חישוב זמן ריצה לאלגוריתם רדוקציה}
+כפי שראינו ישנם שלושה רכיבים הדורשים זמן חישוב בעת הרצת האלגוריתם: 
+\pause
+\begin{itemize}[<+->]
+	\item חישוב תרגום הקלט, 
+	\item הפעלת האלגוריתם לפתרון הבעיה המתורגמת, 
+	\item וחישוב תרגום הפלט. 
+\end{itemize}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=69,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{חישוב זמן ריצה לאלגוריתם רדוקציה}
+\pause
+\begin{itemize}[<+->]
+	\item זמן חישוב האלגוריתם המבוסס על הרדוקציה הינו הזמן המקסימאלי הדרוש מבין השלושה.
+	\item נתייחס לאלגוריתם שפותר את בעיה המתורגמת כאל "\textbf{קופסה שחורה}", מבלי להניח דבר על אופן פעולתו מלבד העובדה שהוא אכן פותר נכון את הבעיה השניה לכל מופע.
+	\item נשים לב שזמן הריצה של הקופסא השחורה הוא על גודל הקלט החדש (הפלט של ממיר הקלט).
+\end{itemize}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=70,width=\paperwidth]{pdfs/lec1}}
+\section{שאלה 2 - אלגוריתם רדוקציה מ-SP ל-SEP }
+\begin{frame}{תרגיל למחשבה}
+\textbf{הגדרת בעיית \E{SOP (Single Source Shortest Odd Paths)}:}\\
+יהי  \E{$G=(V,E)$} גרף לא מכוון ו- \E{$s\in V$} קודקוד ב- \E{$G$}. מצא את אורך המסלול (לפי צלעות) \textbf{האי-זוגי }המינאמלי מ-  \E{$s$} לכל 
+\E{$v\in V$} או \E{$\infty$} אם לא קיים כזה. 
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=71,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=72,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=73,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=74,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=75,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=76,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=77,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
+
+
 \begin{frame}
 \vspace*{-1pt}
 \makebox[\linewidth]{\includegraphics[page=78,width=\paperwidth]{pdfs/lec1}}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=79,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{DFS - האלגוריתם}
+\LR{
+	\fbox{
+		\parbox{8cm}{
+			{\sc $t=0\quad$ color[$u$]=white for all $u\in V$\\ } 
+			{\sc DFS($u$) } 
+			\begin{itemize}
+				\item[] color[$u$] = gray
+				\item[] $d[u]$ = t
+				\item[] t = t + 1
+				\item[] FOR $(u,v)\in E$ DO
+				\begin{itemize}
+					\item[] IF color[$v$] = white THEN
+					\begin{itemize}
+						\item[] parent[$v$] = $u$
+						\item[] {\sc DFS(v)}
+					\end{itemize}
+					\item[] FI
+				\end{itemize}
+				\item[] OD
+				\item[] color[$u$] = black
+				\item[] $f[u]$ = t
+				\item[] t = t + 1
+			\end{itemize}
+	}}
+	
+}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=80,width=\paperwidth]{pdfs/lec1}}
+\section{דוגמא על הלוח}
+\begin{frame}{תכונות DFS}
+\pause
+\begin{itemize}[<+->]
+	\item סורק את כל הקודקודים
+	\item מוצא מעגלים
+	\item סיבוכיות \E{$O(|V|+|E|)$}
+\end{itemize}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=81,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=82,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=83,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=84,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=85,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=86,width=\paperwidth]{pdfs/lec1}}
+
+\begin{frame}{שאלה 3}
+\textbf{הוכיחו או הפריכו את הטענה הבאה:}
+יהי גרף קשיר ולא מכוון ויהי
+\E{$u\in V$}
+. אם קיימת הרצת
+\E{$DFS$} 
+ מ-
+ \E{$u$}
+  על
+   \E{$G$}
+    והרצת
+     \E{$BFS$}
+      מ-
+       \E{$u$}
+       על
+        \E{$G$}
+         הנותנות את אותו עץ
+          \E{$T$}
+           אז בהכרח
+            \E{$G=T$}
 \end{frame}
 \begin{frame}
 \vspace*{-1pt}
@@ -475,95 +600,5 @@
 \vspace*{-1pt}
 \makebox[\linewidth]{\includegraphics[page=106,width=\paperwidth]{pdfs/lec1}}
 \end{frame}
-%
-%\begin{frame}
-%\centering
-%\fontsize{16pt}{7.2}\selectfont
-%100011101 מתחלק ב7?
-%\end{frame}
-%\part{תכנון אלגוריתם באמצעות רדוקציה}
-%\frame{\partpage}
-%\begin{frame}{דוגמא 1}
-%\textbf{הגדרה}
-%יהי  \E{$G=(V,E)$} גרף לא מכוון ויהיו \E{$u,v\in V$} זוג קודקודים ב- \E{$G$}.  \pause נסמן ב-  \E{$d(u,v)$} את אורך המסלול המינימאלי בצלעות מקודקוד \E{$u$} לקודקוד \E{$v$}.  \pause בנוסף, נגדיר כי \E{$d(u,v)=\infty$}   אם לא קיים מסלול מ-u ל- v ב- G.   \pause 
-%
-%\textbf{הגדרת בעיית \E{SP (Single Source Shortest Paths)}:}\\ \pause
-%יהי  \E{$G=(V,E)$} גרף לא מכוון ו- \E{$s\in V$} קודקוד ב- \E{$G$}. \pause מצא \E{$d(s,v) $} לכל 
-%\E{$v\in V$}. 
-%
-% \pause
-%\textbf{הגדרת בעיית \E{SEP (Single Source Shortest Even Paths)}:}\\ \pause
-%יהי  \E{$G=(V,E)$} גרף לא מכוון ו- \E{$s\in V$} קודקוד ב- \E{$G$}.  \pause מצא את אורך המסלול (לפי צלעות) הזוגי המינאמלי מ-  \E{$s$} לכל 
-%\E{$v\in V$} או \E{$\infty$} אם לא קיים כזה. 
-%\end{frame}
-%\begin{frame}{}
-%\begin{itemize}[<+->]
-%	\item איך פותרים את SP?
-%	\item בהינתן של-SP יש אלגוריתם כיצד נבנה אלגוריתם עבור SEP?
-%\end{itemize}
-%\end{frame}
-%\section{אלגוריתם רדוקציה מ-SEP ל-SP (על הלוח)}
-%\begin{frame}{הגדרה פורמאלית ל- "רדוקציה":}
-%\pause
-%תהיינה A ו-B זוג בעיות נתונות. \\\pause
-%רדוקציה מ- A  לבעיה B היא  זוג פונקציות f,g, כך ש:
-%\\\pause 
-%\begin{itemize}[<+->]
-%	\item f היא פונקצית המרת הקלט, המעבירה מופע של בעיה A למופע של בעיה B. 
-%	\item g היא פונקצית המרת הפלט, המעבירה פתרון של בעיה B לפתרון של בעיה A.
-%
-%	\item \textbf{הגדרת נכונות}-\pause עבור מופע a לבעיה A, \\ \pause
-%	אם \E{B(f(a))}  הוא פתרון עבור המופע \E{f(a)} תחת בעיה B \\ \pause
-%	אזי \E{g(B(f(a)))}  הוא פתרון למופע a תחת בעיה A. 
-%
-%\end{itemize}
-%\end{frame}
-%\begin{frame}{הוכחת נכונות רדוקציה}
-%כדי להוכיח את נכונות הרדוקציה, יש להוכיח שהאלגוריתם הבא פותר את הבעיה A:
-% \pause
-%\begin{enumerate}[<+->]
-%	\item 	עבור מופע a לבעיה A, חשב את \E{f(a)}.
-%	\item עבור המופע \E{f(a) } לבעיה B, חשב את הפיתרון b.
-%	\item החזר את \E{g(b)} להיות הפתרון של A.
-%\end{enumerate}
-%
-%\end{frame}
-%\begin{frame}{הערות}
-%\begin{itemize}[<+->]
-%	\item 	הפונקציה  f  נקראת פונקצית המרת הקלט.
-%	
-%	
-%	\item 	הפונקציה  g  נקראת פונקצית המרת הפלט.
-%
-%	\item נתייחס לאלגוריתם שפותר את בעיה B כאל "\textbf{קופסה שחורה}", מבלי להניח דבר על אופן פעולתו מלבד העובדה שהוא אכן פותר נכון את B לכל מופע.
-%	\item לעיתים נשתמש בקופסה השחורה כמה פעמים.
-%\end{itemize}
-%\end{frame}
-%\begin{frame}{}
-%\begin{figure}
-%	\centering
-%	\includegraphics[width=\linewidth]{imgs/screenshot002.jpg}	
-%\end{figure}
-%\end{frame}
-%\begin{frame}{שאלה}
-%בדוגמה הקודמת, מהי פונקצית הרדוקציה, מהי הקופסה השחורה, ומהי פונקצית תרגום הפלט?
-%\end{frame}
-%\begin{frame}{חישוב זמן ריצה לאלגוריתם רדוקציה}
-%כפי שראינו ישנם שלושה רכיבים הדורשים זמן חישוב בעת הרצת האלגוריתם: 
-%\pause
-%\begin{itemize}[<+->]
-%	\item חישוב תרגום הקלט, 
-%	\item הפעלת האלגוריתם לפתרון הבעיה B, 
-%	\item וחישוב תרגום הפלט. 
-%\end{itemize}
-%\pause
-%זמן חישוב האלגוריתם המבוסס על הרדוקציה הינו הזמן המקסימאלי הדרוש מבין השלושה. \\ \pause
-%נשים לב שזמן הריצה של הקופסא השחורה הוא על גודל הקלט החדש (הפלט של ממיר הקלט).
-%\end{frame}
-%\section{אלגוריתם רדוקציה מ-SP ל-SEP (על הלוח)}
-%\begin{frame}{תרגיל למחשבה}
-%\textbf{הגדרת בעיית \E{SOP (Single Source Shortest Odd Paths)}:}\\
-%יהי  \E{$G=(V,E)$} גרף לא מכוון ו- \E{$s\in V$} קודקוד ב- \E{$G$}. מצא את אורך המסלול (לפי צלעות) \textbf{האי-זוגי }המינאמלי מ-  \E{$s$} לכל 
-%\E{$v\in V$} או \E{$\infty$} אם לא קיים כזה. 
-%\end{frame}
+
 \end{document}
