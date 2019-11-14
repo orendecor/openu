@@ -10,8 +10,8 @@
 
 \PassOptionsToPackage{luatex}{hyperref}
 
-\documentclass[luatex]{beamer}
-%\documentclass[handout]{beamer}
+%\documentclass[luatex]{beamer}
+\documentclass[handout]{beamer}
 
 \usetheme{metropolis}
 
@@ -160,7 +160,7 @@
 %%%%%%%%%%%%
 
 \begin{document}
-	\title{ סריקות לעומק ורדוקציות}
+	\title{ סריקות לרוחב ורדוקציות}
 	\subtitle{מפגש 2}
 	%\author{}
 	%\institute{}
@@ -456,149 +456,5 @@
 \end{frame}
 
 
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=78,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}{DFS - האלגוריתם}
-\LR{
-	\fbox{
-		\parbox{8cm}{
-			{\sc $t=0\quad$ color[$u$]=white for all $u\in V$\\ } 
-			{\sc DFS($u$) } 
-			\begin{itemize}
-				\item[] color[$u$] = gray
-				\item[] $d[u]$ = t
-				\item[] t = t + 1
-				\item[] FOR $(u,v)\in E$ DO
-				\begin{itemize}
-					\item[] IF color[$v$] = white THEN
-					\begin{itemize}
-						\item[] parent[$v$] = $u$
-						\item[] {\sc DFS(v)}
-					\end{itemize}
-					\item[] FI
-				\end{itemize}
-				\item[] OD
-				\item[] color[$u$] = black
-				\item[] $f[u]$ = t
-				\item[] t = t + 1
-			\end{itemize}
-	}}
-	
-}
-\end{frame}
-\section{דוגמא על הלוח}
-\begin{frame}{תכונות DFS}
-\pause
-\begin{itemize}[<+->]
-	\item סורק את כל הקודקודים
-	\item מוצא מעגלים
-	\item סיבוכיות \E{$O(|V|+|E|)$}
-\end{itemize}
-\end{frame}
-
-\begin{frame}{שאלה 3}
-\textbf{הוכיחו או הפריכו את הטענה הבאה:}
-יהי גרף קשיר ולא מכוון ויהי
-\E{$u\in V$}
-. אם קיימת הרצת
-\E{$DFS$} 
- מ-
- \E{$u$}
-  על
-   \E{$G$}
-    והרצת
-     \E{$BFS$}
-      מ-
-       \E{$u$}
-       על
-        \E{$G$}
-         הנותנות את אותו עץ
-          \E{$T$}
-           אז בהכרח
-            \E{$G=T$}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=87,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=88,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=89,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=90,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=91,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=92,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=93,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=94,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=95,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=96,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=97,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=98,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=99,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=100,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=101,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=102,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=103,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=104,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=105,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=106,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
 
 \end{document}
