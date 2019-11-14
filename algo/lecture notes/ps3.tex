@@ -185,17 +185,62 @@
 \end{itemize}
 \end{frame}
 
+\part{DFS - סריקה לעומק}
+\frame{\partpage}
+\begin{frame}{הקדמה}
+האלגוריתם DFS פעול באופן רקורסיבי כאשר תמיד יעדיף לחפש "עמוק" יותר בגרף לפני מעבר לשכנים נוספים של קודקוד נסרק.
+\pause
+\begin{itemize}[<+->]
+	\item בסריקה נוצר יער עומר \E{$G_\pi$}.
+	צלע ביער מהסוג
+	\E{$(\pi(x),x)$}.
+	\item לכל קודקוד 3 מצבים אפשריים:
+	\begin{itemize}[<+->]
+		\item קודקוד מאותחל בלבן - ונשאר לבן כל עוד לא התגלה בסריקה
+		\item קודקוד הפוך אפור ברגע גילויו
+		\item קודקוד הופל מאפור לשחור לאחר שהסתיימה סריקת כל הקודקודים שנגישים ממנו.
+	\end{itemize}
+\end{itemize}
+\end{frame}
 
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=78,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{הקדמה}
+\begin{itemize}[<+->]
+	\item :לכל קודקוד מספר שדות
+	\begin{itemize}[<+->]
+\item 
+\E{$d(v)$} - זמן גילוי הקודקוד
+\item \E{$f(v)$} - זמן סיום הטיפול הקודקוד
+\item \E{$\pi(v)$} - קודקוד אשר ממנו התגלה 
+\E{$v$}.
+\item \E{$color(v)$} - צבע הקודקוד
+	\end{itemize}
+\end{itemize}
+\end{frame}
+\section{דוגמת ריצה על הלוח}
+\begin{frame}{DFS - האלגוריתם}
+\LR{
+	\fbox{
+		\parbox{8cm}{
+			{\sc DFS($G$) } 
+			\begin{itemize}
+				\item[] $Init: t=1\quad$ color[$u$]=white for all $u\in V$\\
+				\item[] FOR $u\in V$ DO
+				\begin{itemize}
+					\item[] IF color[$u$] = white THEN
+					\begin{itemize}
+						\item[] {\sc DFS-Visit(u)}
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+	}}
+	
+}
 \end{frame}
 \begin{frame}{DFS - האלגוריתם}
 \LR{
 	\fbox{
 		\parbox{8cm}{
-			{\sc $t=0\quad$ color[$u$]=white for all $u\in V$\\ } 
-			{\sc DFS($u$) } 
+			{\sc DFS-Visit($u$) } 
 			\begin{itemize}
 				\item[] color[$u$] = gray
 				\item[] $d[u]$ = t
@@ -204,12 +249,10 @@
 				\begin{itemize}
 					\item[] IF color[$v$] = white THEN
 					\begin{itemize}
-						\item[] parent[$v$] = $u$
-						\item[] {\sc DFS(v)}
+						\item[] $\pi[v] = u$
+						\item[] {\sc DFS-Visit(v)}
 					\end{itemize}
-					\item[] FI
 				\end{itemize}
-				\item[] OD
 				\item[] color[$u$] = black
 				\item[] $f[u]$ = t
 				\item[] t = t + 1
@@ -218,12 +261,13 @@
 	
 }
 \end{frame}
-\section{דוגמא על הלוח}
 \begin{frame}{תכונות DFS}
 \pause
 \begin{itemize}[<+->]
 	\item סורק את כל הקודקודים
 	\item מוצא מעגלים
+
+	\item מציאת מיון טופולוגי
 	\item סיבוכיות \E{$O(|V|+|E|)$}
 \end{itemize}
 \end{frame}
@@ -249,86 +293,139 @@
            אז בהכרח
             \E{$G=T$}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=87,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{מיון טופולוגי}
+\pause
+\begin{itemize}[<+->]
+	\item  מיון טופולוגי של גרף מכוון
+\E{$G=(V,E)$}
+ הינו סידור
+
+\E{$ (v_1,...,v_n)$}
+   של קודקודי הגרף, כך שלכל
+
+\E{$1 \le i,j \le n$}
+אם
+\E{$ i < j$}
+  אז אין קשתות מ
+   \E{$j$}
+    ל
+     \E{$i$}
+      בגרף
+\end{itemize}
+\pause
+\begin{center}
+\includegraphics[width=0.7\linewidth]{imgs/topologyorder}
+\end{center}
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=88,width=\paperwidth]{pdfs/lec1}}
+\section{דוגמה על הלוח}
+\begin{frame}{מיון טופולוגי}
+\textbf{משפט:} אם הגרף DAG אזי יש מיון טופולוגי.
+\\
+הוכחה בבניה (עמוד 111 בספר).
 \end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=89,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=90,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=91,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=92,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=93,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=94,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=95,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=96,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=97,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=98,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=99,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=100,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=101,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=102,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=103,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=104,width=\paperwidth]{pdfs/lec1}}
-\end{frame}
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=105,width=\paperwidth]{pdfs/lec1}}
+\begin{frame}{מיון טופולוגי באמצעות DFS}
+\pause
+\begin{itemize}[<+->]
+	\item \textbf{טענה: } אם 
+	\E{$G$}
+	חסר מעגלים ו-
+	\E{$(u,v)\in E$}
+	אז בכל סריקת 
+	\E{DFS(G)}
+	מתקיים
+	\E{$f(v)<f(u)$}
+	\item\textbf{ אלגוריתם מבוסס 
+		\E{DFS}
+				 למציאת מיון טופולוגי:
+	 }
+
+\begin{itemize}[<+->]
+	\item הרץ 
+	\E{DFS(G)}
+	\item (אם לא התגלתה קשת אחורה) החזר סידור של 
+	\E{$V$}
+	לפי זמני 
+	\E{$f$}
+	בסדר יורד.
+\end{itemize}
+\pause
+נכונות האלגוריתם נובעת מנכונות הטענה (על הלוח).
+\end{itemize}
 \end{frame}
 
-\begin{frame}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=106,width=\paperwidth]{pdfs/lec1}}
+
+\begin{frame}{שאלה 4}
+ \pause
+ \begin{itemize}[<+->]
+ 	\item \textbf{הגדרה:} גרף מעורב הוא גרף שבו כמה מהקשתות
+מכוונות והאחרות אינן מכוונות. 
+ 	\item הוכיחו שאם בגרף מעורב התת-גרף המתקבל מכל
+צמתי הגרף ומהקשתות המכוונות בלבד אינו מכיל  מעגל מכוון, אז תמיד ניתן לכוון את הקשתות הלא
+מכוונות כך שבגרף המכוון המתקבל אין מעגל מכוון. הראו כיצד ניתן למצוא כיוון מתאים לקשתות בזמן לינארי.
+ 	\item \textbf{רמז:} מצאו קודם את האלגוריתם המבצע את הכיוון
+ומהוכחת נכונותו הסיקו כי קיים כיוון כנדרש. 
+ \end{itemize}
+\end{frame}
+\begin{frame}{שאלה 5}
+נתון גרף מכוון.\\
+כיצד יכול להשתנות מספר הרכיבים
+ הקשירים היטב בגרף אם מוסיפים קשת חדשה?
+\end{frame}
+\begin{frame}{שאלה 6}
+\textbf{הוכח או הפרך-}\\
+אם בגרף מכוון יש קשתות הנכנסות לצומת u וגם קשתות היוצאות ממנו, אזי לא ייתכן שבהרצת DFS על הגרף הצומת u יימצא בעץ המכיל אותו בלבד.
 \end{frame}
 
+\begin{frame}{שאלה 7}
+\textbf{הוכח או הפרך-}\\
+יהי גרף קשיר ולא מכוון, יהי
+ \E{$s\in V$}
+  ויהי
+   \E{$T$}
+    עץ
+המתקבל מהרצת
+ \E{DFS}
+  על
+   
+  \E{$G$}
+   מ-
+  \E{$s$}
+   . אז עומקו של
+    \E{$T$}
+      הוא לפחות כעומקו של כל עץ המתקבל מהרצת 
+      \E{BFS}
+      על
+      \E{$G$}
+      מ-
+      \E{$s$}.
+\end{frame}
+
+\begin{frame}{שאלה 8}
+יהי 
+\E{$G$}
+גרף לא מכוון וקשיר. הוכח או הפרך:
+\pause
+\begin{itemize}[<+->]
+	\item כל עץ המתקבל מריצת 
+	\E{DFS}
+	 על
+	 \E{$G$} 
+	 ניתן
+לקבל על ידי ריצת
+ \E{BFS}
+  על
+    \E{$G$} 
+   . 
+   \item כל עץ המתקבל מריצת 
+   \E{BFS}
+   על
+   \E{$G$} 
+   ניתן
+   לקבל על ידי ריצת
+   \E{DFS}
+   על
+   \E{$G$} 
+   . 
+\end{itemize}
+\end{frame}
 \end{document}

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  14 NOV 2019 06:24
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  14 NOV 2019 15:05
  restricted system commands enabled.
 **ps3.tex
 (./ps3.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.114 seconds
+luaotfload | main : initialization completed in 0.147 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
@@ -1717,40 +1717,7 @@ Overfull \vbox (15.63992pt too high) detected at line 170
 
 ] [7
 
-]
-<pdfs/lec1.pdf, id=55, page=78, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 78>
-Package luatex.def Info: pdfs/lec1.pdf , page78 used on input line 192.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 192
- []
-
-[8
-
-<./pdfs/lec1.pdf>]
-
-LaTeX Font Warning: Font shape `TU/OpenSansHebrew(0)/m/sc' undefined
-(Font)              using `TU/OpenSansHebrew(0)/m/n' instead on input line 220.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 220.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 220.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \vbox (31.85883pt too high) detected at line 220
- []
-
-[9
-
-Missing character: There is no ‏ (U+200F) in font OpenSansHebrew:mode=node;scr
-ipt=hebr;language=DFLT;+tlig;!
-] [10
+] [8
 
 ]
 (/usr/local/texlive/2018/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-en-
@@ -1763,18 +1730,18 @@ c/fonts/otl/opensans-regular.luc)
 otl/opensans-bolditalic.luc)(load luc: /Users/mac/Library/texlive/2018/texmf-var
 /luatex-cache/generic/fonts/otl/opensans-bold.luc)(load luc: /Users/mac/Library/
 texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/opensans-italic.luc)
-luaotfload | aux : font no 106 (nil) does not define feature smcp for script lat
-n with language dflt
-luaotfload | aux : no font with id 106
-luaotfload | aux : font no 108 (nil) does not define feature smcp for script lat
-n with language dflt
-luaotfload | aux : no font with id 108
-luaotfload | aux : font no 109 (nil) does not define feature smcp for script lat
-n with language dflt
-luaotfload | aux : no font with id 109
-luaotfload | aux : font no 107 (nil) does not define feature smcp for script lat
-n with language dflt
-luaotfload | aux : no font with id 107
+luaotfload | aux : font no 55 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : no font with id 55
+luaotfload | aux : font no 57 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : no font with id 57
+luaotfload | aux : font no 58 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : no font with id 58
+luaotfload | aux : font no 56 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : no font with id 56
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1795,7 +1762,21 @@ luaotfload | aux : no font with id 107
 . <->"OpenSans/BI:mode=node;script=latn;language=DFLT;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 .................................................
- [11
+LaTeX Font Info:    Try loading font information for U+msa on input line 204.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 204.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [9
+
+] [10
+
+]
+[11
 
 ] [12
 
@@ -1805,247 +1786,111 @@ luaotfload | aux : no font with id 107
 
 ] [15
 
+] [16
+
+] [17
+
+] [18
+
+] [19
+
+] [20
+
 ]
-<pdfs/lec1.pdf, id=152, page=87, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 87>
-Package luatex.def Info: pdfs/lec1.pdf , page87 used on input line 255.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
 
-Overfull \vbox (32.35449pt too high) detected at line 255
- []
-
-[16
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=192, page=88, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 88>
-Package luatex.def Info: pdfs/lec1.pdf , page88 used on input line 259.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 259
- []
-
-[17
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=200, page=89, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 89>
-Package luatex.def Info: pdfs/lec1.pdf , page89 used on input line 263.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 263
- []
-
-[18
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=206, page=90, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 90>
-Package luatex.def Info: pdfs/lec1.pdf , page90 used on input line 267.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 267
- []
-
-[19
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=228, page=91, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 91>
-Package luatex.def Info: pdfs/lec1.pdf , page91 used on input line 271.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 271
- []
-
-[20
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=244, page=92, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 92>
-Package luatex.def Info: pdfs/lec1.pdf , page92 used on input line 275.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 275
- []
+LaTeX Font Warning: Font shape `TU/OpenSansHebrew(0)/m/sc' undefined
+(Font)              using `TU/OpenSansHebrew(0)/m/n' instead on input line 238.
 
 [21
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=251, page=93, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 93>
-Package luatex.def Info: pdfs/lec1.pdf , page93 used on input line 279.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+Missing character: There is no ‏ (U+200F) in font OpenSansHebrew:mode=node;scr
+ipt=hebr;language=DFLT;+tlig;!
+] [22
 
-Overfull \vbox (32.35449pt too high) detected at line 279
- []
+Missing character: There is no ‏ (U+200F) in font OpenSansHebrew:mode=node;scr
+ipt=hebr;language=DFLT;+tlig;!
+] [23
 
-[22
+] [24
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=259, page=94, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 94>
-Package luatex.def Info: pdfs/lec1.pdf , page94 used on input line 283.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [25
 
-Overfull \vbox (32.35449pt too high) detected at line 283
- []
+] [26
 
-[23
+] [27
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=265, page=95, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 95>
-Package luatex.def Info: pdfs/lec1.pdf , page95 used on input line 287.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [28
 
-Overfull \vbox (32.35449pt too high) detected at line 287
- []
+]
+<imgs/topologyorder.png, id=182, 930.47626pt x 252.945pt>
+File: imgs/topologyorder.png Graphic file (type png)
+<use imgs/topologyorder.png>
+Package luatex.def Info: imgs/topologyorder.png  used on input line 319.
+(luatex.def)             Requested size: 215.10196pt x 58.47331pt.
+ [29
 
-[24
+<./imgs/topologyorder.png>]
+File: imgs/topologyorder.png Graphic file (type png)
+<use imgs/topologyorder.png>
+Package luatex.def Info: imgs/topologyorder.png  used on input line 319.
+(luatex.def)             Requested size: 215.10196pt x 58.47331pt.
+ [30
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=271, page=96, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 96>
-Package luatex.def Info: pdfs/lec1.pdf , page96 used on input line 291.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 291
- []
-
-[25
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=277, page=97, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 97>
-Package luatex.def Info: pdfs/lec1.pdf , page97 used on input line 295.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 295
- []
-
-[26
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=283, page=98, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 98>
-Package luatex.def Info: pdfs/lec1.pdf , page98 used on input line 299.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 299
- []
-
-[27
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=289, page=99, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 99>
-Package luatex.def Info: pdfs/lec1.pdf , page99 used on input line 303.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 303
- []
-
-[28
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=295, page=100, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 100>
-Package luatex.def Info: pdfs/lec1.pdf , page100 used on input line 307.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 307
- []
-
-[29
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=301, page=101, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 101>
-Package luatex.def Info: pdfs/lec1.pdf , page101 used on input line 311.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 311
- []
-
-[30
-
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=307, page=102, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 102>
-Package luatex.def Info: pdfs/lec1.pdf , page102 used on input line 315.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
-
-Overfull \vbox (32.35449pt too high) detected at line 315
- []
+]
+File: imgs/topologyorder.png Graphic file (type png)
+<use imgs/topologyorder.png>
+Package luatex.def Info: imgs/topologyorder.png  used on input line 319.
+(luatex.def)             Requested size: 215.10196pt x 58.47331pt.
 
 [31
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=314, page=103, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 103>
-Package luatex.def Info: pdfs/lec1.pdf , page103 used on input line 319.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+]
+File: imgs/topologyorder.png Graphic file (type png)
+<use imgs/topologyorder.png>
+Package luatex.def Info: imgs/topologyorder.png  used on input line 319.
+(luatex.def)             Requested size: 215.10196pt x 58.47331pt.
+ [32
 
-Overfull \vbox (32.35449pt too high) detected at line 319
- []
+] [33
 
-[32
+] [34
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=320, page=104, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 104>
-Package luatex.def Info: pdfs/lec1.pdf , page104 used on input line 323.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [35
 
-Overfull \vbox (32.35449pt too high) detected at line 323
- []
+] [36
 
-[33
+] [37
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=326, page=105, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 105>
-Package luatex.def Info: pdfs/lec1.pdf , page105 used on input line 327.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [38
 
-Overfull \vbox (32.35449pt too high) detected at line 327
- []
+] [39
 
-[34
+] [40
 
-<./pdfs/lec1.pdf>]
-<pdfs/lec1.pdf, id=332, page=106, 722.7pt x 542.025pt>
-File: pdfs/lec1.pdf Graphic file (type pdf)
-<use pdfs/lec1.pdf, page 106>
-Package luatex.def Info: pdfs/lec1.pdf , page106 used on input line 332.
-(luatex.def)             Requested size: 364.19536pt x 273.14565pt.
+] [41
 
-Overfull \vbox (32.35449pt too high) detected at line 332
- []
+] [42
 
-[35
+] [43
 
-<./pdfs/lec1.pdf>]
+] [44
+
+] [45
+
+]
+[46
+
+] [47
+
+] [48
+
+] [49
+
+] [50
+
+] [51
+
+]
 \tf@nav=\write7
 
 \openout7 = ps3.nav
@@ -2055,13 +1900,13 @@ Overfull \vbox (32.35449pt too high) detected at line 332
 \tf@snm=\write9
 
 \openout9 = ps3.snm
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 431.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 431.
  (./ps3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 334.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 334.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 431.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 431.
 Package rerunfilecheck Info: File `ps3.out' has not changed.
-(rerunfilecheck)             Checksum: AF2929B726F07CCCCF15D207F7AD042D;59.
+(rerunfilecheck)             Checksum: 1FE567AE02ED24ECEDDF4E11CF27987A;203.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2069,25 +1914,30 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 32803 strings out of 494413
+ 33342 strings out of 494413
  100000,953878 words of node,token memory allocated
- 1059 words of node memory still in use:
-   20 hlist, 6 vlist, 4 rule, 1 local_par, 19 glue, 2 kern, 9 penalty, 53 attrib
-ute, 71 glue_spec, 28 attribute_list, 3 write, 4 pdf_colorstack, 1 pdf_setmatrix
-, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:5,2:704,3:140,4:170,5:124,6:31,7:791,8:16,9:191,10:14
- 35271 multiletter control sequences out of 65536+600000
- 111 fonts using 15447055 bytes
- 72i,13n,107p,1805b,723s stack positions out of 5000i,500n,10000p,200000b,100000s
-</Users/mac/Library/Fonts/OpenSansHebrew-Italic.ttf></Users/mac/Library/Fonts/Op
-enSansHebrew-Regular.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Bold.ttf></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on ps3.pdf (35 pages, 260138 bytes).
+ 3387 words of node memory still in use:
+   31 hlist, 8 vlist, 5 rule, 4 local_par, 20 dir, 10 math, 86 glue, 3 kern, 19 
+penalty, 128 glyph, 213 attribute, 71 glue_spec, 108 attribute_list, 3 write, 24
+ pdf_literal, 22 pdf_colorstack nodes
+   avail lists: 1:5,2:517,3:184,4:136,5:123,6:29,7:1113,8:18,9:160,10:14,11:5
+ 35242 multiletter control sequences out of 65536+600000
+ 116 fonts using 16093079 bytes
+ 72i,13n,107p,1805b,719s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2018/texmf-dist/fonts/truetype/public/opensans/OpenSans-Bold
+.ttf></usr/local/texlive/2018/texmf-dist/fonts/truetype/public/opensans/OpenSans
+-Regular.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Italic.ttf></Users/mac/Lib
+rary/Fonts/OpenSansHebrew-Regular.ttf></Users/mac/Library/Fonts/OpenSansHebrew-B
+old.ttf></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on ps3.pdf (51 pages, 141408 bytes).
 
-PDF statistics: 375 PDF objects out of 1000 (max. 8388607)
- 241 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 131072)
- 24 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 365 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 106 named destinations out of 1000 (max. 131072)
+ 40 words of extra memory for PDF output out of 10000 (max. 100000000)
 

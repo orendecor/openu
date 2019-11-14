@@ -1,2 +1,3 @@
 \babel@toc {hebrew}{}
-\beamer@sectionintoc {1}{דוגמא על הלוח}{10}{0}{1}
+\beamer@sectionintoc {1}{דוגמת ריצה על הלוח}{20}{1}{1}
+\beamer@sectionintoc {2}{דוגמה על הלוח}{33}{1}{2}
