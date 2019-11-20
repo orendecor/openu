@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  14 NOV 2019 15:05
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  19 NOV 2019 17:29
  restricted system commands enabled.
 **ps3.tex
 (./ps3.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.147 seconds
+luaotfload | main : initialization completed in 0.161 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
@@ -1537,6 +1537,7 @@ LaTeX Font Info:    ... okay on input line 162.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
 LaTeX Font Info:    ... okay on input line 162.
 
+*geometry* driver: auto-detecting
 *geometry* detected driver: luatex
 *geometry* verbose mode - [ preamble ] result:
 * driver: luatex
@@ -1711,14 +1712,6 @@ Overfull \vbox (15.63992pt too high) detected at line 170
 
 ] [4
 
-] [5
-
-] [6
-
-] [7
-
-] [8
-
 ]
 (/usr/local/texlive/2018/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-en-
 gb.tex ASCII Hyphenation patterns for British English
@@ -1771,16 +1764,39 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 204.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [9
+) [5
 
-] [10
+] [6
 
 ]
-[11
+[7
 
-] [12
+]
 
-] [13
+LaTeX Font Warning: Font shape `TU/OpenSansHebrew(0)/m/sc' undefined
+(Font)              using `TU/OpenSansHebrew(0)/m/n' instead on input line 238.
+
+[8
+
+Missing character: There is no ‏ (U+200F) in font OpenSansHebrew:mode=node;scr
+ipt=hebr;language=DFLT;+tlig;!
+] [9
+
+Missing character: There is no ‏ (U+200F) in font OpenSansHebrew:mode=node;scr
+ipt=hebr;language=DFLT;+tlig;!
+] [10
+
+] [11
+
+]
+<imgs/topologyorder.png, id=95, 930.47626pt x 252.945pt>
+File: imgs/topologyorder.png Graphic file (type png)
+<use imgs/topologyorder.png>
+Package luatex.def Info: imgs/topologyorder.png  used on input line 319.
+(luatex.def)             Requested size: 215.10196pt x 58.47331pt.
+ [12
+
+<./imgs/topologyorder.png>] [13
 
 ] [14
 
@@ -1790,105 +1806,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [17
 
-] [18
+]
+[18
 
 ] [19
 
 ] [20
-
-]
-
-LaTeX Font Warning: Font shape `TU/OpenSansHebrew(0)/m/sc' undefined
-(Font)              using `TU/OpenSansHebrew(0)/m/n' instead on input line 238.
-
-[21
-
-Missing character: There is no ‏ (U+200F) in font OpenSansHebrew:mode=node;scr
-ipt=hebr;language=DFLT;+tlig;!
-] [22
-
-Missing character: There is no ‏ (U+200F) in font OpenSansHebrew:mode=node;scr
-ipt=hebr;language=DFLT;+tlig;!
-] [23
-
-] [24
-
-] [25
-
-] [26
-
-] [27
-
-] [28
-
-]
-<imgs/topologyorder.png, id=182, 930.47626pt x 252.945pt>
-File: imgs/topologyorder.png Graphic file (type png)
-<use imgs/topologyorder.png>
-Package luatex.def Info: imgs/topologyorder.png  used on input line 319.
-(luatex.def)             Requested size: 215.10196pt x 58.47331pt.
- [29
-
-<./imgs/topologyorder.png>]
-File: imgs/topologyorder.png Graphic file (type png)
-<use imgs/topologyorder.png>
-Package luatex.def Info: imgs/topologyorder.png  used on input line 319.
-(luatex.def)             Requested size: 215.10196pt x 58.47331pt.
- [30
-
-]
-File: imgs/topologyorder.png Graphic file (type png)
-<use imgs/topologyorder.png>
-Package luatex.def Info: imgs/topologyorder.png  used on input line 319.
-(luatex.def)             Requested size: 215.10196pt x 58.47331pt.
-
-[31
-
-]
-File: imgs/topologyorder.png Graphic file (type png)
-<use imgs/topologyorder.png>
-Package luatex.def Info: imgs/topologyorder.png  used on input line 319.
-(luatex.def)             Requested size: 215.10196pt x 58.47331pt.
- [32
-
-] [33
-
-] [34
-
-] [35
-
-] [36
-
-] [37
-
-] [38
-
-] [39
-
-] [40
-
-] [41
-
-] [42
-
-] [43
-
-] [44
-
-] [45
-
-]
-[46
-
-] [47
-
-] [48
-
-] [49
-
-] [50
-
-] [51
 
 ]
 \tf@nav=\write7
@@ -1914,15 +1837,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33342 strings out of 494413
+ 32777 strings out of 494413
  100000,953878 words of node,token memory allocated
  3387 words of node memory still in use:
    31 hlist, 8 vlist, 5 rule, 4 local_par, 20 dir, 10 math, 86 glue, 3 kern, 19 
 penalty, 128 glyph, 213 attribute, 71 glue_spec, 108 attribute_list, 3 write, 24
  pdf_literal, 22 pdf_colorstack nodes
-   avail lists: 1:5,2:517,3:184,4:136,5:123,6:29,7:1113,8:18,9:160,10:14,11:5
- 35242 multiletter control sequences out of 65536+600000
- 116 fonts using 16093079 bytes
+   avail lists: 1:5,2:442,3:164,4:136,5:99,6:29,7:1007,8:18,9:160,10:14,11:5
+ 35238 multiletter control sequences out of 65536+600000
+ 116 fonts using 16019447 bytes
  72i,13n,107p,1805b,719s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2018/texmf-dist/fonts/truetype/public/opensans/OpenSans-Bold
 .ttf></usr/local/texlive/2018/texmf-dist/fonts/truetype/public/opensans/OpenSans
@@ -1934,10 +1857,10 @@ fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on ps3.pdf (51 pages, 141408 bytes).
+Output written on ps3.pdf (20 pages, 102399 bytes).
 
-PDF statistics: 365 PDF objects out of 1000 (max. 8388607)
- 280 compressed objects within 3 object streams
- 106 named destinations out of 1000 (max. 131072)
+PDF statistics: 203 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 131072)
  40 words of extra memory for PDF output out of 10000 (max. 100000000)
 

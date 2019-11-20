@@ -1,0 +1,431 @@
+%! TEX program = lualatex
+% find: (\\E{$((?!\$}).)+\$)
+%replace: \E{\1}
+
+%%%%%%%%%%
+% BEAMER %
+%%%%%%%%%%
+
+\RequirePackage{luatex85}
+
+\PassOptionsToPackage{luatex}{hyperref}
+
+%\documentclass[luatex]{beamer}
+\documentclass[handout]{beamer}
+
+\usetheme{metropolis}
+
+	\newcommand{\bigq}{\mathbb{Q}}
+\newcommand{\bb}{\bfseries\large}
+\newcommand{\class}{\mathcal}
+\newcommand{\mbi}[1]{\textbf{\em{#1}}}
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
+\newcommand{\ita}[1]{\textit{#1}}
+\newcommand{\p}{\cdot}
+\newcommand{\req}{\emptyset}
+\newcommand{\init}{\mathcal{J}}
+\newcommand{\power}[1]{\class{P}(#1)}
+\newcommand{\bigpower}[2]{\class{P}^{#1}(#2)}
+\newcommand{\symetric}{\bigtriangleup}
+\newcommand{\gx}[3]{\Gamma_{(#1,#2)}(#3)}
+\newcommand{\bd}[3]{\Delta_{(#1,#2)}(#3)}
+\newcommand{\bp}[3]{\Phi_{(#1,#2)}(#3)}
+\newcommand{\eab}{\eta_{\alpha \beta}}
+\newcommand{\sab}{\sigma_{\alpha\beta}}
+\newcommand{\dab}{\class{D}_{\alpha\beta}}
+\newcommand{\cab}{\class{C}_{\alpha\beta}}
+\newcommand{\C}[1]{\class{#1}}
+\newcommand{\ol}{\overline}
+\newcommand{\into}{\longrightarrow}
+\newcommand{\ifff}{\Longleftrightarrow}
+\newcommand{\imply}{\Rightarrow}
+\newcommand{\since}{\Longleftarrow}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\andd}{\wedge}
+\newcommand{\orr}{\vee}
+\newcommand{\ft}{(\C F \C T)_Q}
+\newcommand{\pathopen}[3]{#1_{(\ol{#2},#3)}}
+\newcommand{\fpi}[3]{#1_*(\Pi(#2,#3))}
+\newcommand{\xpath}[2]{(\ol {#1},#2)}
+\newcommand{\qn}[2]{\Lambda(#1,#2)}
+\newcommand{\jh}{\class J \class H}
+\newcommand{\bos}{\boldsymbol}
+\newcommand{\f}{\mathbb}
+\newcommand{\rss}{\la\psi_i:i\in \lambda\ra}
+\newcommand{\ito}[1]{\overset{#1}{\longrightarrow}}
+\newcommand{\pcomplex}[2]{\class #1(\class #2)}
+\newcommand{\then}{\Rightarrow}
+\newcommand{\ud}{{ {up-down-automaton}} }
+
+\newcommand{\map}[1]{\underset{#1}{\mapsto}}
+\newcommand{\mapi}[1]{\underset{#1}{\overset{i}{\mapsto}}}
+\newcommand{\mapstar}[1]{\underset{#1}{\overset{*}{\mapsto}}}
+\newcommand{\mapk}[2]{\underset{#1}{\overset{#2}{\mapsto}}}
+
+\newcommand{\eql}{\equiv_L}
+\newcommand{\der}[1]{\underset{#1}{\imply}}
+\newcommand{\deri}[1]{\underset{#1}{\overset{i}{\imply}}}
+\newcommand{\derstar}[1]{\underset{#1}{\overset{*}{\imply}}}
+\newcommand{\derk}[2]{\underset{#1}{\overset{#2}{\imply}}}
+\newcommand{\blank}{\bar{b}}
+\newcommand{\R}[1]{#1}
+\newcommand{\say}[1]{\color{blue}{#1}\color{black}}
+
+
+
+% Fix the title separator
+\makeatletter
+\setbeamertemplate{title separator}{
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[fg] (0,0) rectangle (\textwidth, \metropolis@titleseparator@linewidth);
+	\end{tikzpicture}%
+	\egroup
+	\par%
+}
+\makeatother
+
+% Fix the progress bar and make it progress from right to left
+\makeatletter
+\setbeamertemplate{progress bar in section page}{
+	\setlength{\metropolis@progressonsectionpage}{%
+		\textwidth * \ratio{\insertframenumber pt}{\inserttotalframenumber pt}%
+	}%
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[bg] (0,0) rectangle (\textwidth, \metropolis@progressonsectionpage@linewidth);
+	\fill[fg] (\textwidth,0) rectangle (\textwidth-\metropolis@progressonsectionpage, \metropolis@progressonsectionpage@linewidth);
+	\end{tikzpicture}%
+	\egroup
+}
+\makeatother
+
+% A more logical title page, juxtaposing `institute` to `author`. This modification is not necessary for Hebrew support.
+\makeatletter
+\setbeamertemplate{title page}{
+	\begin{minipage}[b][\paperheight]{\textwidth}
+		\ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+		\vfill%
+		\ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+		\ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+		\usebeamertemplate*{title separator}
+		\ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+		\ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+		\ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+		\vfill
+		\vspace*{1mm}
+	\end{minipage}
+}
+\setbeamertemplate{author}{\vspace*{2em}\insertauthor\par\vspace*{0.25em}}
+\setbeamertemplate{institute}{\insertinstitute\par}
+\setbeamertemplate{date}{\vspace*{3mm}\insertdate\par}
+\makeatother
+
+
+
+
+%%%%%%%%%
+% Babel %
+%%%%%%%%%
+
+\usepackage[nil,bidi=basic-r]{babel}
+\babelprovide[import=he,main]{hebrew}
+\babelprovide[import=en-GB]{english}
+
+% For some reason Babel’s `\babelfont` doesn’t work
+\setsansfont[Script=Hebrew]{Open Sans Hebrew}
+\setmonofont{Fira Mono}
+\renewcommand{\H}[1]{\foreignlanguage{hebrew}{\fontspec[Script=Hebrew]{Open Sans Hebrew}#1}}
+\newcommand{\E}[1]{\foreignlanguage{english}{\fontspec{Open Sans}#1}}
+\newcommand{\LR}[1]{{‏\textdir TLT #1}}
+
+
+
+
+%%%%%%%%
+% MISC %
+%%%%%%%%
+
+\usepackage{metalogo, fancyvrb}
+\usepackage{cancel}
+\newcommand{\smallurl}[1]{{\footnotesize\url{#1}}}
+
+
+
+%%%%%%%%%%%%
+% DOCUMENT %
+%%%%%%%%%%%%
+
+\begin{document}
+	\title{ סריקות לעומק ומיון טופולוגי}
+	\subtitle{מפגש 3}
+	%\author{}
+	%\institute{}
+	\date{}
+	
+	
+	\maketitle
+\begin{frame}{שבוע שעבר ראינו}
+\pause
+
+\begin{itemize}[<+->]
+	\item מעבר על BFS
+	\item תכנון אלגוריתם מבוסס רדוקציה
+\end{itemize}
+\end{frame}
+
+\begin{frame}{התוכנית להיום}
+\pause
+\begin{itemize}[<+->]
+	\item סריקת עומק - DFS 
+	\item מיון טופולוגי
+\end{itemize}
+\end{frame}
+
+\part{DFS - סריקה לעומק}
+\frame{\partpage}
+\begin{frame}{הקדמה}
+האלגוריתם DFS פעול באופן רקורסיבי כאשר תמיד יעדיף לחפש "עמוק" יותר בגרף לפני מעבר לשכנים נוספים של קודקוד נסרק.
+\pause
+\begin{itemize}[<+->]
+	\item בסריקה נוצר יער עומר \E{$G_\pi$}.
+	צלע ביער מהסוג
+	\E{$(\pi(x),x)$}.
+	\item לכל קודקוד 3 מצבים אפשריים:
+	\begin{itemize}[<+->]
+		\item קודקוד מאותחל בלבן - ונשאר לבן כל עוד לא התגלה בסריקה
+		\item קודקוד הפוך אפור ברגע גילויו
+		\item קודקוד הופל מאפור לשחור לאחר שהסתיימה סריקת כל הקודקודים שנגישים ממנו.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{הקדמה}
+\begin{itemize}[<+->]
+	\item :לכל קודקוד מספר שדות
+	\begin{itemize}[<+->]
+\item 
+\E{$d(v)$} - זמן גילוי הקודקוד
+\item \E{$f(v)$} - זמן סיום הטיפול הקודקוד
+\item \E{$\pi(v)$} - קודקוד אשר ממנו התגלה 
+\E{$v$}.
+\item \E{$color(v)$} - צבע הקודקוד
+	\end{itemize}
+\end{itemize}
+\end{frame}
+\section{דוגמת ריצה על הלוח}
+\begin{frame}{DFS - האלגוריתם}
+\LR{
+	\fbox{
+		\parbox{8cm}{
+			{\sc DFS($G$) } 
+			\begin{itemize}
+				\item[] $Init: t=1\quad$ color[$u$]=white for all $u\in V$\\
+				\item[] FOR $u\in V$ DO
+				\begin{itemize}
+					\item[] IF color[$u$] = white THEN
+					\begin{itemize}
+						\item[] {\sc DFS-Visit(u)}
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+	}}
+	
+}
+\end{frame}
+\begin{frame}{DFS - האלגוריתם}
+\LR{
+	\fbox{
+		\parbox{8cm}{
+			{\sc DFS-Visit($u$) } 
+			\begin{itemize}
+				\item[] color[$u$] = gray
+				\item[] $d[u]$ = t
+				\item[] t = t + 1
+				\item[] FOR $(u,v)\in E$ DO
+				\begin{itemize}
+					\item[] IF color[$v$] = white THEN
+					\begin{itemize}
+						\item[] $\pi[v] = u$
+						\item[] {\sc DFS-Visit(v)}
+					\end{itemize}
+				\end{itemize}
+				\item[] color[$u$] = black
+				\item[] $f[u]$ = t
+				\item[] t = t + 1
+			\end{itemize}
+	}}
+	
+}
+\end{frame}
+\begin{frame}{תכונות DFS}
+\pause
+\begin{itemize}[<+->]
+	\item סורק את כל הקודקודים
+	\item מוצא מעגלים
+
+	\item מציאת מיון טופולוגי
+	\item סיבוכיות \E{$O(|V|+|E|)$}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{שאלה 3}
+\textbf{הוכיחו או הפריכו את הטענה הבאה:}
+יהי גרף קשיר ולא מכוון ויהי
+\E{$u\in V$}
+. אם קיימת הרצת
+\E{$DFS$} 
+ מ-
+ \E{$u$}
+  על
+   \E{$G$}
+    והרצת
+     \E{$BFS$}
+      מ-
+       \E{$u$}
+       על
+        \E{$G$}
+         הנותנות את אותו עץ
+          \E{$T$}
+           אז בהכרח
+            \E{$G=T$}
+\end{frame}
+\begin{frame}{מיון טופולוגי}
+\pause
+\begin{itemize}[<+->]
+	\item  מיון טופולוגי של גרף מכוון
+\E{$G=(V,E)$}
+ הינו סידור
+
+\E{$ (v_1,...,v_n)$}
+   של קודקודי הגרף, כך שלכל
+
+\E{$1 \le i,j \le n$}
+אם
+\E{$ i < j$}
+  אז אין קשתות מ
+   \E{$j$}
+    ל
+     \E{$i$}
+      בגרף
+\end{itemize}
+\pause
+\begin{center}
+\includegraphics[width=0.7\linewidth]{imgs/topologyorder}
+\end{center}
+\end{frame}
+\section{דוגמה על הלוח}
+\begin{frame}{מיון טופולוגי}
+\textbf{משפט:} אם הגרף DAG אזי יש מיון טופולוגי.
+\\
+הוכחה בבניה (עמוד 111 בספר).
+\end{frame}
+\begin{frame}{מיון טופולוגי באמצעות DFS}
+\pause
+\begin{itemize}[<+->]
+	\item \textbf{טענה: } אם 
+	\E{$G$}
+	חסר מעגלים ו-
+	\E{$(u,v)\in E$}
+	אז בכל סריקת 
+	\E{DFS(G)}
+	מתקיים
+	\E{$f(v)<f(u)$}
+	\item\textbf{ אלגוריתם מבוסס 
+		\E{DFS}
+				 למציאת מיון טופולוגי:
+	 }
+
+\begin{itemize}[<+->]
+	\item הרץ 
+	\E{DFS(G)}
+	\item (אם לא התגלתה קשת אחורה) החזר סידור של 
+	\E{$V$}
+	לפי זמני 
+	\E{$f$}
+	בסדר יורד.
+\end{itemize}
+\pause
+נכונות האלגוריתם נובעת מנכונות הטענה (על הלוח).
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{שאלה 4}
+ \pause
+ \begin{itemize}[<+->]
+ 	\item \textbf{הגדרה:} גרף מעורב הוא גרף שבו כמה מהקשתות
+מכוונות והאחרות אינן מכוונות. 
+ 	\item הוכיחו שאם בגרף מעורב התת-גרף המתקבל מכל
+צמתי הגרף ומהקשתות המכוונות בלבד אינו מכיל  מעגל מכוון, אז תמיד ניתן לכוון את הקשתות הלא
+מכוונות כך שבגרף המכוון המתקבל אין מעגל מכוון. הראו כיצד ניתן למצוא כיוון מתאים לקשתות בזמן לינארי.
+ 	\item \textbf{רמז:} מצאו קודם את האלגוריתם המבצע את הכיוון
+ומהוכחת נכונותו הסיקו כי קיים כיוון כנדרש. 
+ \end{itemize}
+\end{frame}
+\begin{frame}{שאלה 5}
+נתון גרף מכוון.\\
+כיצד יכול להשתנות מספר הרכיבים
+ הקשירים היטב בגרף אם מוסיפים קשת חדשה?
+\end{frame}
+\begin{frame}{שאלה 6}
+\textbf{הוכח או הפרך-}\\
+אם בגרף מכוון יש קשתות הנכנסות לצומת u וגם קשתות היוצאות ממנו, אזי לא ייתכן שבהרצת DFS על הגרף הצומת u יימצא בעץ המכיל אותו בלבד.
+\end{frame}
+
+\begin{frame}{שאלה 7}
+\textbf{הוכח או הפרך-}\\
+יהי גרף קשיר ולא מכוון, יהי
+ \E{$s\in V$}
+  ויהי
+   \E{$T$}
+    עץ
+המתקבל מהרצת
+ \E{DFS}
+  על
+   
+  \E{$G$}
+   מ-
+  \E{$s$}
+   . אז עומקו של
+    \E{$T$}
+      הוא לפחות כעומקו של כל עץ המתקבל מהרצת 
+      \E{BFS}
+      על
+      \E{$G$}
+      מ-
+      \E{$s$}.
+\end{frame}
+
+\begin{frame}{שאלה 8}
+יהי 
+\E{$G$}
+גרף לא מכוון וקשיר. הוכח או הפרך:
+\pause
+\begin{itemize}[<+->]
+	\item כל עץ המתקבל מריצת 
+	\E{DFS}
+	 על
+	 \E{$G$} 
+	 ניתן
+לקבל על ידי ריצת
+ \E{BFS}
+  על
+    \E{$G$} 
+   . 
+   \item כל עץ המתקבל מריצת 
+   \E{BFS}
+   על
+   \E{$G$} 
+   ניתן
+   לקבל על ידי ריצת
+   \E{DFS}
+   על
+   \E{$G$} 
+   . 
+\end{itemize}
+\end{frame}
+\end{document}
