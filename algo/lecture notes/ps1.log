@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  10 NOV 2019 08:13
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  25 NOV 2019 09:56
  restricted system commands enabled.
 **ps1.tex
 (./ps1.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.109 seconds
+luaotfload | main : initialization completed in 0.130 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
@@ -2003,21 +2003,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 621.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 621.
 Package rerunfilecheck Info: File `ps1.out' has not changed.
 (rerunfilecheck)             Checksum: 9DEEC39A1208D57102C126527BE5EFDB;862.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 )
 
 Here is how much of LuaTeX's memory you used:
- 33090 strings out of 494413
+ 33088 strings out of 494413
  100000,953878 words of node,token memory allocated
  1922 words of node memory still in use:
    22 hlist, 8 vlist, 5 rule, 2 local_par, 6 dir, 38 glue, 1 kern, 11 penalty, 7
 4 glyph, 83 attribute, 71 glue_spec, 43 attribute_list, 3 write, 3 pdf_action, 1
 2 pdf_colorstack nodes
    avail lists: 1:5,2:793,3:300,4:122,5:127,6:20,7:1237,8:53,9:133,10:15,11:5
- 35336 multiletter control sequences out of 65536+600000
+ 35334 multiletter control sequences out of 65536+600000
  112 fonts using 15945223 bytes
  72i,13n,97p,1805b,723s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2018/texmf-dist/fonts/truetype/public/opensans/OpenSans-Regu

@@ -1,0 +1,389 @@
+%! TEX program = lualatex
+% find: (\$((?!\$).)+\$)
+%replace: \E{\1}
+
+%%%%%%%%%%
+% BEAMER %
+%%%%%%%%%%
+
+\RequirePackage{luatex85}
+
+\PassOptionsToPackage{luatex}{hyperref}
+
+\documentclass[luatex]{beamer}
+%\documentclass[handout]{beamer}
+
+\usetheme{metropolis}
+
+	\newcommand{\bigq}{\mathbb{Q}}
+\newcommand{\bb}{\bfseries\large}
+\newcommand{\class}{\mathcal}
+\newcommand{\mbi}[1]{\textbf{\em{#1}}}
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
+\newcommand{\ita}[1]{\textit{#1}}
+\newcommand{\p}{\cdot}
+\newcommand{\req}{\emptyset}
+\newcommand{\init}{\mathcal{J}}
+\newcommand{\power}[1]{\class{P}(#1)}
+\newcommand{\bigpower}[2]{\class{P}^{#1}(#2)}
+\newcommand{\symetric}{\bigtriangleup}
+\newcommand{\gx}[3]{\Gamma_{(#1,#2)}(#3)}
+\newcommand{\bd}[3]{\Delta_{(#1,#2)}(#3)}
+\newcommand{\bp}[3]{\Phi_{(#1,#2)}(#3)}
+\newcommand{\eab}{\eta_{\alpha \beta}}
+\newcommand{\sab}{\sigma_{\alpha\beta}}
+\newcommand{\dab}{\class{D}_{\alpha\beta}}
+\newcommand{\cab}{\class{C}_{\alpha\beta}}
+\newcommand{\C}[1]{\class{#1}}
+\newcommand{\ol}{\overline}
+\newcommand{\into}{\longrightarrow}
+\newcommand{\ifff}{\Longleftrightarrow}
+\newcommand{\imply}{\Rightarrow}
+\newcommand{\since}{\Longleftarrow}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\andd}{\wedge}
+\newcommand{\orr}{\vee}
+\newcommand{\ft}{(\C F \C T)_Q}
+\newcommand{\pathopen}[3]{#1_{(\ol{#2},#3)}}
+\newcommand{\fpi}[3]{#1_*(\Pi(#2,#3))}
+\newcommand{\xpath}[2]{(\ol {#1},#2)}
+\newcommand{\qn}[2]{\Lambda(#1,#2)}
+\newcommand{\jh}{\class J \class H}
+\newcommand{\bos}{\boldsymbol}
+\newcommand{\f}{\mathbb}
+\newcommand{\rss}{\la\psi_i:i\in \lambda\ra}
+\newcommand{\ito}[1]{\overset{#1}{\longrightarrow}}
+\newcommand{\pcomplex}[2]{\class #1(\class #2)}
+\newcommand{\then}{\Rightarrow}
+\newcommand{\ud}{{ {up-down-automaton}} }
+
+\newcommand{\map}[1]{\underset{#1}{\mapsto}}
+\newcommand{\mapi}[1]{\underset{#1}{\overset{i}{\mapsto}}}
+\newcommand{\mapstar}[1]{\underset{#1}{\overset{*}{\mapsto}}}
+\newcommand{\mapk}[2]{\underset{#1}{\overset{#2}{\mapsto}}}
+
+\newcommand{\eql}{\equiv_L}
+\newcommand{\der}[1]{\underset{#1}{\imply}}
+\newcommand{\deri}[1]{\underset{#1}{\overset{i}{\imply}}}
+\newcommand{\derstar}[1]{\underset{#1}{\overset{*}{\imply}}}
+\newcommand{\derk}[2]{\underset{#1}{\overset{#2}{\imply}}}
+\newcommand{\blank}{\bar{b}}
+\newcommand{\R}[1]{#1}
+\newcommand{\say}[1]{\color{blue}{#1}\color{black}}
+
+
+
+% Fix the title separator
+\makeatletter
+\setbeamertemplate{title separator}{
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[fg] (0,0) rectangle (\textwidth, \metropolis@titleseparator@linewidth);
+	\end{tikzpicture}%
+	\egroup
+	\par%
+}
+\makeatother
+
+% Fix the progress bar and make it progress from right to left
+\makeatletter
+\setbeamertemplate{progress bar in section page}{
+	\setlength{\metropolis@progressonsectionpage}{%
+		\textwidth * \ratio{\insertframenumber pt}{\inserttotalframenumber pt}%
+	}%
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[bg] (0,0) rectangle (\textwidth, \metropolis@progressonsectionpage@linewidth);
+	\fill[fg] (\textwidth,0) rectangle (\textwidth-\metropolis@progressonsectionpage, \metropolis@progressonsectionpage@linewidth);
+	\end{tikzpicture}%
+	\egroup
+}
+\makeatother
+
+% A more logical title page, juxtaposing `institute` to `author`. This modification is not necessary for Hebrew support.
+\makeatletter
+\setbeamertemplate{title page}{
+	\begin{minipage}[b][\paperheight]{\textwidth}
+		\ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+		\vfill%
+		\ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+		\ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+		\usebeamertemplate*{title separator}
+		\ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+		\ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+		\ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+		\vfill
+		\vspace*{1mm}
+	\end{minipage}
+}
+\setbeamertemplate{author}{\vspace*{2em}\insertauthor\par\vspace*{0.25em}}
+\setbeamertemplate{institute}{\insertinstitute\par}
+\setbeamertemplate{date}{\vspace*{3mm}\insertdate\par}
+\makeatother
+
+
+
+
+%%%%%%%%%
+% Babel %
+%%%%%%%%%
+
+\usepackage[nil,bidi=basic-r]{babel}
+\babelprovide[import=he,main]{hebrew}
+\babelprovide[import=en-GB]{english}
+
+% For some reason Babel’s `\babelfont` doesn’t work
+\setsansfont[Script=Hebrew]{Open Sans Hebrew}
+\setmonofont{Fira Mono}
+\renewcommand{\H}[1]{\foreignlanguage{hebrew}{\fontspec[Script=Hebrew]{Open Sans Hebrew}#1}}
+\newcommand{\E}[1]{\foreignlanguage{english}{\fontspec{Open Sans}#1}}
+\newcommand{\LR}[1]{{‏\textdir TLT #1}}
+
+
+
+
+%%%%%%%%
+% MISC %
+%%%%%%%%
+
+\usepackage{metalogo, fancyvrb}
+\usepackage{cancel}
+\newcommand{\smallurl}[1]{{\footnotesize\url{#1}}}
+
+
+
+%%%%%%%%%%%%
+% DOCUMENT %
+%%%%%%%%%%%%
+
+\begin{document}
+	\title{הפרד ומשול}
+	\subtitle{מפגש 7}
+	%\author{}
+	%\institute{}
+	\date{}
+	\begin{frame}{לפני הכל בואו נדבר על:}
+	\pause
+	\begin{itemize}[<+->]
+		\item משפט 4.17
+		\item הוכחה ע"י הרצה של אלגוריתם
+	\end{itemize}
+\end{frame}
+	\begin{frame}{}
+\begin{center}
+	\includegraphics[width=10cm]{imgs/trees}
+	\end{center}
+\end{frame}
+
+\begin{frame}{}
+\begin{center}
+	\includegraphics[width=10cm]{imgs/trees2}
+\end{center}
+\end{frame}
+	
+	\frame{\titlepage}
+	\begin{frame}{שבוע שעבר סיימנו}
+	\pause
+	
+	\begin{itemize}[<+->]
+		\item פרק של אלגוריתמים חמדניים
+		\begin{itemize}[<+->]
+\item מסלול קל ביותר - האלגוריתם של דייקסטרא
+\item מציאת עץ פורש מינימלי 
+\begin{itemize}[<+->]
+			\item אלגוריתם של פרים
+	\item האלגוריתם של קרוסקל
+\end{itemize}
+			\item  דחיסת נתונים - קידוד הופמן
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{התוכנית להיום}
+\pause
+\begin{itemize}[<+->]
+	\item הצגת הרעיון של הפרד ומשול
+	\item בעיית פשוטה - מיון מיזוג
+	\item ספירת היפוכים בפרמוטציה
+	\item הקדמה בנושא FFT
+\end{itemize}
+\end{frame}
+
+\begin{frame}{הפרד ומשול - הרעיון}
+\pause
+\begin{itemize}[<+->]
+	\item  חלק את הבעיה ל-2 בעיות
+	\item פתור כל תת בעיה רקורסיבית
+	\item אחד את תתי הבעיות
+\end{itemize}
+\pause
+בפרק זה אנחנו נעסוק בהרבה בעיות אשר אנו מכירים כבר אלגוריתמים יעילים עבורן (שרצים בזמן פולינומי). טכניקת הפרד ומשול תאפשר לנו לבנות אלגוריתם עם זמן ריצה טוב יותר.
+\end{frame}
+\begin{frame}{דוגמא - מיון מיזוג}
+\pause
+\begin{itemize}[<+->]
+	\item הבעיה: יש למיין מערך
+	\item פתרון:
+	\pause
+	\begin{itemize}[<+->]
+		\item נחלק מערך לשתי מערכים שווי גודל
+		\item נמיין רקורסיבית כל חצי
+		\item נאחד
+	\end{itemize}
+	\item חלוקה ואיחוד בזמן לינארי בגודל הקלט
+	\item נקבל זמן ריצה של:
+	$$T(n)=2T(n/2) +cn$$
+	זמן הריצה יהיה \E{$nlog(n)$}
+\end{itemize}
+\end{frame}
+\begin{frame}{איך נאחד שני מערכים ממיונים? (בזמן לינארי)}
+
+\end{frame}
+\begin{frame}{ניתוח זמן של נוסחאות נסיגה}
+\pause
+\begin{itemize}[<+->]
+	\item ניתן לחשב נוסחאות נסיגה ע"י אינדוקציה או הצבה (הסבר במבוא של פרק 5 בספר למי שרוצה להזכר)
+	\item כמה נוסחאות נסיגה שצריך להכיר:
+	\pause
+	\begin{itemize}[<+->]
+		\item זמן ריצה \E{$nlog(n)$}
+		$$T(n)=2T(n/2) +cn$$
+		\item זמן ריצה לוגרתמי
+		$$T(n)=T(n/2) +1$$
+		\item זמן ריצה מעריכי
+		$$T(n)=2T(n-1) +cn$$
+	\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{ספירת היפוכים בפרמוטציה}
+\pause
+\begin{itemize}[<+->]
+	\item בהינתן סידרה \E{$a_1,a_2,\ldots,a_n$} חשב כמה זוגות יש כך ש \E{$i>j$} וגם \E{$a_i<a_j$}
+	\item בייצוג גרפי כמה חיתוכים על \E{$n$} מספרים
+	\begin{center}
+		\includegraphics[width=6cm]{imgs/hipuhim}
+		\end{center}
+\end{itemize}
+\end{frame}
+\begin{frame}{האלגוריתם}
+\pause
+\begin{itemize}[<+->]
+	\item אם הרשימה היא בגודל 1 - החזר אין היפוכים
+	\item חלק את הפרמוטציה לשני חלקים \E{$A,B$}
+	\item ספור היפוכים ומיין כל תת רשימה בצורה רקורסיבית
+	\item אחד את התוצאות של \E{$A$} ו-\E{$B$} יחד עם מספר ההיפוכים בינהם.
+\end{itemize}
+\end{frame}
+\section{דוגמת ריצה}
+\begin{frame}{ניתוח זמן ריצה}
+\pause
+\begin{itemize}[<+->]
+	\item חלוקה לשני חלקים - זמן לינארי
+	\item ספירת היפוכים עבור חצי מערך - \E{$T(\frac{n}{2})$}
+	\item ספירת היפוכים בין שני החציים וסכימה יחד עם התוצאות של כל חצי -  זמן לינארי
+\end{itemize}
+\pause
+סה"כ: 
+
+$$T(n) = 2\cdot T(\frac{n}{2}) + O(n) = n log(n)$$
+\end{frame}
+\begin{frame}{קונבולציה}
+\pause
+\begin{itemize}[<+->]
+	\item פעולה על שני וקטורים בדומה לחיבור, חיסור, כפל מטריצות או מכפלה 
+	פנימית
+	\item שימושי ב-
+	\begin{itemize}[<+->]
+		\item עיבוד אותות 
+		\item מכפלה מהירה של מספרים טבעיים גדולים
+		\item יצירת ממוצע נע (moving average)
+	\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{קונבולוציה - בעצם אתם כבר מכירים את זה מכיתה ח'}
+\pause
+\begin{itemize}[<+->]
+\item איך מכפילים שני פולינומים?
+$$(4x^2 + 3x +1)\cdot (x^2 + x +2)=$$
+\pause
+$$4x^4 + 7x^3 +12x^2 + 7x+3$$
+\item למעשה מה שעשיתם זה קונבולוציה למקדמי הפולינומים
+\end{itemize}
+\end{frame}
+\begin{frame}{קונבולוציה - הגדרה}
+\pause
+\begin{itemize}[<+->]
+	\item בהינתן שני וקטורים
+	$$A=(a_0,a_1,\ldots,a_n)$$
+		$$B=(b_0,b_1,\ldots,b_m)$$
+	\item קונבולוציה של \E{$A$} עם \E{$B$} מסומנת ב: \E{$A*B = C$} 
+	\item עבור וקטור 
+	\E{$C$} באורך \E{$1+n+m$} המוגדר כך:
+	$$c_i=\sum_{j,k:j+k=i}a_j\cdot b_k$$
+\end{itemize}
+\end{frame}
+\begin{frame}{דוגמא}
+\E{$(a_0,a_1,a_2)*(b_0,b_1,b_2)=(1,3,4)*(2,1,1) = (\onslide<3->{2},\onslide<5->{7},\onslide<7->{12},\onslide<8->{7},\onslide<8->{4})$ }
+\pause
+\begin{itemize}[<+->]
+	\item \E{$c_0=a_0\cdot b_0=1\cdot 2$}
+	\pause
+	\item \E{$c_1=a_0\cdot b_1 +a_1\cdot b_0=1\cdot 1+3\cdot 2$}
+		\pause
+		\item \E{$c_2=a_0\cdot b_2 +a_1\cdot b_1 + a_2\cdot b_0=1\cdot 1+3 \cdot 1 + 4 \cdot 2 $}
+\end{itemize}
+\end{frame}
+\begin{frame}{קונובולוציה - זה בעצם שקול להכפלת שני פולינומים}
+\pause
+\begin{itemize}[<+->]
+	\item בדוגמא הקודמת:
+	$$(1,3,4) \rightarrow 4x^2 + 3x +1$$ 
+		$$(2,1,1) \rightarrow x^2 + x +2$$
+	\item \E{$(1,3,4)*(2,1,1) \rightarrow (4x^2 + 3x +1)\cdot (x^2 + x +2)=$}
+	$$4x^4 + 7x^3 +12x^2 + 7x+2 \rightarrow (2,7,12,7,4)$$
+\end{itemize}
+
+\end{frame}
+\begin{frame}{הכפלת שני פולינומים}
+\pause
+\begin{itemize}[<+->]
+	\item נגביל את הבעיה למקרה בו שני הפולינומים מאותו סדר, כלומר  \E{m=n} (אחרת פשוט אפשר להוסיף אפסים)
+	\item מה זמן הריצה להכפלת שני פולינומים מסדר n?
+	\item האם אפשר לעשות את זה בזמן טוב יותר?
+\end{itemize}
+\end{frame} 
+\begin{frame}{ייצוג פולינומים}
+בהינתן פולינום מדרגה \E{$n$} ניתן לייצג אותו:
+\pause
+\begin{itemize}[<+->]
+	\item ע"י \E{$n+1$}  מקדמים 
+	\item ע"י \E{$n+1$} נקודות
+\end{itemize}
+\pause
+\textbf{המשפט היסודי של האלגברה:} דרך \E{$n+1$} נקודות עובר פולינום יחיד ממעלה \E{$n$}
+\end{frame}
+\begin{frame}{ההבדלים בין הייצוגים}
+\pause
+\begin{itemize}[<+->]
+	\item קבלת הערך בנקודה
+	\item מכפלת שני פולינומים
+	\pause
+	\begin{itemize}[<+->]
+		\item בייצוג מקדמים - דורש זמן ריבועי
+		\item בייצוג בנקודות - אם יש לנו \E{$2n+1$} נקודות של כל פולינום ניתן לחשב בזמן לינארי 
+	\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{דוגמא}
+\pause
+\begin{itemize}[<+->]
+	\item \E{$(1,1,1)*(1,0,2)=$}
+	\item \E{$(x^2+x+1)\cdot (2x^2+1) =x^4+x^3+3x^2+2x+2= (2,2,3,1,1)$}
+	\item 
+	\item 
+\end{itemize}
+\end{frame}
+\end{document}

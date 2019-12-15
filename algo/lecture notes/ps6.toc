@@ -1,0 +1,3 @@
+\babel@toc {hebrew}{}
+\beamer@sectionintoc {1}{תכנון האלגוריתם של הופמן}{39}{0}{1}
+\beamer@sectionintoc {2}{הוכחת נכונות}{68}{0}{2}

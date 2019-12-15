@@ -1,0 +1,393 @@
+%! TEX program = lualatex
+% find: (\$((?!\$).)+\$)
+%replace: \E{\1}
+
+%%%%%%%%%%
+% BEAMER %
+%%%%%%%%%%
+
+\RequirePackage{luatex85}
+
+\PassOptionsToPackage{luatex}{hyperref}
+
+\documentclass[luatex]{beamer}
+%\documentclass[handout]{beamer}
+
+\usetheme{metropolis}
+
+	\newcommand{\bigq}{\mathbb{Q}}
+\newcommand{\bb}{\bfseries\large}
+\newcommand{\class}{\mathcal}
+\newcommand{\mbi}[1]{\textbf{\em{#1}}}
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
+\newcommand{\ita}[1]{\textit{#1}}
+\newcommand{\p}{\cdot}
+\newcommand{\req}{\emptyset}
+\newcommand{\init}{\mathcal{J}}
+\newcommand{\power}[1]{\class{P}(#1)}
+\newcommand{\bigpower}[2]{\class{P}^{#1}(#2)}
+\newcommand{\symetric}{\bigtriangleup}
+\newcommand{\gx}[3]{\Gamma_{(#1,#2)}(#3)}
+\newcommand{\bd}[3]{\Delta_{(#1,#2)}(#3)}
+\newcommand{\bp}[3]{\Phi_{(#1,#2)}(#3)}
+\newcommand{\eab}{\eta_{\alpha \beta}}
+\newcommand{\sab}{\sigma_{\alpha\beta}}
+\newcommand{\dab}{\class{D}_{\alpha\beta}}
+\newcommand{\cab}{\class{C}_{\alpha\beta}}
+\newcommand{\C}[1]{\class{#1}}
+\newcommand{\ol}{\overline}
+\newcommand{\into}{\longrightarrow}
+\newcommand{\ifff}{\Longleftrightarrow}
+\newcommand{\imply}{\Rightarrow}
+\newcommand{\since}{\Longleftarrow}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\andd}{\wedge}
+\newcommand{\orr}{\vee}
+\newcommand{\ft}{(\C F \C T)_Q}
+\newcommand{\pathopen}[3]{#1_{(\ol{#2},#3)}}
+\newcommand{\fpi}[3]{#1_*(\Pi(#2,#3))}
+\newcommand{\xpath}[2]{(\ol {#1},#2)}
+\newcommand{\qn}[2]{\Lambda(#1,#2)}
+\newcommand{\jh}{\class J \class H}
+\newcommand{\bos}{\boldsymbol}
+\newcommand{\f}{\mathbb}
+\newcommand{\rss}{\la\psi_i:i\in \lambda\ra}
+\newcommand{\ito}[1]{\overset{#1}{\longrightarrow}}
+\newcommand{\pcomplex}[2]{\class #1(\class #2)}
+\newcommand{\then}{\Rightarrow}
+\newcommand{\ud}{{ {up-down-automaton}} }
+
+\newcommand{\map}[1]{\underset{#1}{\mapsto}}
+\newcommand{\mapi}[1]{\underset{#1}{\overset{i}{\mapsto}}}
+\newcommand{\mapstar}[1]{\underset{#1}{\overset{*}{\mapsto}}}
+\newcommand{\mapk}[2]{\underset{#1}{\overset{#2}{\mapsto}}}
+
+\newcommand{\eql}{\equiv_L}
+\newcommand{\der}[1]{\underset{#1}{\imply}}
+\newcommand{\deri}[1]{\underset{#1}{\overset{i}{\imply}}}
+\newcommand{\derstar}[1]{\underset{#1}{\overset{*}{\imply}}}
+\newcommand{\derk}[2]{\underset{#1}{\overset{#2}{\imply}}}
+\newcommand{\blank}{\bar{b}}
+\newcommand{\R}[1]{#1}
+\newcommand{\say}[1]{\color{blue}{#1}\color{black}}
+
+
+
+% Fix the title separator
+\makeatletter
+\setbeamertemplate{title separator}{
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[fg] (0,0) rectangle (\textwidth, \metropolis@titleseparator@linewidth);
+	\end{tikzpicture}%
+	\egroup
+	\par%
+}
+\makeatother
+
+% Fix the progress bar and make it progress from right to left
+\makeatletter
+\setbeamertemplate{progress bar in section page}{
+	\setlength{\metropolis@progressonsectionpage}{%
+		\textwidth * \ratio{\insertframenumber pt}{\inserttotalframenumber pt}%
+	}%
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[bg] (0,0) rectangle (\textwidth, \metropolis@progressonsectionpage@linewidth);
+	\fill[fg] (\textwidth,0) rectangle (\textwidth-\metropolis@progressonsectionpage, \metropolis@progressonsectionpage@linewidth);
+	\end{tikzpicture}%
+	\egroup
+}
+\makeatother
+
+% A more logical title page, juxtaposing `institute` to `author`. This modification is not necessary for Hebrew support.
+\makeatletter
+\setbeamertemplate{title page}{
+	\begin{minipage}[b][\paperheight]{\textwidth}
+		\ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+		\vfill%
+		\ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+		\ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+		\usebeamertemplate*{title separator}
+		\ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+		\ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+		\ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+		\vfill
+		\vspace*{1mm}
+	\end{minipage}
+}
+\setbeamertemplate{author}{\vspace*{2em}\insertauthor\par\vspace*{0.25em}}
+\setbeamertemplate{institute}{\insertinstitute\par}
+\setbeamertemplate{date}{\vspace*{3mm}\insertdate\par}
+\makeatother
+
+
+
+
+%%%%%%%%%
+% Babel %
+%%%%%%%%%
+
+\usepackage[nil,bidi=basic-r]{babel}
+\babelprovide[import=he,main]{hebrew}
+\babelprovide[import=en-GB]{english}
+
+% For some reason Babel’s `\babelfont` doesn’t work
+\setsansfont[Script=Hebrew]{Open Sans Hebrew}
+\setmonofont{Fira Mono}
+\renewcommand{\H}[1]{\foreignlanguage{hebrew}{\fontspec[Script=Hebrew]{Open Sans Hebrew}#1}}
+\newcommand{\E}[1]{\foreignlanguage{english}{\fontspec{Open Sans}#1}}
+\newcommand{\LR}[1]{{‏\textdir TLT #1}}
+
+
+
+
+%%%%%%%%
+% MISC %
+%%%%%%%%
+
+\usepackage{metalogo, fancyvrb}
+\usepackage{cancel}
+\newcommand{\smallurl}[1]{{\footnotesize\url{#1}}}
+
+
+
+%%%%%%%%%%%%
+% DOCUMENT %
+%%%%%%%%%%%%
+
+\begin{document}
+	\title{קודי הופמן ודחיסת נתונים}
+	\subtitle{מפגש 6}
+	%\author{}
+	%\institute{}
+	\date{}
+	
+	
+	\frame{\titlepage}
+	\begin{frame}{שבוע שעבר ראינו}
+	\pause
+	
+	\begin{itemize}[<+->]
+		\item בעיית עץ הפורש המינימלי
+		\begin{itemize}[<+->]
+			\item אלגוריתם של פרים
+			\item האלגוריתם של קרוסקל
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{התוכנית להיום}
+\pause
+\begin{itemize}[<+->]
+	\item דחיסת נתונים באמצעות קידוד הופמן
+	\begin{itemize}[<+->]
+		\item הצגת הבעיה
+		\item הגדרות
+		\item האלגוריתם של הופמן
+	\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{imgs/telegraph}
+\end{figure}
+
+
+\end{frame}
+\begin{frame}{מטרות התקשורת}
+\pause
+\begin{itemize}[<+->]
+	\item תקשורת יעילה
+	\item ניתנת לפענוח
+\end{itemize}
+\end{frame}
+\begin{frame}{תקשורת יעילה}
+
+\centering \E{i love algorithm course. }
+\pause
+\begin{itemize}[<+->]
+	\item $f(space(= 4/24$
+	\item $f(o(=3/24$
+	\item $f(i( = 2/24$
+	\item ...
+\end{itemize}
+\end{frame}
+\begin{frame}{קידוד אפשרי}
+
+\pause
+\begin{itemize}[<+->]
+	\item הקידוד של space יהיה - 0 
+	\item הקידוד של o יהיה - 1
+	\item הקידוד של i יהיה  - 01
+	\item וכ"ו...
+\end{itemize}
+\pause
+נקבל: 01001101001010110010100100
+\pause 
+\\איך אפשר לקרוא את זה?
+\end{frame}
+\begin{frame}{הגדרות וסימונים}
+\pause
+\begin{itemize}[<+->]
+	\item \E{$S$} - א"ב שאנחנו רוצים לקודד
+	\item \E{$f$} - פונק' שכיחויות של הא"ב
+	$$f : S \rightarrow (0,\infty) $$
+	\item \E{$\gamma$} - קידוד תחיליות של א"ב
+	$$\gamma : S \rightarrow \{0,1\}^*$$
+	\item \E{$ABL(\gamma)$} - מספר ביטים ממוצע לאות בקידוד \E{$\gamma$}.
+	$$ABL(\gamma) = \sum_{x\in S} f(x)\cdot |\gamma(x)|$$
+\end{itemize}
+\end{frame}
+\begin{frame}{בעיית קוד תחיליות אופטימלי}
+\pause
+\begin{itemize}[<+->]
+	\item \textbf{הקלט:} קבוצה 
+	\E{$S$} ושכיחויות 
+	\E{$f:S\rightarrow (0,\infty)$}
+	\item \textbf{הפלט:}
+	 מיפוי 
+	\E{$\gamma : S \rightarrow \{0,1\}^*$}
+	\\ כך שלכל
+	 \E{$  x, y \in S $}
+	   שונים,
+	מתקיים תנאי התחיליות:
+	\pause
+	\begin{itemize}[<+->]
+		\item 	 אף אחת מהמחרוזות הבינריות 
+		\E{$\gamma(x),\gamma(y)$}
+		אינה תחילית של
+		האחרת.
+	\end{itemize}
+
+	\item \textbf{מטרה: }
+	למזער את הסכום
+\E{$ABL(\gamma)=\sum_{x\in S} f(x)|\gamma(x)| $}
+\end{itemize}
+\end{frame}
+
+\section{תכנון האלגוריתם של הופמן}
+\begin{frame}{ייצוג קודי תחיליות בעצים בינאריים}
+\begin{center}
+	\includegraphics[width=1\linewidth]{imgs/htree}
+\end{center}
+\end{frame}
+\begin{frame}{ייצוג קודי תחיליות בעצים בינאריים}
+\pause
+\begin{itemize}[<+->]
+	\item \textbf{משפט: } קידוד הבנוי על בסיס עץ בינארי הוא קוד של תחיליות
+	\item \textbf{משפט: } עץ בינארי שמתאים לקוד אופטימלי של תחיליות הוא עץ מלא.
+\end{itemize}
+\end{frame}
+\begin{frame}{הבעיה השקולה}
+\textbf{הגדרה: }\E{$ABL(T)$} - ממוצע משוקלל של עומקי העלים בעץ \E{$T$}.
+$$ABL(T) = \sum_{x\in S} f(x)\cdot depth_T(x)$$
+\pause
+\begin{itemize}[<+->]
+	\item \textbf{הקלט:} קבוצה 
+\E{$S$} ושכיחויות 
+\E{$f:S\rightarrow (0,\infty)$}
+\item \textbf{הפלט:}
+עץ בינארי \E{$T$} המכיל קבוצת עלים \E{$S$}
+
+
+\item \textbf{מטרה: }
+למזער את הסכום
+\E{$ABL(T)$}
+\end{itemize}
+\end{frame}
+\begin{frame}{משפט מפתח}
+נביט בעץ בינארי 
+\E{$T^*$}
+ שמתאים לקוד אופטימלי של תחיליות.
+יהי
+\E{$v$}
+קודקוד עמוק ביותר בעץ. אז 
+\E{$v$}
+ עלה ויש לו שכן
+\E{   $w$}
+    שהינו גם עלה.
+\end{frame}
+\begin{frame}{קידוד מלמטה למעלה}
+\pause
+\begin{itemize}[<+->]
+	\item יש לנו שתי עלים אחים עמוקים ביותר - איזה אותיות הן ייצגו?
+\end{itemize}
+\begin{center}
+	\includegraphics[width=4cm]{imgs/htree2}
+	\end{center}
+\pause
+\begin{itemize}[<+->]
+	\item \textbf{טענה:} נניח ש-
+	\E{$u$}
+	ו-
+		\E{$v$}
+		הם עלים ב-
+			\E{$T^*$}
+			עץ המותאם לקוד תחיליות אופטימלי.
+			אם הם מקיימים
+				\E{$depth(u)<depth(v)$},
+				אזי התדירות של האות שמוצמדת ל-
+					\E{$u$}
+					גדולה מהתדירות של האות שמוצמדת ל- 	\E{$v$}
+					.
+	\item \textbf{מסקנה:} קיים קוד אופטימלי של תחיליות ועץ תואם 
+	\E{$T^*$}
+	שבו שתי האותיות בעלות השכיחיות הנמוכות ביותר משוייכות לעלים שהם אחים ב-\E{$T^*$}.
+	
+\end{itemize}
+\end{frame}
+\begin{frame}{}
+\begin{center}
+	\includegraphics[width=0.5\linewidth]{huffmann-running-example}
+\end{center}
+
+\end{frame}
+\begin{frame}{תיאור האלגוריתם}
+\pause
+ליצירת קוד תחיליות לשפה עם א"ב \E{$S$}: 
+\begin{enumerate}[<+->]
+	\item אם ב-\E{$S$} יש שתי אותיות או פחות:
+	\pause
+	\begin{itemize}[<+->]
+		\item קבע את הראשונה בקידוד 0 ואת השניה בקידוד 1.
+	\end{itemize}
+	\item אחרת
+	\pause
+	\begin{enumerate}[<+->]
+		\item יהיו, \E{$x,y$} שני האיברים עם התדירות הנמוכה ביותר ב-\E{$S$}.
+		\item צור א"ב חדש \E{$S'$} ע"י מחיקת 
+		\E{ $x,y$} 
+		והחלפתם באות חדשה \E{$w$} בעלת התדירות \E{$f(x)+f(y)$}.
+		\item צור בצורה רקורסיבית קוד תחיליות \E{$\gamma'$} ל-\E{$S'$}, עם עץ \E{$T'$}
+		\item  הגדר קוד תחיליות עבור \E{$S$} :בצורה הבאה
+		\pause
+		\begin{itemize}[<+->]
+			\item התחל עם \E{$T'$}
+			\item קח את העלה שמתיוג ב-\E{$w$} והוסף לו שתי ילדים המתיוגים כ-\E{$x,y$}.
+		\end{itemize}
+	\end{enumerate}
+\end{enumerate}
+
+\end{frame}
+\section{הוכחת נכונות}
+\begin{frame}{תרגיל 4.20 מהמדריך}
+בהינתן קבוצת תווים
+ \E{$S$}
+ שהשכיחויות שלהם הן
+ \E{$f:S\rightarrow (0,\infty)$}
+  , פתחו אלגוריתם ליצירת￼￼￼￼￼￼￼￼￼￼ 􏰌
+קוד תחיליות
+\E{$\gamma : S \rightarrow \{0,1,2\}$}
+ שימזער את
+ \E{$\sum_{x\in S} f(x)|\gamma(x)|$}
+  . הוכיחו את הנכונות ונתחו את הסיבוכיות. כדי לקצר את התשובה במקצת, אתם יכולים להניח 
+  ש־
+  \E{$|S|\ge 3$}
+   ואי־זוגי.
+\end{frame}
+\end{document}

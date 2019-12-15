@@ -1,0 +1,5 @@
+\babel@toc {hebrew}{}
+\beamer@sectionintoc {1}{אלגוריתמים חמדניים}{4}{0}{1}
+\beamer@sectionintoc {2}{הוכחה על הלוח}{13}{1}{2}
+\beamer@sectionintoc {3}{הוכחה על הלוח}{15}{1}{3}
+\beamer@sectionintoc {4}{דייקסטרא}{16}{1}{4}

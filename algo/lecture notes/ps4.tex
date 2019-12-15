@@ -160,8 +160,8 @@
 %%%%%%%%%%%%
 
 \begin{document}
-	\title{ סריקות לעומק ומיון טופולוגי}
-	\subtitle{מפגש 3}
+	\title{ אלגוריתמים חמדניים - מסלולים קלים ביותר}
+	\subtitle{מפגש 4}
 	%\author{}
 	%\institute{}
 	\date{}
@@ -172,260 +172,129 @@
 \pause
 
 \begin{itemize}[<+->]
-	\item מעבר על BFS
-	\item תכנון אלגוריתם מבוסס רדוקציה
+	\item סיימנו סריקות בגרף (DFS,BFS)
+	\item מיון טופולוגי
 \end{itemize}
 \end{frame}
 
 \begin{frame}{התוכנית להיום}
 \pause
 \begin{itemize}[<+->]
-	\item סריקת עומק - DFS 
-	\item מיון טופולוגי
+	\item מסלולים קלים ביותר
+\item אלגוריתם גנרי
+\item אלגוריתם דייקסטרא
 \end{itemize}
 \end{frame}
-
-\part{DFS - סריקה לעומק}
+\section{אלגוריתמים חמדניים}
+\part{מסלולים קלים ביותר בגרפים מכוונים עם מקור יחיד}
 \frame{\partpage}
 \begin{frame}{הקדמה}
-האלגוריתם DFS פעול באופן רקורסיבי כאשר תמיד יעדיף לחפש "עמוק" יותר בגרף לפני מעבר לשכנים נוספים של קודקוד נסרק.
 \pause
 \begin{itemize}[<+->]
-	\item בסריקה נוצר יער עומר \E{$G_\pi$}.
-	צלע ביער מהסוג
-	\E{$(\pi(x),x)$}.
-	\item לכל קודקוד 3 מצבים אפשריים:
-	\begin{itemize}[<+->]
-		\item קודקוד מאותחל בלבן - ונשאר לבן כל עוד לא התגלה בסריקה
-		\item קודקוד הפוך אפור ברגע גילויו
-		\item קודקוד הופל מאפור לשחור לאחר שהסתיימה סריקת כל הקודקודים שנגישים ממנו.
-	\end{itemize}
+	\item נוסיף אספקט נוסף לגרף, גרף ממושקל.
+	\item נוספת פונקציית משקל על הקשתות:
+	$$w:E\rightarrow \mathbb{R}$$
+	\item \textbf{הגדרה:} משקל של מסלול הינו סך משקולות הצלעות
+	\item פונקציית מרחק $\delta$:
+	$$\delta(s,v)=\delta(v) = \begin{cases}
+	\infty, \quad \text{$v$- ל $s$ אין מסלול בין}\\
+	\text{$v$-ל $s$-משקל מסלול קל ביותר מ },\quad \text{אחרת}
+	\end{cases}$$
+	\item \textbf{הערה: }במידה וקיים מעגל שלילי (=מעגל במשקל שלילי) במסלול כלשהו בין 
+	\E{$s$}
+	ל-
+	\E{$v$}
+	אזי הפונקציה
+	$\delta$ 
+	לא מוגדרת היטב. נשלים את ההגדרה במקרה זה כ-
+	$$\delta(s,v)=-\infty$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}{הקדמה}
+\begin{frame}{ בעיית מציאת מסלולים קלים ביותר בגרפים מכוונים עם מקור יחיד ומשקולות אי-שליליים}
 \begin{itemize}[<+->]
-	\item :לכל קודקוד מספר שדות
-	\begin{itemize}[<+->]
-\item 
-\E{$d(v)$} - זמן גילוי הקודקוד
-\item \E{$f(v)$} - זמן סיום הטיפול הקודקוד
-\item \E{$\pi(v)$} - קודקוד אשר ממנו התגלה 
-\E{$v$}.
-\item \E{$color(v)$} - צבע הקודקוד
-	\end{itemize}
+	\item \textbf{קלט:} 
+	\E{$G=(V,E)$}
+	מכוון,
+	\E{$s\in V$}
+	קודקוד מקור.
+	\E{$w:E\rightarrow \mathbb{R}^+\cup\{0\}$}
+	\item \textbf{יש למצוא:} לכל 
+	\E{$v\in V$}
+	מסלול קל ביותר מ-
+	\E{$s$}
+	ל-
+		\E{$v$},
+		אם קיים.
 \end{itemize}
 \end{frame}
-\section{דוגמת ריצה על הלוח}
-\begin{frame}{DFS - האלגוריתם}
-\LR{
-	\fbox{
-		\parbox{8cm}{
-			{\sc DFS($G$) } 
-			\begin{itemize}
-				\item[] $Init: t=1\quad$ color[$u$]=white for all $u\in V$\\
-				\item[] FOR $u\in V$ DO
-				\begin{itemize}
-					\item[] IF color[$u$] = white THEN
-					\begin{itemize}
-						\item[] {\sc DFS-Visit(u)}
-					\end{itemize}
-				\end{itemize}
-			\end{itemize}
-	}}
-	
-}
-\end{frame}
-\begin{frame}{DFS - האלגוריתם}
-\LR{
-	\fbox{
-		\parbox{8cm}{
-			{\sc DFS-Visit($u$) } 
-			\begin{itemize}
-				\item[] color[$u$] = gray
-				\item[] $d[u]$ = t
-				\item[] t = t + 1
-				\item[] FOR $(u,v)\in E$ DO
-				\begin{itemize}
-					\item[] IF color[$v$] = white THEN
-					\begin{itemize}
-						\item[] $\pi[v] = u$
-						\item[] {\sc DFS-Visit(v)}
-					\end{itemize}
-				\end{itemize}
-				\item[] color[$u$] = black
-				\item[] $f[u]$ = t
-				\item[] t = t + 1
-			\end{itemize}
-	}}
-	
-}
-\end{frame}
-\begin{frame}{תכונות DFS}
-\pause
-\begin{itemize}[<+->]
-	\item סורק את כל הקודקודים
-	\item מוצא מעגלים
-
-	\item מציאת מיון טופולוגי
-	\item סיבוכיות \E{$O(|V|+|E|)$}
-\end{itemize}
-\end{frame}
-
-\begin{frame}{שאלה 3}
-\textbf{הוכיחו או הפריכו את הטענה הבאה:}
-יהי גרף קשיר ולא מכוון ויהי
-\E{$u\in V$}
-. אם קיימת הרצת
-\E{$DFS$} 
- מ-
- \E{$u$}
-  על
-   \E{$G$}
-    והרצת
-     \E{$BFS$}
-      מ-
-       \E{$u$}
-       על
-        \E{$G$}
-         הנותנות את אותו עץ
-          \E{$T$}
-           אז בהכרח
-            \E{$G=T$}
-\end{frame}
-\begin{frame}{מיון טופולוגי}
-\pause
-\begin{itemize}[<+->]
-	\item  מיון טופולוגי של גרף מכוון
-\E{$G=(V,E)$}
- הינו סידור
-
-\E{$ (v_1,...,v_n)$}
-   של קודקודי הגרף, כך שלכל
-
-\E{$1 \le i,j \le n$}
-אם
-\E{$ i < j$}
-  אז אין קשתות מ
-   \E{$j$}
-    ל
-     \E{$i$}
-      בגרף
-\end{itemize}
-\pause
-\begin{center}
-\includegraphics[width=0.7\linewidth]{imgs/topologyorder}
-\end{center}
-\end{frame}
-\section{דוגמה על הלוח}
-\begin{frame}{מיון טופולוגי}
-\textbf{משפט:} אם הגרף DAG אזי יש מיון טופולוגי.
-\\
-הוכחה בבניה (עמוד 111 בספר).
-\end{frame}
-\begin{frame}{מיון טופולוגי באמצעות DFS}
-\pause
-\begin{itemize}[<+->]
-	\item \textbf{טענה: } אם 
-	\E{$G$}
-	חסר מעגלים ו-
-	\E{$(u,v)\in E$}
-	אז בכל סריקת 
-	\E{DFS(G)}
-	מתקיים
-	\E{$f(v)<f(u)$}
-	\item\textbf{ אלגוריתם מבוסס 
-		\E{DFS}
-				 למציאת מיון טופולוגי:
-	 }
-
-\begin{itemize}[<+->]
-	\item הרץ 
-	\E{DFS(G)}
-	\item (אם לא התגלתה קשת אחורה) החזר סידור של 
-	\E{$V$}
-	לפי זמני 
-	\E{$f$}
-	בסדר יורד.
-\end{itemize}
-\pause
-נכונות האלגוריתם נובעת מנכונות הטענה (על הלוח).
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{שאלה 4}
+\begin{frame}{הערות}
  \pause
- \begin{itemize}[<+->]
- 	\item \textbf{הגדרה:} גרף מעורב הוא גרף שבו כמה מהקשתות
-מכוונות והאחרות אינן מכוונות. 
- 	\item הוכיחו שאם בגרף מעורב התת-גרף המתקבל מכל
-צמתי הגרף ומהקשתות המכוונות בלבד אינו מכיל  מעגל מכוון, אז תמיד ניתן לכוון את הקשתות הלא
-מכוונות כך שבגרף המכוון המתקבל אין מעגל מכוון. הראו כיצד ניתן למצוא כיוון מתאים לקשתות בזמן לינארי.
- 	\item \textbf{רמז:} מצאו קודם את האלגוריתם המבצע את הכיוון
-ומהוכחת נכונותו הסיקו כי קיים כיוון כנדרש. 
- \end{itemize}
-\end{frame}
-\begin{frame}{שאלה 5}
-נתון גרף מכוון.\\
-כיצד יכול להשתנות מספר הרכיבים
- הקשירים היטב בגרף אם מוסיפים קשת חדשה?
-\end{frame}
-\begin{frame}{שאלה 6}
-\textbf{הוכח או הפרך-}\\
-אם בגרף מכוון יש קשתות הנכנסות לצומת u וגם קשתות היוצאות ממנו, אזי לא ייתכן שבהרצת DFS על הגרף הצומת u יימצא בעץ המכיל אותו בלבד.
-\end{frame}
-
-\begin{frame}{שאלה 7}
-\textbf{הוכח או הפרך-}\\
-יהי גרף קשיר ולא מכוון, יהי
- \E{$s\in V$}
-  ויהי
-   \E{$T$}
-    עץ
-המתקבל מהרצת
- \E{DFS}
-  על
-   
-  \E{$G$}
-   מ-
-  \E{$s$}
-   . אז עומקו של
-    \E{$T$}
-      הוא לפחות כעומקו של כל עץ המתקבל מהרצת 
-      \E{BFS}
-      על
-      \E{$G$}
-      מ-
-      \E{$s$}.
-\end{frame}
-
-\begin{frame}{שאלה 8}
-יהי 
-\E{$G$}
-גרף לא מכוון וקשיר. הוכח או הפרך:
-\pause
 \begin{itemize}[<+->]
-	\item כל עץ המתקבל מריצת 
-	\E{DFS}
-	 על
-	 \E{$G$} 
-	 ניתן
-לקבל על ידי ריצת
- \E{BFS}
-  על
-    \E{$G$} 
-   . 
-   \item כל עץ המתקבל מריצת 
-   \E{BFS}
-   על
-   \E{$G$} 
-   ניתן
-   לקבל על ידי ריצת
-   \E{DFS}
-   על
-   \E{$G$} 
-   . 
+	\item ראשית נחשב את המרחקים לכל $v\in V$ ולאחר מכן נשחזר את המסלולים עצמם ע"י שימוי במרחקים הנ"ל.
+	\item אם $w(e)=c$ לכל קשת, איך נוכל לפתור את הבעיה?
+	\item מסלול קל ביותר הינו בהכרח מסלול פשוט.
 \end{itemize}
 \end{frame}
+\begin{frame}{טענה}
+
+\pause
+\begin{itemize}[<+->]
+	\item תת מסלול של מסלול קל ביותר הינו מסלול קל ביותר. (הוכחה על הלוח)
+	\item \textbf{מסקנה:} רישא של מסלול קל ביותר הינו גם מסלול קל ביותר.
+\end{itemize}
+\end{frame}
+\begin{frame}{הערה נוספת}
+\pause
+\begin{itemize}[<+->]
+\item לכל קשת \E{$(u,v)$} מתקיים:
+$$\delta(s,v) \le \delta(s,u)+w(u,v)$$
+\end{itemize}
+
+\end{frame}
+\begin{frame}{ אלגוריתם גנרי}
+\LR{
+	\fbox{
+		\parbox{8cm}{
+			\begin{itemize}
+				\item[] \textbf{Init:} $\forall v\in V$, $d(v)\leftarrow \infty$,  $d(s)\leftarrow 0$ 
+				\item[] \textbf{Step:} If exists $(u,v)$ s.t $d(v)>d(u)+w(u,v)$ do $Relax(u,v)$
+			\end{itemize}
+	}}
+	
+}
+\pause
+\LR{
+	\fbox{
+		\parbox{8cm}{
+			{\sc Relax($u,v$) } 
+			\begin{itemize}
+				\item[] If $d(v)>d(u)+w(u,v)$
+				\item[] $d(v)\leftarrow d(u)+w(u,v)$
+			\end{itemize}
+	}}
+	
+}
+\end{frame}
+\begin{frame}{טענה נשמרת}
+בכל שלב באלגוריתם 
+\E{$d(v)\ge\delta(s,v)$}
+ואם
+\E{ $d(v)<\infty$ }
+ אזי 
+\E{$d(v)$ }
+משקל מסלול כלשהו מ-
+\E{$s$} 
+ ל-
+ \E{$v$}
+ .
+\end{frame}
+\section{הוכחה על הלוח}
+\begin{frame}{משפט נכונות האלגוריתם הגנרי}
+אם האלגוריתם עוצר אזי לכל 
+\E{$v\in V$}
+$$d(v)=\delta(s,v)$$
+\end{frame}
+\section{הוכחה על הלוח}
+\section{דייקסטרא}
 \end{document}
