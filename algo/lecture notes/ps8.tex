@@ -1,0 +1,230 @@
+%! TEX program = lualatex
+% find: (\$((?!\$).)+\$)
+%replace: \E{\1}
+
+%%%%%%%%%%
+% BEAMER %
+%%%%%%%%%%
+
+\RequirePackage{luatex85}
+
+\PassOptionsToPackage{luatex}{hyperref}
+
+\documentclass[luatex]{beamer}
+%\documentclass[handout]{beamer}
+
+\usetheme{metropolis}
+
+	\newcommand{\bigq}{\mathbb{Q}}
+\newcommand{\bb}{\bfseries\large}
+\newcommand{\class}{\mathcal}
+\newcommand{\mbi}[1]{\textbf{\em{#1}}}
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
+\newcommand{\ita}[1]{\textit{#1}}
+\newcommand{\p}{\cdot}
+\newcommand{\req}{\emptyset}
+\newcommand{\init}{\mathcal{J}}
+\newcommand{\power}[1]{\class{P}(#1)}
+\newcommand{\bigpower}[2]{\class{P}^{#1}(#2)}
+\newcommand{\symetric}{\bigtriangleup}
+\newcommand{\gx}[3]{\Gamma_{(#1,#2)}(#3)}
+\newcommand{\bd}[3]{\Delta_{(#1,#2)}(#3)}
+\newcommand{\bp}[3]{\Phi_{(#1,#2)}(#3)}
+\newcommand{\eab}{\eta_{\alpha \beta}}
+\newcommand{\sab}{\sigma_{\alpha\beta}}
+\newcommand{\dab}{\class{D}_{\alpha\beta}}
+\newcommand{\cab}{\class{C}_{\alpha\beta}}
+\newcommand{\C}[1]{\class{#1}}
+\newcommand{\ol}{\overline}
+\newcommand{\into}{\longrightarrow}
+\newcommand{\ifff}{\Longleftrightarrow}
+\newcommand{\imply}{\Rightarrow}
+\newcommand{\since}{\Longleftarrow}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\andd}{\wedge}
+\newcommand{\orr}{\vee}
+\newcommand{\ft}{(\C F \C T)_Q}
+\newcommand{\pathopen}[3]{#1_{(\ol{#2},#3)}}
+\newcommand{\fpi}[3]{#1_*(\Pi(#2,#3))}
+\newcommand{\xpath}[2]{(\ol {#1},#2)}
+\newcommand{\qn}[2]{\Lambda(#1,#2)}
+\newcommand{\jh}{\class J \class H}
+\newcommand{\bos}{\boldsymbol}
+\newcommand{\f}{\mathbb}
+\newcommand{\rss}{\la\psi_i:i\in \lambda\ra}
+\newcommand{\ito}[1]{\overset{#1}{\longrightarrow}}
+\newcommand{\pcomplex}[2]{\class #1(\class #2)}
+\newcommand{\then}{\Rightarrow}
+\newcommand{\ud}{{ {up-down-automaton}} }
+
+\newcommand{\map}[1]{\underset{#1}{\mapsto}}
+\newcommand{\mapi}[1]{\underset{#1}{\overset{i}{\mapsto}}}
+\newcommand{\mapstar}[1]{\underset{#1}{\overset{*}{\mapsto}}}
+\newcommand{\mapk}[2]{\underset{#1}{\overset{#2}{\mapsto}}}
+
+\newcommand{\eql}{\equiv_L}
+\newcommand{\der}[1]{\underset{#1}{\imply}}
+\newcommand{\deri}[1]{\underset{#1}{\overset{i}{\imply}}}
+\newcommand{\derstar}[1]{\underset{#1}{\overset{*}{\imply}}}
+\newcommand{\derk}[2]{\underset{#1}{\overset{#2}{\imply}}}
+\newcommand{\blank}{\bar{b}}
+\newcommand{\R}[1]{#1}
+\newcommand{\say}[1]{\color{blue}{#1}\color{black}}
+
+
+
+% Fix the title separator
+\makeatletter
+\setbeamertemplate{title separator}{
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[fg] (0,0) rectangle (\textwidth, \metropolis@titleseparator@linewidth);
+	\end{tikzpicture}%
+	\egroup
+	\par%
+}
+\makeatother
+
+% Fix the progress bar and make it progress from right to left
+\makeatletter
+\setbeamertemplate{progress bar in section page}{
+	\setlength{\metropolis@progressonsectionpage}{%
+		\textwidth * \ratio{\insertframenumber pt}{\inserttotalframenumber pt}%
+	}%
+	\bgroup
+	\bodydir TLT
+	\begin{tikzpicture}
+	\fill[bg] (0,0) rectangle (\textwidth, \metropolis@progressonsectionpage@linewidth);
+	\fill[fg] (\textwidth,0) rectangle (\textwidth-\metropolis@progressonsectionpage, \metropolis@progressonsectionpage@linewidth);
+	\end{tikzpicture}%
+	\egroup
+}
+\makeatother
+
+% A more logical title page, juxtaposing `institute` to `author`. This modification is not necessary for Hebrew support.
+\makeatletter
+\setbeamertemplate{title page}{
+	\begin{minipage}[b][\paperheight]{\textwidth}
+		\ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+		\vfill%
+		\ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+		\ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+		\usebeamertemplate*{title separator}
+		\ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+		\ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+		\ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+		\vfill
+		\vspace*{1mm}
+	\end{minipage}
+}
+\setbeamertemplate{author}{\vspace*{2em}\insertauthor\par\vspace*{0.25em}}
+\setbeamertemplate{institute}{\insertinstitute\par}
+\setbeamertemplate{date}{\vspace*{3mm}\insertdate\par}
+\makeatother
+
+
+
+
+%%%%%%%%%
+% Babel %
+%%%%%%%%%
+
+\usepackage[nil,bidi=basic-r]{babel}
+\babelprovide[import=he,main]{hebrew}
+\babelprovide[import=en-GB]{english}
+
+% For some reason Babel’s `\babelfont` doesn’t work
+\setsansfont[Script=Hebrew]{Open Sans Hebrew}
+\setmonofont{Fira Mono}
+\renewcommand{\H}[1]{\foreignlanguage{hebrew}{\fontspec[Script=Hebrew]{Open Sans Hebrew}#1}}
+\newcommand{\E}[1]{\foreignlanguage{english}{\fontspec{Open Sans}#1}}
+\newcommand{\LR}[1]{{‏\textdir TLT #1}}
+
+
+
+
+%%%%%%%%
+% MISC %
+%%%%%%%%
+
+\usepackage{metalogo, fancyvrb}
+\usepackage{cancel}
+\newcommand{\smallurl}[1]{{\footnotesize\url{#1}}}
+
+
+
+%%%%%%%%%%%%
+% DOCUMENT %
+%%%%%%%%%%%%
+
+\begin{document}
+	\title{FFT - התמרת פורייה המהירה}
+	\subtitle{מפגש 8}
+	%\author{}
+	%\institute{}
+	\date{}
+	
+	
+	\frame{\titlepage}
+	\section{בוא נזכר מה התחלנו שבוע שעבר}
+\begin{frame}{קונבולוציה - הגדרה}
+\pause
+\begin{itemize}[<+->]
+	\item בהינתן שני וקטורים
+	$$A=(a_0,a_1,\ldots,a_n)$$
+		$$B=(b_0,b_1,\ldots,b_m)$$
+	\item קונבולוציה של \E{$A$} עם \E{$B$} מסומנת ב: \E{$A*B = C$} 
+	\item עבור וקטור 
+	\E{$C$} באורך \E{$1+n+m$} המוגדר כך:
+	$$c_i=\sum_{j,k:j+k=i}a_j\cdot b_k$$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{ייצוג פולינומים}
+בהינתן פולינום מדרגה \E{$n$} ניתן לייצג אותו:
+\pause
+\begin{itemize}[<+->]
+	\item ע"י \E{$n+1$}  מקדמים 
+	\item ע"י \E{$n+1$} נקודות
+\end{itemize}
+\pause
+\textbf{המשפט היסודי של האלגברה:} דרך \E{$n+1$} נקודות עובר פולינום יחיד ממעלה \E{$n$}
+\end{frame}
+\begin{frame}{ההבדלים בין הייצוגים}
+\pause
+\begin{itemize}[<+->]
+	\item קבלת הערך בנקודה
+	\item מכפלת שני פולינומים
+	\pause
+	\begin{itemize}[<+->]
+		\item בייצוג מקדמים - דורש זמן ריבועי
+		\item בייצוג בנקודות - אם יש לנו \E{$2n+1$} נקודות של כל פולינום ניתן לחשב בזמן לינארי 
+	\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{סקיצה לאלגוריתם לחישוב קונבולוציה}
+ על מנת לחשב את \E{$C=A*B$}
+\pause
+\begin{enumerate}[<+->]
+	\item נחשב את \E{$A$} ו-\E{$B$} ב-\E{$2n$} נקודות
+	\item נכפול נקודתית את ערכי \E{$A$} ו-\E{$B$}
+	\item נחשב את מקדמי הפולינום \E{$C$} מתוך הנקודות
+\end{enumerate}
+\pause
+כיצד נעבור מייצוג לייצוג בצורה יעילה? (מהירה יותר מ-\E{$\Theta(n^2)$}).
+\end{frame}
+\begin{frame}{חישוב פולינום ב-n נקודות}
+\pause
+\end{frame}
+%\begin{frame}{חזרה מהירה על מורכבים}
+%\pause
+%\begin{itemize}[<+->]
+%	\item \E{$i^2=-1$}
+%	\item לפולינום מדרגה \E{$n$} יש \E{$n$} שורשים מעל המורכבים
+%	\item יש \E{$n$} 
+%	\item 
+%\end{itemize}
+%\end{frame}
+\end{document}

@@ -1,7 +1,7 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  17 DEC 2019 17:33
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  17 DEC 2019 13:20
  restricted system commands enabled.
-**ps7.tex
-(./ps7.tex
+**ps8.tex
+(./ps8.tex
 LaTeX2e <2018-04-01> patch level 2
 Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
 Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.146 seconds
+luaotfload | main : initialization completed in 0.153 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
@@ -1517,8 +1517,8 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
-) (./ps7.aux)
-\openout1 = ps7.aux
+) (./ps8.aux)
+\openout1 = ps8.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
 LaTeX Font Info:    ... okay on input line 162.
@@ -1537,7 +1537,6 @@ LaTeX Font Info:    ... okay on input line 162.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
 LaTeX Font Info:    ... okay on input line 162.
 
-*geometry* driver: auto-detecting
 *geometry* detected driver: luatex
 *geometry* verbose mode - [ preamble ] result:
 * driver: luatex
@@ -1617,10 +1616,10 @@ LaTeX Info: Redefining \ref on input line 162.
 LaTeX Info: Redefining \pageref on input line 162.
 LaTeX Info: Redefining \nameref on input line 162.
 
-(./ps7.out) (./ps7.out)
+(./ps8.out) (./ps8.out)
 \@outlinefile=\write6
 
-\openout6 = ps7.out
+\openout6 = ps8.out
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 162.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
@@ -1699,45 +1698,25 @@ Dictionary: translator-numbers-dictionary, Language: English
 (/usr/local/texlive/2018/texmf-dist/tex/latex/translator/translator-theorem-dic
 tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./ps7.nav) [1
-
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<imgs/trees.jpg, id=25, 858.20625pt x 313.17pt>
-File: imgs/trees.jpg Graphic file (type jpg)
-<use imgs/trees.jpg>
-Package luatex.def Info: imgs/trees.jpg  used on input line 179.
-(luatex.def)             Requested size: 284.52756pt x 103.82904pt.
- [2
-
-<./imgs/trees.jpg>]
-<imgs/trees2.jpg, id=31, 858.20625pt x 313.17pt>
-File: imgs/trees2.jpg Graphic file (type jpg)
-<use imgs/trees2.jpg>
-Package luatex.def Info: imgs/trees2.jpg  used on input line 185.
-(luatex.def)             Requested size: 284.52756pt x 103.82904pt.
- [3
-
-<./imgs/trees2.jpg>]
-Overfull \vbox (48.99539pt too high) detected at line 187
+) (./ps8.nav)
+Overfull \vbox (48.99539pt too high) detected at line 170
  []
 
-[4
+[1
 
-] [5
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for U+msa on input line 171.
 
-] [6
-
-] [7
-
-]
-LaTeX Font Info:    Try loading font information for U+msa on input line 241.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 241.
+LaTeX Font Info:    Try loading font information for U+msb on input line 171.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [2
+
+]
 (/usr/local/texlive/2018/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-en-
 gb.tex ASCII Hyphenation patterns for British English
 (/usr/local/texlive/2018/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-en-
@@ -1748,18 +1727,18 @@ c/fonts/otl/opensans-regular.luc)
 otl/opensans-bolditalic.luc)(load luc: /Users/mac/Library/texlive/2018/texmf-var
 /luatex-cache/generic/fonts/otl/opensans-bold.luc)(load luc: /Users/mac/Library/
 texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/opensans-italic.luc)
+luaotfload | aux : font no 73 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : no font with id 73
+luaotfload | aux : font no 75 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : no font with id 75
 luaotfload | aux : font no 76 (nil) does not define feature smcp for script latn
  with language dflt
 luaotfload | aux : no font with id 76
-luaotfload | aux : font no 78 (nil) does not define feature smcp for script latn
+luaotfload | aux : font no 74 (nil) does not define feature smcp for script latn
  with language dflt
-luaotfload | aux : no font with id 78
-luaotfload | aux : font no 79 (nil) does not define feature smcp for script latn
- with language dflt
-luaotfload | aux : no font with id 79
-luaotfload | aux : font no 77 (nil) does not define feature smcp for script latn
- with language dflt
-luaotfload | aux : no font with id 77
+luaotfload | aux : no font with id 74
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1780,21 +1759,25 @@ luaotfload | aux : no font with id 77
 . <->"OpenSans/BI:mode=node;script=latn;language=DFLT;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 .................................................
- [8
+ [3
+
+] [4
+
+] [5
+
+] [6
+
+] [7
+
+] [8
 
 ] [9
 
 ] [10
 
-]
-<imgs/hipuhim.jpg, id=76, 357.335pt x 217.81375pt>
-File: imgs/hipuhim.jpg Graphic file (type jpg)
-<use imgs/hipuhim.jpg>
-Package luatex.def Info: imgs/hipuhim.jpg  used on input line 270.
-(luatex.def)             Requested size: 170.71652pt x 104.06084pt.
- [11
+] [11
 
-<./imgs/hipuhim.jpg>] [12
+] [12
 
 ]
 [13
@@ -1817,136 +1800,54 @@ Package luatex.def Info: imgs/hipuhim.jpg  used on input line 270.
 
 ] [22
 
-]
-luaotfload | aux : font no 40 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 40
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew' with script 'Hebrew' and language 'Default'.
-*************************************************
-luaotfload | aux : font no 40 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 40
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew' with script 'Hebrew' and language 'Default'.
-*************************************************
-luaotfload | aux : font no 40 (nil) does not define feature smcp for script hebr
- with language dflt
-luaotfload | aux : no font with id 40
-luaotfload | aux : font no 42 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 42
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew/B' with script 'Hebrew' and language 'Default'.
-*************************************************
-luaotfload | aux : font no 42 (nil) does not define feature smcp for script hebr
- with language dflt
-luaotfload | aux : no font with id 42
-luaotfload | aux : font no 43 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 43
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew/I' with script 'Hebrew' and language 'Default'.
-*************************************************
-luaotfload | aux : font no 43 (nil) does not define feature smcp for script hebr
- with language dflt
-luaotfload | aux : no font with id 43
-luaotfload | aux : font no 41 (nil) does not define feature tnum for script hebr
- with language dflt
-luaotfload | aux : no font with id 41
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Monospaced' (tnum) not available for font
-* 'OpenSansHebrew/BI' with script 'Hebrew' and language 'Default'.
-*************************************************
-luaotfload | aux : font no 41 (nil) does not define feature smcp for script hebr
- with language dflt
-luaotfload | aux : no font with id 41
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'OpenSansHebrew(1)' created for font 'Open Sans Hebrew' with
-. options [Ligatures=TeX,Script=Hebrew,Numbers={Monospaced}].
-.  
-.  This font family consists of the following NFSS series/shapes:
-.  
-. - 'normal' (m/n) with NFSS spec.:
-. <->"OpenSansHebrew:mode=node;script=hebr;language=DFLT;+tlig;"
-. - 'small caps'  (m/sc) with NFSS spec.: 
-. - 'bold' (bx/n) with NFSS spec.:
-. <->"OpenSansHebrew/B:mode=node;script=hebr;language=DFLT;+tlig;"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: 
-. - 'italic' (m/it) with NFSS spec.:
-. <->"OpenSansHebrew/I:mode=node;script=hebr;language=DFLT;+tlig;"
-. - 'italic small caps'  (m/itsc) with NFSS spec.: 
-. - 'bold italic' (bx/it) with NFSS spec.:
-. <->"OpenSansHebrew/BI:mode=node;script=hebr;language=DFLT;+tlig;"
-. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
-.................................................
-[23
+] [23
 
 ] [24
 
 ] [25
 
-] [26
-
 ]
 \tf@nav=\write7
 
-\openout7 = ps7.nav
+\openout7 = ps8.nav
 \tf@toc=\write8
 
-\openout8 = ps7.toc
+\openout8 = ps8.toc
 \tf@snm=\write9
 
-\openout9 = ps7.snm
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
- (./ps7.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
-Package rerunfilecheck Info: File `ps7.out' has not changed.
-(rerunfilecheck)             Checksum: C5C9F052C3ED2AE5E6F23A80995FE69F;54.
+\openout9 = ps8.snm
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 230.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 230.
+ (./ps8.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 230.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 230.
+Package rerunfilecheck Info: File `ps8.out' has not changed.
+(rerunfilecheck)             Checksum: 15E58D3E07B2CE640977CB579915ECA4;86.
 )
 
 Here is how much of LuaTeX's memory you used:
- 32814 strings out of 494413
+ 32862 strings out of 494413
  100000,953878 words of node,token memory allocated
- 2426 words of node memory still in use:
-   27 hlist, 8 vlist, 5 rule, 1 disc, 3 local_par, 2 dir, 51 glue, 3 kern, 16 pe
-nalty, 68 glyph, 181 attribute, 71 glue_spec, 92 attribute_list, 3 write, 24 pdf
-_literal, 22 pdf_colorstack nodes
-   avail lists: 1:5,2:676,3:292,4:108,5:100,6:20,7:941,8:95,9:224,10:14,11:1
- 35229 multiletter control sequences out of 65536+600000
- 106 fonts using 15350551 bytes
- 72i,13n,97p,1805b,723s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/local/texlive/2018/texmf-dist/fonts/truetype/public/opensans/OpenSans-Regu
-lar.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Italic.ttf></Users/mac/Library/
-Fonts/OpenSansHebrew-Regular.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Bold.t
-tf></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on ps7.pdf (26 pages, 349367 bytes).
+ 1480 words of node memory still in use:
+   19 hlist, 8 vlist, 5 rule, 1 disc, 1 local_par, 2 dir, 20 glue, 1 kern, 9 pen
+alty, 22 glyph, 113 attribute, 71 glue_spec, 58 attribute_list, 3 write, 8 pdf_l
+iteral, 12 pdf_colorstack nodes
+   avail lists: 1:5,2:622,3:198,4:94,5:117,6:17,7:806,8:16,9:124,10:14,11:2
+ 35143 multiletter control sequences out of 65536+600000
+ 105 fonts using 15331999 bytes
+ 72i,13n,96p,1805b,723s stack positions out of 5000i,500n,10000p,200000b,100000s
+</Users/mac/Library/Fonts/OpenSansHebrew-Italic.ttf></Users/mac/Library/Fonts/Op
+enSansHebrew-Regular.ttf></Users/mac/Library/Fonts/OpenSansHebrew-Bold.ttf></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on ps8.pdf (25 pages, 87837 bytes).
 
-PDF statistics: 216 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
- 54 named destinations out of 1000 (max. 131072)
+PDF statistics: 201 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 131072)
  24 words of extra memory for PDF output out of 10000 (max. 100000000)
 
