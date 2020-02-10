@@ -1,2 +1,0 @@
-\babel@toc {hebrew}{}
-\beamer@sectionintoc {1}{דוגמא לחישוב פולינום ב-n נקודות}{26}{0}{1}

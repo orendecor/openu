@@ -1,4 +1,0 @@
-\babel@toc {hebrew}{}
-\beamer@sectionintoc {1}{הוכחה}{10}{1}{1}
-\beamer@sectionintoc {2}{דוגמת ריצה על הלוח והוכחת נכונות}{18}{3}{2}
-\beamer@sectionintoc {3}{דוגמת ריצה על הלוח והוכחת נכונות}{21}{4}{3}

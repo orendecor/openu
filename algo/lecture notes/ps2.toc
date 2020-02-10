@@ -1,3 +1,0 @@
-\babel@toc {hebrew}{}
-\beamer@sectionintoc {1}{שאלה 1 - הראו אלגוריתם רדוקציה מ-SEP ל-SP }{42}{2}{1}
-\beamer@sectionintoc {2}{שאלה 2 - אלגוריתם רדוקציה מ-SP ל-SEP }{45}{2}{2}
